@@ -1,0 +1,18 @@
+# Publica apenas o site. Ignora tudo na raiz e libera as pastas do geoportal.
+/*
+!/.gitignore
+!/vercel.json
+!/index.html
+!/README.md
+!/PUBLICAR.md
+!/css/
+!/js/
+!/data/
+!/atlas/
+!/media/
+!/dossie/
+!/server.py
+!/server.ps1
+!/iniciar_servidor.bat
+# Nunca publicar: bibliografia (PDFs com direitos autorais), dados brutos grandes,
+# backups e versões antigas. (Já ficam fora pela regra /* acima.)

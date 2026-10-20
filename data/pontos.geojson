@@ -1,0 +1,1220 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.725,
+     -2.405
+    ]
+   },
+   "properties": {
+    "id": "p_encontro",
+    "ordem": 1,
+    "titulo": "O encontro das águas: o Tapajós como Ser-Rio",
+    "categoria": "aguas",
+    "resumo": "Diante de Santarém, as águas claras do Tapajós correm lado a lado com as águas barrentas do Amazonas.",
+    "texto": "Para o planejamento, este trecho é um nó logístico: o ponto em que a hidrovia do Tapajós encontra o Amazonas e os grãos do Centro-Oeste seguem para o Atlântico. Para quem vive no rio, é um ser com vontade, humores e moradores próprios — peixes, botos, encantados.\n\nA proposta deste trabalho é deslocar o olhar: reconhecer o Rio Tapajós como **Ser-Rio**, sujeito vivo de direitos, na trilha do constitucionalismo ecocêntrico latino-americano que reconheceu o rio Vilcabamba (Equador, 2010) e o rio Atrato (Colômbia, 2016) como sujeitos.\n\n> \"O rio tem direito a viver por si próprio, tem direito à vida, direito à existência.\" — debate *Seres-rio*",
+    "imagens": [
+     {
+      "src": "media/a1_encontro_aguas.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Seres-rio (diálogos); Cançado, Tavares et al.",
+    "camera": {
+     "center": [
+      -54.74,
+      -2.43
+     ],
+     "zoom": 11.2,
+     "pitch": 62,
+     "bearing": 20
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_encontro"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.7195,
+     -2.4205
+    ]
+   },
+   "properties": {
+    "id": "p_sitioporto",
+    "ordem": 2,
+    "titulo": "O Sítio Porto sob o terminal graneleiro",
+    "categoria": "capital",
+    "resumo": "O maior sítio arqueológico tapajônico conhecido está sob o porto de exportação de soja de Santarém.",
+    "texto": "Entre os sítios inventariados na região tapajônica, o maior é o chamado **sítio Porto**, em Santarém, com 35,7 hectares — exatamente onde hoje funciona o porto fluvial escoador de soja da Cargill (Stenborg & Schaan, 2012, citados em *Os verdadeiros donos da terra*).\n\nA sobreposição é um retrato da disputa cartográfica: a mesma margem que guarda séculos de ocupação indígena densa é lida pelo planejamento como plataforma logística. A orla deixa de ser multifuncional — praia, pesca, casario — para servir à produção (porto) ou ao consumo (orla de bares).",
+    "imagens": [
+     {
+      "src": "media/a1_sitio_porto.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Stenborg & Schaan (2012); *Os verdadeiros donos da terra*; *Santarém: o ponto de partida…* (urbe, 2019).",
+    "camera": {
+     "center": [
+      -54.716,
+      -2.43
+     ],
+     "zoom": 13.6,
+     "pitch": 64,
+     "bearing": -25
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_porto"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.708,
+     -2.441
+    ]
+   },
+   "properties": {
+    "id": "p_ceramica",
+    "ordem": 3,
+    "titulo": "Cerâmica tapajônica e muiraquitãs",
+    "categoria": "memoria",
+    "resumo": "Terra preta, urnas e pedras verdes: a memória que a terra guarda sob a cidade.",
+    "texto": "Até o século XVII, os Tapajó formavam o limite sul de um extenso circuito comercial orientado para o norte, ao longo dos tributários da margem esquerda do Amazonas. As relações com os Konduri se davam pelo comércio das pedras de **muiraquitã** — a região de Santarém parece ter sido a principal área de produção desses artefatos.\n\nOs sítios de terra preta revelam assentamentos de longa duração e o manejo especializado de recursos. Na camada 'memória da terra' do mapa estão os 546 sítios cadastrados pelo IPHAN no recorte do projeto.",
+    "imagens": [
+     {
+      "src": "media/a1_ceramica.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Navarro et al. (2017), *O muiraquitã da estearia da Boca do Rio*; Schaan (2012); IPHAN/CNSA.",
+    "camera": {
+     "center": [
+      -54.72,
+      -2.45
+     ],
+     "zoom": 12.4,
+     "pitch": 55,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_ceramica"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.962,
+     -2.513
+    ]
+   },
+   "properties": {
+    "id": "p_cobra",
+    "ordem": 4,
+    "titulo": "A cobra-grande do Lago Verde",
+    "categoria": "encantes",
+    "resumo": "Sob a vila de Alter do Chão, uma cobra de dois mil metros tem a cabeça \"debaixo do pé da santa\".",
+    "texto": "\"Os antigos diziam\" que a cobra-grande que vive debaixo do Lago Verde mede cerca de dois mil metros e se dispõe entre a serra Piroca e a igreja, com a cabeça \"debaixo do pé da santa\" (Nossa Senhora da Saúde). Seu corpo atravessa a ponta de areia da Ilha do Amor por um túnel subaquático, ainda usado pelos botos que passam do Tapajós ao Lago Verde.\n\nNessas narrativas, bicho, mãe, cobra-grande e índios antigos são potências de formação da paisagem: os encantados ocupam os lugares em posição de **donos**. Um morador resume o alerta: \"Quando explorarem Alter do Chão por causa do turismo vai dar muita zebra ainda\".",
+    "imagens": [
+     {
+      "src": "media/a1_cobra.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "*Os verdadeiros donos da terra: paisagem e transformação no Baixo Tapajós*; Galvão (1955).",
+    "camera": {
+     "center": [
+      -54.955,
+      -2.51
+     ],
+     "zoom": 13.2,
+     "pitch": 66,
+     "bearing": 35
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_cobra"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.975,
+     -2.55
+    ]
+   },
+   "properties": {
+    "id": "p_borari",
+    "ordem": 5,
+    "titulo": "Autodemarcação da TI Borari de Alter do Chão",
+    "categoria": "territorio",
+    "resumo": "Diante da demora do Estado, o povo Borari mapeou o próprio território (2024–2025).",
+    "texto": "A Terra Indígena Borari de Alter do Chão reúne três aldeias — Alter do Chão, Caranazal e Curucuruí — e cerca de 1.200 famílias. A demarcação foi reivindicada em 2003; o Relatório Circunstanciado da FUNAI saiu em 2009, mas a TI segue \"em estudo\".\n\nOs Borari não reconhecem a totalidade dos limites dos mapas da FUNAI e do INCRA, que não refletem a ocupação tradicional, o uso e a cosmologia do território. Entre julho de 2024 e fevereiro de 2025, com apoio do NEPES-UFOPA, os pontos da autodemarcação foram levantados com drone e GPS — enquanto avançam a especulação imobiliária e os focos de desmatamento.",
+    "imagens": [
+     {
+      "src": "media/a1_borari.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Relatório de Autodemarcação da Terra Indígena Borari de Alter do Chão (2025).",
+    "camera": {
+     "center": [
+      -54.97,
+      -2.56
+     ],
+     "zoom": 11.6,
+     "pitch": 58,
+     "bearing": -10
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_borari"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.25,
+     -2.68
+    ]
+   },
+   "properties": {
+    "id": "p_resex",
+    "ordem": 6,
+    "titulo": "Resex Tapajós-Arapiuns: a rede",
+    "categoria": "territorio",
+    "resumo": "Comunidades, roças, caminhos e encantes tecem um território que o mapa oficial lê como \"vazio\".",
+    "texto": "Na margem esquerda do Baixo Tapajós, a Reserva Extrativista Tapajós-Arapiuns (1998) abriga dezenas de comunidades ligadas por caminhos, igarapés e relações de parentesco. Os nomes dos lugares guardam histórias de encantados: \"quando passam por esses lugares, ao longo da praia ou nas embarcações, os mais velhos vão contando e recontando histórias para os mais jovens\" (Vaz Filho, 2010).\n\nNo Arapiuns, a biografia do pajé Merandolino está associada às pontas do Toronó e do Curumy, onde se relacionava com os encantados do lugar.",
+    "imagens": [
+     {
+      "src": "media/a2_rede.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     },
+     {
+      "src": "media/a2_encantes.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Vaz Filho (2010); Lima (2015); ICMBio.",
+    "camera": {
+     "center": [
+      -55.15,
+      -2.62
+     ],
+     "zoom": 9.6,
+     "pitch": 55,
+     "bearing": -20
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_rede"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.02,
+     -3.05
+    ]
+   },
+   "properties": {
+    "id": "p_flona",
+    "ordem": 7,
+    "titulo": "Flona do Tapajós: floresta entre o rio e a estrada",
+    "categoria": "territorio",
+    "resumo": "Uma faixa de floresta protegida separa o Tapajós da BR-163.",
+    "texto": "Criada em 1974, a Floresta Nacional do Tapajós ocupa a margem direita do rio. Vista do alto, ela é uma barreira verde entre a várzea e a \"espinha de peixe\" de desmatamento que acompanha a BR-163. Comunidades como Jamaraquá e Maguari vivem do manejo da floresta e do rio.\n\nAtive a camada **Desmatamento 2008–2025** e a linha do tempo para ver como a fronteira avança sobre os limites da unidade.",
+    "imagens": [
+     {
+      "src": "media/a2_flona.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     }
+    ],
+    "fontes": "ICMBio; PRODES/INPE.",
+    "camera": {
+     "center": [
+      -54.98,
+      -3.15
+     ],
+     "zoom": 9.2,
+     "pitch": 60,
+     "bearing": -30
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_flona"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.94,
+     -2.64
+    ]
+   },
+   "properties": {
+    "id": "p_soja",
+    "ordem": 8,
+    "titulo": "Belterra e o planalto da soja",
+    "categoria": "capital",
+    "resumo": "Do seringal de Henry Ford às lavouras mecanizadas do planalto santareno.",
+    "texto": "O planalto entre Santarém, Belterra e Mojuí dos Campos concentra a expansão das lavouras de grãos que alimentam o terminal graneleiro. A paisagem de lotes retilíneos é a expressão mais clara da **linha**: a terra convertida em superfície produtiva medida em hectares e toneladas.\n\nCompare com a camada de sítios arqueológicos: muitos estão nas mesmas bordas de planalto.",
+    "imagens": [
+     {
+      "src": "media/a2_soja.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     }
+    ],
+    "fontes": "PRODES/INPE; IBGE.",
+    "camera": {
+     "center": [
+      -54.9,
+      -2.7
+     ],
+     "zoom": 10.6,
+     "pitch": 60,
+     "bearing": 15
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_soja"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.96,
+     -4.29
+    ]
+   },
+   "properties": {
+    "id": "p_miritituba",
+    "ordem": 9,
+    "titulo": "Miritituba e o Arco Norte",
+    "categoria": "capital",
+    "resumo": "Estações de transbordo trocam o caminhão pela barcaça: o rio vira corredor.",
+    "texto": "Em frente a Itaituba, os terminais de Miritituba recebem os grãos que descem pela BR-163 e os embarcam em comboios de barcaças até Santarém. O sistema Tapajós é um dos principais corredores hidroviários do chamado **Arco Norte**.\n\nEstudos batimétricos apontam que, na vazante, a falta de profundidade obriga as embarcações a partir com menos carga — e daí vêm as pressões por dragagem e por \"melhorias\" no leito do rio.",
+    "imagens": [
+     {
+      "src": "media/a2_miritituba.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     }
+    ],
+    "fontes": "*Mapa batimétrico* (Santos et al., 2020; Su et al., 2017); ANTAQ.",
+    "camera": {
+     "center": [
+      -55.97,
+      -4.28
+     ],
+     "zoom": 12.2,
+     "pitch": 60,
+     "bearing": 40
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_miri"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.95,
+     -3.7
+    ]
+   },
+   "properties": {
+    "id": "p_br163",
+    "ordem": 10,
+    "titulo": "BR-163: a espinha de peixe",
+    "categoria": "ruptura",
+    "resumo": "A rodovia Cuiabá–Santarém organiza o desmatamento em vicinais perpendiculares.",
+    "texto": "Ao longo da BR-163, as estradas vicinais abrem lotes de um lado e de outro do eixo, formando o padrão conhecido como \"espinha de peixe\". No recorte do projeto, os polígonos PRODES somam cerca de 12,8 mil km² desmatados entre 2008 e 2025, além de quase 40 mil km² acumulados até 2007.\n\nUse a camada **Intensidade 3D** com a linha do tempo para ver o acúmulo ano a ano.",
+    "imagens": [
+     {
+      "src": "media/a2_br163.jpg",
+      "legenda": "Detalhe do Atlas II — A linha e a rede (ilustração do projeto)"
+     }
+    ],
+    "fontes": "PRODES/INPE (arquivos do projeto); DNIT.",
+    "camera": {
+     "center": [
+      -54.9,
+      -3.75
+     ],
+     "zoom": 9.0,
+     "pitch": 62,
+     "bearing": -20
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_br163"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.28,
+     -4.48
+    ]
+   },
+   "properties": {
+    "id": "p_daje",
+    "ordem": 11,
+    "titulo": "Daje Kapap Eypi — os fechos do rio",
+    "categoria": "territorio",
+    "resumo": "Lugar sagrado Munduruku no médio Tapajós, autodemarcado desde 2014 (TI Sawré Muybu).",
+    "texto": "Para os Munduruku, Daje Kapap Eypi — \"os fechos\" — é o lugar onde os porcos, levando o filho de Karosakaybu, estreitaram o leito do rio para atravessá-lo. Na vazante se veem, gravadas nas pedras, as marcas da passagem e as pegadas de Karosakaybu. Ele deixou ali uma surucucu, tornando o lugar interdito.\n\nO Relatório Circunstanciado da TI Sawré Muybu (178.173 ha) foi concluído em 2013, mas o governo segurou a publicação porque a terra estava na área da UHE São Luiz do Tapajós. Os Munduruku responderam com a **autodemarcação**: \"Já que o governo não quer fazer a demarcação, decidimos que nós mesmos vamos fazer.\"\n\n*Localização aproximada.*",
+    "imagens": [
+     {
+      "src": "media/a3_fechos.jpg",
+      "legenda": "Detalhe do Atlas III — Daje Kapap Eypi (ilustração do projeto)"
+     },
+     {
+      "src": "media/a3_porcos.jpg",
+      "legenda": "Detalhe do Atlas III — Daje Kapap Eypi (ilustração do projeto)"
+     },
+     {
+      "src": "media/a3_autodemarcacao.jpg",
+      "legenda": "Detalhe do Atlas III — Daje Kapap Eypi (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Korap Munduruku, Alfinito & Schavelzon (2024), *Rev. Direito e Práxis*; Cartas da Autodemarcação (2014).",
+    "camera": {
+     "center": [
+      -56.3,
+      -4.5
+     ],
+     "zoom": 11.0,
+     "pitch": 64,
+     "bearing": 10
+    },
+    "atlas": {
+     "id": "atlas3",
+     "hotspot": "h3_fechos"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.05,
+     -4.75
+    ]
+   },
+   "properties": {
+    "id": "p_garimpo",
+    "ordem": 12,
+    "titulo": "Garimpo e mercúrio no Tapajós",
+    "categoria": "ruptura",
+    "resumo": "Balsas e dragas sobem o rio; o mercúrio desce pela cadeia alimentar até os corpos.",
+    "texto": "A partir de 2018, o movimento Munduruku passou a confrontar com mais intensidade o garimpo ilegal em suas terras. Pesquisa da Fiocruz e do WWF (Basta & Hacon, 2020) mostrou que todos os Munduruku testados estavam contaminados por mercúrio; seis em cada dez acima do limite de segurança — e nove em cada dez nas aldeias às margens dos rios mais afetados.\n\n> \"Garimpo legal não existe para nós, porque todos eles geram destruição e trazem doenças.\" — liderança Munduruku, *Seres-rio*\n\n*Localização aproximada.*",
+    "imagens": [
+     {
+      "src": "media/a3_garimpo.jpg",
+      "legenda": "Detalhe do Atlas III — Daje Kapap Eypi (ilustração do projeto)"
+     },
+     {
+      "src": "media/a3_mercurio.jpg",
+      "legenda": "Detalhe do Atlas III — Daje Kapap Eypi (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Basta & Hacon (2020); *O cerco do ouro*; *Seres-rio*.",
+    "camera": {
+     "center": [
+      -56.1,
+      -4.7
+     ],
+     "zoom": 9.4,
+     "pitch": 58,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas3",
+     "hotspot": "h3_garimpo"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.99,
+     -2.47
+    ]
+   },
+   "properties": {
+    "id": "p_aquabilidade",
+    "ordem": 13,
+    "titulo": "Aquabilidade: existir sobre as águas",
+    "categoria": "aguas",
+    "resumo": "Palafitas, igapós e a vida que acompanha a cheia e a vazante.",
+    "texto": "Miranda & Gomes (2019) propõem a **aquabilidade** como alternativa à categoria \"territorialidade\", que pressupõe que toda existência humana se desenrola sobre o solo. Nos aguatórios amazônicos, rios e lagos também são lugares de morar, trabalhar e pensar.\n\nNas várzeas e igapós do Baixo Tapajós, a casa sobe sobre esteios, a roça acompanha a vazante e o caminho é feito de canoa. A camada **Igapós e várzeas** mostra essa terra que é, por meses, água.",
+    "imagens": [
+     {
+      "src": "media/a1_igapo.jpg",
+      "legenda": "Detalhe do Atlas I — O Fundo (ilustração do projeto)"
+     }
+    ],
+    "fontes": "Miranda & Gomes (2019), *Existir sobre as águas*; *Homens anfíbios: terra e água*.",
+    "camera": {
+     "center": [
+      -55.0,
+      -2.47
+     ],
+     "zoom": 11.5,
+     "pitch": 60,
+     "bearing": -40
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_igapo"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.285,
+     -3.438
+    ]
+   },
+   "properties": {
+    "id": "hv_canal",
+    "percurso": "hidrovia",
+    "ordem": 1,
+    "titulo": "Hidrovia do Tapajós: o canal Santarém–Itaituba",
+    "categoria": "capital",
+    "resumo": "Cerca de 250 km de rio convertidos em corredor de grãos do Arco Norte.",
+    "texto": "**Ficha técnica**\n- Trecho: Itaituba/Miritituba – Santarém, ~250 km (código HN-106/HN-206, conforme a fonte).\n- Canal de projeto: 190 m de largura na superfície, 140 m na base, 4,90 m de profundidade.\n- Calado das barcaças carregadas: 4,5 m. Navios oceânicos em Santarém: até 11,75 m.\n- Carga em Miritituba: ~15 Mt (2023); **16,8 Mt (2025, +14,3%)**, 88% soja e milho.\n- Meta do Plano Hidroviário 2035: 66 Mt/ano.\n\n**Sazonalidade.** Na seca de 2023 os comboios reduziram a carga em ~40%. Em outubro de 2024 o transporte foi suspenso; a régua de Itaituba chegou a 0,83 m e a de Santarém a −16 cm (13/10/2024), a menor já registrada.\n\n**Leitura crítica.** O rio é tratado como canal de profundidade constante. O pulso de cheia e vazante — que organiza pesca, roçados de várzea, desova de quelônios e piracema — aparece no planejamento apenas como \"restrição operacional\".",
+    "imagens": [
+     {
+      "src": "media/hv_canal.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "GT Infra (04/02/2026); Amazônia Real (16/09/2025); Agência iNFRA (12/05/2026); Repórter Brasil (19/02/2026); Reuters (2023; 2024); Amazonas Atual (01/10/2026); Diário do Pará (2024).",
+    "camera": {
+     "center": [
+      -55.285,
+      -3.438
+     ],
+     "zoom": 8.6,
+     "pitch": 50,
+     "bearing": -20
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_hidrovia"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.93,
+     -4.305
+    ]
+   },
+   "properties": {
+    "id": "hv_miritituba",
+    "percurso": "hidrovia",
+    "ordem": 2,
+    "titulo": "Miritituba: estações de transbordo",
+    "categoria": "capital",
+    "resumo": "Onde o caminhão vira barcaça — e a margem deixa de ser dos pescadores.",
+    "texto": "**Terminais (ETCs)**\n| ETC | Início | Capacidade |\n|---|---|---|\n| Unitapajós (Bunge + Amaggi) | 2014 | 5 Mt/ano |\n| Hidrovias do Brasil | 2016 | 6 Mt/ano |\n| Cianport | 2016 | 2,5 Mt/ano |\n| Cargill | 2021 | até 4 Mt/ano |\n| Bertolini (flutuante) | 2020 | até 2,5 Mt/ano |\n\nSeis novos terminais estão em implantação; a capacidade deve passar de 17 para 30 Mt.\n\n**Efeitos registrados**\n- Quase 1 km de margem sob controle dos portos; pescadores da Z-56 (~400) deslocados até Aveiro.\n- 900 a 1.500 caminhões por dia na safra; Miritituba passou de ~5 mil para ~13 mil habitantes.\n- Roubos de 181 (2012) para 834 (2017); relatos de exploração sexual perto dos pátios de carretas.\n\n> “Os portos se instalaram na rota do peixe.” — Lany Cruz, Z-56",
+    "imagens": [
+     {
+      "src": "media/hv_miritituba.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Inesc (2020; 2021; 2024); Fenatac (24/07/2026); Brasil de Fato (12/12/2024; 26/10/2023); Rodrigues et al., Geosul (2019).",
+    "camera": {
+     "center": [
+      -55.93,
+      -4.305
+     ],
+     "zoom": 12,
+     "pitch": 58,
+     "bearing": 30
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_miri"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.985,
+     -4.258
+    ]
+   },
+   "properties": {
+    "id": "hv_munduruku",
+    "percurso": "hidrovia",
+    "ordem": 3,
+    "titulo": "Praia do Mangue e Praia do Índio",
+    "categoria": "territorio",
+    "resumo": "Aldeias Munduruku urbanas a menos de 10 km dos terminais.",
+    "texto": "Os EIAs da Cargill consideram apenas estas duas aldeias. A Associação Pariri aponta **11 aldeias afetadas**: Praia do Mangue, Praia do Índio, Sawre Apompu, Sawre Juybu, Dace Watpu, Sawre Muybu, Boa Fé, Karo Muybu, Dajekapap, Sawre Aboy e Poxo Muybu.\n\n**Impactos relatados:** pó de soja sobre a aldeia, peixe contaminado, pesca mais distante, margens privatizadas, violência urbana.\n\n**Situação jurídica.** Em 2022 a Justiça Federal suspendeu o licenciamento do porto da RTL até a consulta e determinou que a Funai ampliasse o termo de referência aos Munduruku do Baixo, Médio e Alto Tapajós — exigência estendida aos EIAs de Cargill, Unitapajós, HBSA e Cianport.\n\n> “O peixe está todo cheio de bagaço de soja.” — cacique Brasilino Painhum Munduruku",
+    "imagens": [
+     {
+      "src": "media/hv_aldeia.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Terra de Direitos (02/06/2022; 26/04/2023); Brasil de Fato (26/10/2023).",
+    "camera": {
+     "center": [
+      -55.985,
+      -4.258
+     ],
+     "zoom": 12.5,
+     "pitch": 55,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.76092,
+     -4.14144
+    ]
+   },
+   "properties": {
+    "id": "hv_santarenzinho",
+    "percurso": "hidrovia",
+    "ordem": 4,
+    "titulo": "Santarenzinho: cemitérios sob o canal",
+    "categoria": "memoria",
+    "resumo": "Lugar sagrado Munduruku, sítio arqueológico e passagem crítica da dragagem.",
+    "texto": "- Sítio com **mais de 50 mil vestígios** e três cemitérios Munduruku (Iphan).\n- Local de ETC da Louis Dreyfus em licenciamento (Rurópolis).\n- Uma das sete passagens críticas do projeto de dragagem do DNIT.\n\nO caso mostra a sobreposição entre a linha do planejamento (canal, terminal) e a memória do território — a mesma lógica do terminal da Cargill sobre o Sítio Porto, em Santarém.\n\n*Localização aproximada, posicionada sobre o canal.*",
+    "imagens": [],
+    "fontes": "Agência Pública (23/04/2024); Brasil de Fato (02/04/2022); CNN Brasil (24/07/2026).",
+    "camera": {
+     "center": [
+      -55.76092,
+      -4.14144
+     ],
+     "zoom": 11.5,
+     "pitch": 55,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.59019,
+     -3.96419
+    ]
+   },
+   "properties": {
+    "id": "hv_montecristo",
+    "percurso": "hidrovia",
+    "ordem": 5,
+    "titulo": "Tabuleiro de Monte Cristo: o caminho dos quelônios",
+    "categoria": "aguas",
+    "resumo": "A maior praia de desova do Tapajós é também ponto de dragagem.",
+    "texto": "**Quem passa por aqui**\n- Tartaruga-da-amazônia (*Podocnemis expansa*), tracajá e pitiú desovam nas praias expostas na vazante.\n- ~10 mil fêmeas em 2017 (+268% desde os anos 1980); o Ibama estimou **19.447 fêmeas e mais de 1 milhão de filhotes em 2025**.\n- Os filhotes vocalizam ~36 h antes de eclodir; as fêmeas esperam e migram com eles para lagos e igapós.\n\n**Interferências**\n- A dragagem pode alterar a altura e o tipo de areia das praias.\n- O ruído de dragas e comboios pode atrapalhar a comunicação vocal (hipótese da pesquisadora C. Ferrara/WCS; falta estudo).\n- O MPF incluiu o tabuleiro e o bota-fora sobre a Resex e a Flona na ACP 1014317-12.2024.\n\n*Localização aproximada.*",
+    "imagens": [],
+    "fontes": "MPF (17/03/2025); Portal Amazônia; eCycle.",
+    "camera": {
+     "center": [
+      -55.59019,
+      -3.96419
+     ],
+     "zoom": 11.5,
+     "pitch": 50,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.26,
+     -3.47
+    ]
+   },
+   "properties": {
+    "id": "hv_dragagem",
+    "percurso": "hidrovia",
+    "ordem": 6,
+    "titulo": "Dragagem: cronologia 2024–2026",
+    "categoria": "ruptura",
+    "resumo": "De “emergência” a licitação cancelada: o canal sem licença e sem consulta.",
+    "texto": "- **set/2024** — Decreto estadual 4192 e Portaria DNIT 4674: dragagem emergencial. A Semas autoriza em 12/02/2025, sem estudos; ~3,57 milhões de m³ dragados (R$ 34,4 mi).\n- **ago/2025** — Lei 15.190 (licenciamento) e Decreto 12.600 (hidrovias no PND).\n- **23/12/2025** — Edital DNIT 90.515/2025: 4,54 milhões de m³, 7 passagens, 3 anos, R$ 74,8 mi.\n- **06/02/2026** — licitação suspensa durante a ocupação da Cargill; **23/02** decreto revogado.\n- **26/06/2026** — Semas declara a \"manutenção\" dispensada de licença; GT Infra mostra que 4 dos 7 pontos nunca foram dragados.\n- **01/07/2026** — TCU (Acórdão 1736/2026): retomada só com Licença Prévia e consulta prévia.\n- **15/07/2026** — MPF recomenda suspensão (18 protocolos de consulta desrespeitados; risco de remobilizar mercúrio).\n- **jul–set/2026** — Lula recusa a dragagem emergencial paga pelas empresas; o DNIT cancela a licitação.\n- **09/10/2026** — Tapajós sai da carteira prioritária de concessões 2027–2030 (estudos continuam).\n\n**Passagens críticas:** Amorim, Barranco do Navio, Itapaiuna, Lago do Roque, Monte Cristo, Pederneiras e Santarenzinho.",
+    "imagens": [],
+    "fontes": "GT Infra (04/02/2026; 13/07/2026); Agência iNFRA (03/07/2026); MPF (15/07/2026); CNN Brasil (24/07/2026); Brasil 247 (17/09/2026); O Liberal (09/10/2026).",
+    "camera": {
+     "center": [
+      -55.26,
+      -3.47
+     ],
+     "zoom": 9.5,
+     "pitch": 45,
+     "bearing": -25
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.64,
+     -2.68
+    ]
+   },
+   "properties": {
+    "id": "hv_planalto",
+    "percurso": "hidrovia",
+    "ordem": 7,
+    "titulo": "Planalto santareno: a soja chamada pelo porto",
+    "categoria": "ruptura",
+    "resumo": "O terminal de Santarém reorganizou a terra muito além da beira do rio.",
+    "texto": "- Em 2002, um ano antes da abertura do porto da Cargill, 600 agricultores venderam suas terras.\n- Entre 2000 e 2005, 90% dos imóveis da BR-163 entre Santarém e Belterra mudaram de mãos.\n- Mojuí dos Campos: soja de 3 mil ha (2005) para **51,4 mil ha (2023)**; 19 de ~130 comunidades desapareceram.\n- Belterra (jun/2024): escola com ~300 alunos teve aulas suspensas por exposição a agrotóxicos.\n- Munduruku e Apiaká do Planalto: deriva de veneno, igarapé aterrado e 101 registros de CAR sobre o território autodemarcado.\n\n> “A soja é uma praga para nós.” — cacique Josenildo Cruz, Açaizal",
+    "imagens": [
+     {
+      "src": "media/hv_soja.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "MAB/Brasil de Fato (11/12/2024); Terra de Direitos (2021); FASE et al. (2005); Agência Pública (01/10/2019).",
+    "camera": {
+     "center": [
+      -54.64,
+      -2.68
+     ],
+     "zoom": 10,
+     "pitch": 50,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas2",
+     "hotspot": "h2_soja"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.655,
+     -2.468
+    ]
+   },
+   "properties": {
+    "id": "hv_maica",
+    "percurso": "hidrovia",
+    "ordem": 8,
+    "titulo": "Lago do Maicá: portos contra quilombos e pescadores",
+    "categoria": "territorio",
+    "resumo": "Uma APA transformada em zona portuária pelo Plano Diretor.",
+    "texto": "**Projetos:** TUP da Embraps (4,8–7,2 Mt/ano; licenciamento suspenso desde 2016) e porto da Atem's (licenças anuladas em 15/09/2025; extensão para grãos em recurso no TRF1).\n\n**Quem vive do lago:** ~1.500 pescadores (Z-20); o Maicá abasteceria ~30% do peixe de Santarém. Quilombos Pérola do Maicá, Murumuru, Murumurutuba, Tiningu, Bom Jardim, Arapemã, Saracura e outros.\n\n**Disputa urbana:** a Lei 20.534/2018 transformou o Maicá de APA em área portuária; em 2022 o TJPA, em ação da FOQS e do CITA, proibiu a Prefeitura de autorizar novos portos. Em dez/2024, liminar na ACP 1014317-12.2024 exigiu EIA com análise climática e consulta prévia antes de qualquer licença.\n\n> “Os navios e as balsas espantam os cardumes.” — Ana Cleide Vasconcelos, quilombo Arapemã",
+    "imagens": [
+     {
+      "src": "media/hv_maica.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Terra de Direitos (2016; 2017; 28/06/2024; 31/10/2025); MPF (02/07/2025; 17/09/2025; 20/10/2025); IHU (24/08/2022).",
+    "camera": {
+     "center": [
+      -54.655,
+      -2.468
+     ],
+     "zoom": 12,
+     "pitch": 55,
+     "bearing": 20
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.716,
+     -2.425
+    ]
+   },
+   "properties": {
+    "id": "hv_ocupacao",
+    "percurso": "hidrovia",
+    "ordem": 9,
+    "titulo": "33 dias no terminal da Cargill",
+    "categoria": "territorio",
+    "resumo": "A ocupação indígena que derrubou o decreto de privatização dos rios.",
+    "texto": "- **22/01/2026** — 14 povos do Baixo Tapajós ocupam o terminal da Cargill em Santarém.\n- **06/02** — o governo suspende o pregão de dragagem.\n- **18/02** — o TRF1 suspende a ordem de desocupação obtida por Cargill e Amport, a pedido do MPF e da DPU.\n- **19/02** — barqueata; cerca de 400 pessoas abordam uma balsa de grãos.\n- **23/02** — Decreto 12.856 revoga o Decreto 12.600/2025, que incluía Tapajós, Madeira e Tocantins no Programa Nacional de Desestatização (~3.056 km).\n\nLema do movimento: *rio não é mercadoria*.\n\n> “Esse rio é nossa rua. É nossa fonte de alimento.” — Auricélia Arapiuns",
+    "imagens": [
+     {
+      "src": "media/hv_santarem.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "InfoAmazonia (19/02/2026; 23/02/2026); Agência Brasil (21/02/2026); Alma Preta (18/02/2026); Repórter Brasil (19/02/2026).",
+    "camera": {
+     "center": [
+      -54.716,
+      -2.425
+     ],
+     "zoom": 13.5,
+     "pitch": 60,
+     "bearing": -30
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_porto"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.75,
+     -2.385
+    ]
+   },
+   "properties": {
+    "id": "hv_seres",
+    "percurso": "hidrovia",
+    "ordem": 10,
+    "titulo": "Seres e seus caminhos no encontro das águas",
+    "categoria": "aguas",
+    "resumo": "Peixes, botos, quelônios, peixe-boi e sedimentos também usam o rio como rota.",
+    "texto": "| Ser | Caminho | Interferência da hidrovia |\n|---|---|---|\n| Dourada | Andes ↔ estuário (8.000–11.600 km) | Barragens bloqueiam; ruído e dragagem não estudados |\n| Jaraqui, matrinxã | Piracema entre águas claras e brancas; dispersão até ~300 km | Turbidez, alteração de lagos e bancos |\n| Boto e tucuxi | Canais, lagos e floresta alagada; sonar de ~40 m | Ambos \"Em Perigo\" (boto IUCN 2018; tucuxi IUCN 2020 e lista brasileira 2026); ruído de barcaças é lacuna |\n| Quelônios | Praias da vazante → lagos e igapós | Dragagem de praias; ruído sobre vocalização |\n| Peixe-boi | Lagos de várzea → refúgios na vazante | Novos gargalos; regime de cheia alterado |\n| Sedimento/mercúrio | Garimpo → baixo Tapajós | Dragagem remobiliza mercúrio |\n\nAs linhas tracejadas da camada **Caminhos não humanos** são esquemas, não rastreamentos.\n\nPara os Munduruku, os peixes têm mães, e certos lugares do rio são onde eles se procriam — derrubar uma cachoeira é \"matar as Mães dos Peixes\".",
+    "imagens": [
+     {
+      "src": "media/hv_encontro.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Duponchelle et al. (2016); Hauser et al. (2024); Ribeiro & Petrere (1990); Ladegaard et al. (2015); da Silva et al. (2018); MapBiomas (2022); Carta Munduruku (Cimi, 2013); Loures & Moreira (2022).",
+    "camera": {
+     "center": [
+      -54.75,
+      -2.385
+     ],
+     "zoom": 10.5,
+     "pitch": 50,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_encontro"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.955,
+     -2.49
+    ]
+   },
+   "properties": {
+    "id": "hv_lacunas",
+    "percurso": "hidrovia",
+    "ordem": 11,
+    "titulo": "O que ainda não está nos mapas",
+    "categoria": "territorio",
+    "resumo": "Lacunas de informação que uma contra-cartografia pode preencher.",
+    "texto": "A pesquisa não encontrou registros sistemáticos de:\n- **Banzeiro e acidentes**: canoas viradas, redes destruídas ou pesqueiros perdidos por comboios no Tapajós.\n- **Ruído subaquático**: medições do efeito de barcaças sobre botos, peixes e quelônios na Amazônia.\n- **Ligação portos ↔ Alter do Chão**: a pressão fundiária na APA é documentada, mas não sua relação direta com os terminais.\n- **Rotas de pesca**: nenhuma cartografia comunitária dos pesqueiros e caminhos de canoa dos pescadores do Tapajós foi localizada.\n- **Georreferenciamento** das sete passagens de dragagem.\n\nEssas lacunas indicam onde o trabalho de campo — com pescadores, Borari, quilombolas e Munduruku — pode produzir mapas próprios.",
+    "imagens": [
+     {
+      "src": "media/hv_rede.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Síntese da pesquisa (out/2026).",
+    "camera": {
+     "center": [
+      -54.955,
+      -2.49
+     ],
+     "zoom": 10.5,
+     "pitch": 45,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.31,
+     -3.4
+    ]
+   },
+   "properties": {
+    "id": "en_fundo",
+    "percurso": "encantados",
+    "ordem": 1,
+    "titulo": "O Fundo sob o canal",
+    "categoria": "encantes",
+    "resumo": "Para quem vive do rio, a dragagem não mexe só em areia: mexe na morada dos encantados.",
+    "texto": "**Cosmologia.** No Baixo Tapajós o cosmos tem três patamares — céu, terra e fundo — habitados por santos, gente comum e encantados. O **Encante** é uma cidade rica e brilhante sob rios e igarapés, morada de caboclos, mestres e antigos pajés; quem entra n'água sem pedir licença pode ser castigado.\n\n**O conflito.** O projeto de dragagem prevê 4,54 milhões de m³ em sete passagens entre Santarém e Itaituba. Nas falas de 2026 o leito aparece como morada:\n- Auricélia Arapiun: dragar é “mexer lá no fundo do rio, na morada dos peixes e dos encantados”.\n- Associação Iwipurãga (Borari): o rio é “território, alimento, caminho, memória e morada dos nossos encantados”.\n\n> “Essa luta é política, mas ela é espiritual também.” — Auricélia Arapiun\n\n**Leitura técnica.** Nenhum estudo ambiental, licença ou edital da dragagem considera os encantados ou os lugares de respeito como componente a ser avaliado.",
+    "imagens": [
+     {
+      "src": "media/hv_canal.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Romcy-Pereira, *Os verdadeiros donos da terra* (2018); Vaz Filho & Carvalho, *Isso tudo é encantado* (2013); Amazônia Real (22/01/2026); Agência Pública (05/02/2026; 25/02/2026); GT Infra (2026).",
+    "camera": {
+     "center": [
+      -55.31,
+      -3.4
+     ],
+     "zoom": 9.5,
+     "pitch": 45,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_fundo"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.728,
+     -2.416
+    ]
+   },
+   "properties": {
+    "id": "en_cargill",
+    "percurso": "encantados",
+    "ordem": 2,
+    "titulo": "Um cemitério sob o terminal",
+    "categoria": "encantes",
+    "resumo": "Vera Paz, Sítio Porto e a fala dos encantados durante a COP30.",
+    "texto": "- O terminal da Cargill ocupa a antiga Praia da Vera Paz e o Sítio Porto, o maior sítio arqueológico tapajônico (35,7 ha).\n- Para as lideranças da ocupação de 2026, o lugar é **território sagrado** e cemitério de antepassados.\n- A ocupação de 33 dias (jan–fev/2026) foi narrada também como resposta a um chamado espiritual.\n\n> “Durante a COP, os encantados falaram que era para nós voltarmos para o território” — Auricélia Arapiun\n\n**Implicação.** A disputa não opõe apenas “desenvolvimento” e “meio ambiente”: os encantados e os mortos aparecem como agentes políticos que orientam a ação.",
+    "imagens": [
+     {
+      "src": "media/hv_santarem.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Agência Pública (25/02/2026); Amazônia Latitude (20/02/2026); Terra de Direitos (2021); Stenborg & Schaan (2012).",
+    "camera": {
+     "center": [
+      -54.728,
+      -2.416
+     ],
+     "zoom": 13.5,
+     "pitch": 60,
+     "bearing": -30
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_porto"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.958,
+     -2.508
+    ]
+   },
+   "properties": {
+    "id": "en_lagoverde",
+    "percurso": "encantados",
+    "ordem": 3,
+    "titulo": "Lago Verde: cobra-grande, Norato e o túnel dos botos",
+    "categoria": "encantes",
+    "resumo": "O coração da cosmologia Borari e o que a pressão sobre Alter do Chão ameaça.",
+    "texto": "- Sob o Lago Verde vive uma cobra-grande de cerca de 2 mil metros, com a cabeça “debaixo do pé da santa”.\n- Um túnel sob a Ilha do Amor liga o Tapajós ao lago e é usado pelos botos.\n- Caboclos e seus encantes: Lago Verde, Serra do Mocotó, Terra Vermelha, Pedreira/Arioca, Coroa de Areia.\n- O boto (vermelho ou tucuxi) aparece ao mesmo tempo como bicho e encantado, capaz de “roubar a sombra” de quem vai à beira em tempo proibido; o pajé negocia a cura.\n\n**Ameaças documentadas:** turismo, especulação imobiliária e grilagem, assoreamento e a exclusão do Lago Verde das delimitações oficiais — razão central da autodemarcação Borari (2024–2025).\n\n*Não foi encontrada fonte que ligue diretamente a dragagem a este lugar.*",
+    "imagens": [],
+    "fontes": "Romcy-Pereira (2018), p. 250, 267, 303–304; Relatório de Autodemarcação da TI Borari de Alter do Chão (2025).",
+    "camera": {
+     "center": [
+      -54.958,
+      -2.508
+     ],
+     "zoom": 13,
+     "pitch": 60,
+     "bearing": 20
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_cobra"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.02,
+     -2.43
+    ]
+   },
+   "properties": {
+    "id": "en_protocolos",
+    "percurso": "encantados",
+    "ordem": 4,
+    "titulo": "Protocolos que protegem os encantados",
+    "categoria": "territorio",
+    "resumo": "Três protocolos de consulta do Baixo Tapajós escrevem os encantados no direito.",
+    "texto": "| Protocolo | O que garante |\n|---|---|\n| Tupinambá (2018) | preservar “espaços sagrados onde vivem os nossos seres encantados”; pajés no conselho |\n| Kumaruara (2021) | proteger os lugares sagrados e “garantir a existência dos nossos Encantados” |\n| TI Cobra Grande — Tapajó, Jarakí, Arapiun (2021) | inclui **os espíritos encantados** entre os que devem ser consultados; cita a Ponta do Toronó, onde descansa o pajé Merandolino |\n| Munduruku (2014) | consultar os pajés e os que conhecem os lugares sagrados; locais sagrados não podem ser filmados |\n\n**No Estado:** a Recomendação 6/2026 do MPF reconhece Santarenzinho como local sagrado Munduruku, mas não usa as categorias “dano espiritual” ou “patrimônio imaterial”. Não foi encontrada decisão judicial que reconheça dano espiritual com esse nome.\n\n*Ponto posicionado de forma aproximada (Ponta do Toronó não georreferenciada na fonte).*",
+    "imagens": [],
+    "fontes": "Protocolos de Consulta Tupinambá (2018), Kumaruara (2021), TI Cobra Grande (2021), Munduruku (2014); MPF, Recomendação 6/2026.",
+    "camera": {
+     "center": [
+      -55.02,
+      -2.43
+     ],
+     "zoom": 11,
+     "pitch": 45,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.73,
+     -2.395
+    ]
+   },
+   "properties": {
+    "id": "en_tucuxi",
+    "percurso": "encantados",
+    "ordem": 5,
+    "titulo": "Tucuxi: o boto que ajuda, agora Em Perigo",
+    "categoria": "aguas",
+    "resumo": "Desde junho de 2026 o tucuxi está na lista nacional de espécies ameaçadas.",
+    "texto": "**Status**\n- IUCN: **Em Perigo (EN), 2020**.\n- Brasil: **EN** pela Portaria MMA nº 1.704, de 16/06/2026 — primeira vez na lista nacional (era “Quase Ameaçado” no PAN de 2019).\n- Em Mamirauá a população cai à metade a cada ~9 anos (da Silva et al., 2018).\n\n**No Tapajós** (só ocorre abaixo das corredeiras de São Luiz)\n- Estimativas: 3.371 (2014) → 1.577 (2017) → 2.208 (2022). Os autores pedem cautela, mas apontam declínio.\n- Ameaças: captura acidental em redes, tráfego de embarcações, mercúrio, secas extremas — em Tefé (2023) morreram 31 tucuxis entre 209 golfinhos.\n- Ruído de comboios sobre o tucuxi: **não há estudo publicado**.\n\n**Na cosmologia.** O tucuxi é descrito como benfazejo: empurra os afogados para a praia e afugenta os botos vermelhos (Galvão, 1955). A oposição não é rígida — no Baixo Tapajós, o boto das duas espécies pode ser bicho e encantado.",
+    "imagens": [
+     {
+      "src": "media/hv_encontro.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "IUCN (da Silva et al., 2020); Portaria MMA 1.704/2026; Pavanato et al. (2016); WWF-Brasil/Mamirauá (2022); Galvão (1955); Vasconcelos & Süssekind (2020); Romcy-Pereira (2018).",
+    "camera": {
+     "center": [
+      -54.73,
+      -2.395
+     ],
+     "zoom": 11.5,
+     "pitch": 50,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas1",
+     "hotspot": "h1_boto"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.8,
+     -2.43
+    ]
+   },
+   "properties": {
+    "id": "en_boto",
+    "percurso": "encantados",
+    "ordem": 6,
+    "titulo": "Boto-vermelho: gente do fundo com mercúrio no corpo",
+    "categoria": "aguas",
+    "resumo": "Encantado sedutor, espécie Em Perigo, sentinela da contaminação do rio.",
+    "texto": "**Status:** IUCN **EN (2018)**; Brasil **EN** (2022 e 2026). População de Mamirauá cai à metade a cada ~10 anos; projeção de chegar a 5% em 24–45 anos (Martin & da Silva, 2022).\n\n**No Tapajós**\n- 1.814 (2014) → 1.572 (2017) → 1.604 (2022).\n- Remoção potencial suportável (PBR): apenas **11 a 18 botos por ano** — o estudo já citava as hidrovias de soja entre as obras planejadas.\n- Mercúrio detectado em 100% dos 46 golfinhos amostrados na Amazônia e no Orinoco; nos botos do Tapajós, 0,55 a **2,6 mg/kg**, o maior valor registrado para a subespécie.\n- Uso como isca de piracatinga: moratória desde 2015, por prazo indeterminado desde 2023.\n\n**Na cosmologia.** “Gente do fundo”, “pessoa imitando bicho”: pode curar ou malinar. Ferir ou matar um boto é perigoso — quem o faz pode ser perturbado pelo encante.",
+    "imagens": [],
+    "fontes": "da Silva et al. (2018); Martin & da Silva (2022); Pavanato et al. (2016); Mosquera-Guerra et al. (2019); Portaria Interministerial 4/2023; Maués (2006); Vasconcelos & Süssekind (2020).",
+    "camera": {
+     "center": [
+      -54.8,
+      -2.43
+     ],
+     "zoom": 11,
+     "pitch": 50,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.24,
+     -4.47
+    ]
+   },
+   "properties": {
+    "id": "en_pedrais",
+    "percurso": "encantados",
+    "ordem": 7,
+    "titulo": "Pedrais: onde vivem as mães dos peixes",
+    "categoria": "encantes",
+    "resumo": "O derrocamento ameaça corredeiras que são lugares de procriação e moradas.",
+    "texto": "- Para os Munduruku, todos os animais têm mães; corredeiras e cachoeiras são lugares onde os peixes se procriam (carta de 2013).\n- Na COP30, Tupinambá e Munduruku denunciaram que a hidrovia abre caminho para o **derrocamento de pedrais sagrados**.\n- O mesmo trecho guarda Daje Kapap Eypi, a travessia dos porcos de Karosakaybu, que seria alagada pela UHE São Luiz (arquivada em 2016).\n\n> “Vão tirar nossos pedrais, nossos peixes, nosso alimento, e nossos lugares sagrados.” — pajé Nato Tupinambá\n\n**Ecologia.** Pedrais e corredeiras concentram desova e oxigenação; no Tocantins, o derrocamento do Pedral do Lourenço afeta mais de 20 espécies ameaçadas.",
+    "imagens": [
+     {
+      "src": "media/hv_fechos.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Carta Munduruku (Cimi, 2013); Amazônia Real (12/11/2025); Repórter Brasil (14/11/2025); Pariri (2018); Mongabay (06/2025).",
+    "camera": {
+     "center": [
+      -56.24,
+      -4.47
+     ],
+     "zoom": 11.5,
+     "pitch": 55,
+     "bearing": 0
+    },
+    "atlas": {
+     "id": "atlas3",
+     "hotspot": "h3_fechos"
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -56.77,
+     -9.35
+    ]
+   },
+   "properties": {
+    "id": "en_karobixexe",
+    "percurso": "encantados",
+    "ordem": 8,
+    "titulo": "Karobixexe: o precedente de Sete Quedas",
+    "categoria": "ruptura",
+    "resumo": "Quando uma cachoeira sagrada foi dinamitada para uma hidrelétrica da mesma rota.",
+    "texto": "- Em 2013, a cachoeira de Sete Quedas (Karobixexe), no rio Teles Pires, foi dinamitada para a UHE Teles Pires — parte do eixo Teles Pires–Tapajós.\n- Doze urnas funerárias foram retiradas e levadas a Alta Floresta (MT); os Munduruku as resgataram em 2019.\n- O Dekoka'a (Morro dos Macacos) foi destruído pela UHE São Manoel.\n\n> “Quando eles dinamitaram a cachoeira, eles mataram as Mães dos Peixes” — Eurico Kirixi\n\n> “A gente vai morrer no espírito também.” — Kirixi Biwün\n\n**Por que importa para a hidrovia:** é o caso documentado em que uma obra da mesma rota logística produziu dano espiritual reconhecido pelas comunidades — e não reconhecido pelo licenciamento.\n\n*Localização aproximada.*",
+    "imagens": [],
+    "fontes": "Loures & Moreira, *Antropolítica* 54(1), 2022; IHU (27/11/2014); Branford, Moreira & Torres (Mongabay, 2017).",
+    "camera": {
+     "center": [
+      -56.77,
+      -9.35
+     ],
+     "zoom": 10,
+     "pitch": 50,
+     "bearing": 0
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -54.635,
+     -2.45
+    ]
+   },
+   "properties": {
+    "id": "en_parentes",
+    "percurso": "encantados",
+    "ordem": 9,
+    "titulo": "Outros parentes ameaçados nas várzeas",
+    "categoria": "aguas",
+    "resumo": "Peixe-boi, ariranha, iaçá e quelônios: a lista nacional de 2026 e o rio.",
+    "texto": "| Espécie | Brasil (2026) | Relação com a hidrovia |\n|---|---|---|\n| Peixe-boi-da-amazônia | VU | tráfego de barcos; gargalos na vazante |\n| Ariranha | EN (antes VU) | mercúrio via peixes |\n| Iaçá (*Podocnemis sextuberculata*) | EN (nova) | praias e bancos de areia |\n| Tartaruga-da-amazônia | não listada (CR recomendado pelo TTWG) | dragagem em Monte Cristo; ruído sobre vocalização |\n| Tambaqui | VU (Portaria 1.667/2026) | lagos de várzea |\n\nNa cosmologia do encante, o que para os humanos são objetos, para os encantados são animais: bancos são tartarugas, cintos são poraquês. Ameaçar os bichos é também desfazer o mundo do fundo.",
+    "imagens": [
+     {
+      "src": "media/hv_maica.jpg",
+      "legenda": "Detalhe das colagens do projeto (Autoral, 2026)"
+     }
+    ],
+    "fontes": "Portarias MMA 1.704/2026 e 1.667/2026; Forero-Medina et al. (2019); Mongabay (28/04/2026); Romcy-Pereira (2018), p. 272–273.",
+    "camera": {
+     "center": [
+      -54.635,
+      -2.45
+     ],
+     "zoom": 11.5,
+     "pitch": 50,
+     "bearing": 0
+    }
+   }
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "fonte": "PRODES/INPE — recorte da área de estudo (arquivos desmatamento.1 e desmatamento.2)",
+ "unidade": "km²",
+ "anterior_2008_km2": 39827.9,
+ "anos": [
+  {
+   "ano": 2008,
+   "poligonos": 5758,
+   "km2": 807.6
+  },
+  {
+   "ano": 2009,
+   "poligonos": 4963,
+   "km2": 633.0
+  },
+  {
+   "ano": 2010,
+   "poligonos": 5688,
+   "km2": 684.1
+  },
+  {
+   "ano": 2011,
+   "poligonos": 3913,
+   "km2": 473.6
+  },
+  {
+   "ano": 2012,
+   "poligonos": 3013,
+   "km2": 422.1
+  },
+  {
+   "ano": 2013,
+   "poligonos": 3135,
+   "km2": 384.1
+  },
+  {
+   "ano": 2014,
+   "poligonos": 3721,
+   "km2": 440.8
+  },
+  {
+   "ano": 2015,
+   "poligonos": 9756,
+   "km2": 491.5
+  },
+  {
+   "ano": 2016,
+   "poligonos": 5032,
+   "km2": 433.9
+  },
+  {
+   "ano": 2017,
+   "poligonos": 7209,
+   "km2": 778.4
+  },
+  {
+   "ano": 2018,
+   "poligonos": 4812,
+   "km2": 634.0
+  },
+  {
+   "ano": 2019,
+   "poligonos": 6587,
+   "km2": 1073.6
+  },
+  {
+   "ano": 2020,
+   "poligonos": 5593,
+   "km2": 939.6
+  },
+  {
+   "ano": 2021,
+   "poligonos": 6225,
+   "km2": 1213.4
+  },
+  {
+   "ano": 2022,
+   "poligonos": 9588,
+   "km2": 1243.3
+  },
+  {
+   "ano": 2023,
+   "poligonos": 7717,
+   "km2": 753.8
+  },
+  {
+   "ano": 2024,
+   "poligonos": 8874,
+   "km2": 801.8
+  },
+  {
+   "ano": 2025,
+   "poligonos": 6823,
+   "km2": 565.0
+  }
+ ],
+ "total_2008_2025_km2": 12773.6
+}

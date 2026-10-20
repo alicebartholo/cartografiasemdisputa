@@ -1,0 +1,9 @@
+{
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    { "source": "/(.*)\\.geojson", "headers": [ { "key": "Content-Type", "value": "application/geo+json; charset=utf-8" } ] },
+    { "source": "/atlas/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800" } ] },
+    { "source": "/dossie/img/(.*)", "headers": [ { "key": "Cache-Control", "value": "public, max-age=604800" } ] }
+  ]
+}

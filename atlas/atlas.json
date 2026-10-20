@@ -1,0 +1,1162 @@
+{
+ "atlases": [
+  {
+   "id": "colagem1",
+   "titulo": "A origem colonial dos mapas",
+   "subtitulo": "O truque de Deus, a régua e a fabricação do vazio: cartas coloniais rasgadas sobre a cianotipia do Baixo Tapajós.",
+   "tipo": "tiles",
+   "src": "atlas/colagem1",
+   "capa": "atlas/colagem1/preview.jpg",
+   "geo": [
+    -55.6,
+    -3.6
+   ],
+   "serie": "Colagens",
+   "hotspots": [
+    {
+     "id": "c1_merc",
+     "x": 0.1979,
+     "y": 0.4352,
+     "categoria": "capital",
+     "titulo": "Mercator: a profecia etnocêntrica",
+     "resumo": "A Europa no centro geométrico do globo.",
+     "texto": "A projeção de Mercator (1569) posicionou a Europa no centro do globo, inflando as metrópoles coloniais e reduzindo a proporção das terras do Sul Global — uma verdadeira profecia geopolítica etnocêntrica.\n\nNa colagem, o planisfério é rasgado e sobreposto: a geometria que pretende ser neutra aparece como camada, não como verdade.",
+     "imagens": []
+    },
+    {
+     "id": "c1_port",
+     "x": 0.0938,
+     "y": 0.2778,
+     "categoria": "capital",
+     "titulo": "A carta portulano e a bula",
+     "resumo": "Linhas de rumo, rosas dos ventos, terras a repartir.",
+     "texto": "Cartas náuticas como esta acompanharam a divisão do Novo Mundo pela Bula Inter Caetera e pelo Tratado de Tordesilhas (1493–1494): papas e reis repartiram terras e oceanos traçando um meridiano sobre a folha impressa, sem qualquer referência ao terreno real ou aos povos que o habitavam.",
+     "imagens": []
+    },
+    {
+     "id": "c1_tord",
+     "x": 0.275,
+     "y": 0.1667,
+     "categoria": "capital",
+     "titulo": "O meridiano de Tordesilhas",
+     "resumo": "A sintaxe euclidiana do controle territorial.",
+     "texto": "Para Brian Harley, a geometria dos mapas é uma das três estruturas veladas que garantem a eficácia da cartografia como dispositivo de dominação, ao lado dos silêncios e da hierarquização. O meridiano tracejado em vermelho atravessa toda a colagem: continentes inteiros divididos por linhas retas desenhadas sobre a mesa de negociação.",
+     "imagens": [],
+     "fontes": "HARLEY, Brian. Mapas, saber e poder."
+    },
+    {
+     "id": "c1_ortelius",
+     "x": 0.3306,
+     "y": 0.1337,
+     "categoria": "capital",
+     "titulo": "Theatrum Orbis Terrarum (1570)",
+     "resumo": "A Europa como rainha no trono.",
+     "texto": "No frontispício do atlas de Abraham Ortelius, a Europa é personificada como uma rainha emoldurada em um trono supremo, acima dos continentes asiático, africano e americano. As tendências à hierarquização cartográfica espelham e reeditam a hierarquia social e política das elites.",
+     "imagens": []
+    },
+    {
+     "id": "c1_fry",
+     "x": 0.1354,
+     "y": 0.7963,
+     "categoria": "capital",
+     "titulo": "O mapa da “parte habitada” da Virgínia",
+     "resumo": "Silêncios cartográficos (Fry & Jefferson, 1751).",
+     "texto": "No *A Map of the Inhabited Part of Virginia*, as nações e aldeias indígenas foram intencionalmente omitidas. Os silêncios cartográficos exercem uma carga política tão violenta quanto aquilo que é explicitamente representado: constroem a narrativa de que os colonos eram os primeiros habitantes do lugar.",
+     "imagens": []
+    },
+    {
+     "id": "c1_snark",
+     "x": 0.4062,
+     "y": 0.6759,
+     "categoria": "capital",
+     "titulo": "Terra nullius?",
+     "resumo": "O mapa em branco como promessa de posse.",
+     "texto": "A folha vazia, emoldurada por pontos cardeais, é a imagem da “tabula rasa”: a abstração gráfica atenua a consciência de que existem seres humanos e não humanos vivendo na paisagem, fabricando a ilusão de uma *terra nullius* que desvincula as decisões de expropriação de suas consequências.",
+     "imagens": []
+    },
+    {
+     "id": "c1_regua",
+     "x": 0.5417,
+     "y": 0.9352,
+     "categoria": "capital",
+     "titulo": "A régua (ruler, regente)",
+     "resumo": "O artesanato da certeza.",
+     "texto": "Como analisa Tim Ingold, a ordenação geométrica apoia-se no uso da régua — *ruler*, termo etimologicamente idêntico a regente. Ao aplicar a régua sobre o papel, o soberano impõe o “artesanato da certeza” contra o movimento fluido e tátil do corpo pelo chão.",
+     "imagens": []
+    },
+    {
+     "id": "c1_vazio",
+     "x": 0.6615,
+     "y": 0.5,
+     "categoria": "capital",
+     "titulo": "O carimbo do vazio demográfico",
+     "resumo": "A tecnologia de Estado que atravessa a formação do Brasil.",
+     "texto": "A produção do “vazio demográfico” pela técnica cartográfica converteu-se em persistente tecnologia de Estado: de Brasília à Doutrina de Segurança Nacional (“ocupar para não entregar”), que embasou a abertura da Transamazônica e da BR-163.",
+     "imagens": [],
+     "geo": [
+      -55.0,
+      -3.2
+     ],
+     "zoom": 8,
+     "ponto": "p_br163"
+    },
+    {
+     "id": "c1_hidro",
+     "x": 0.6833,
+     "y": 0.6296,
+     "categoria": "capital",
+     "titulo": "A calha reduzida a lâmina d’água",
+     "resumo": "Hidrovia, dragagem, derrocamento.",
+     "texto": "Nos mapas da ANTAQ e dos ministérios de infraestrutura, a calha do Tapajós é reduzida a uma lâmina d’água bidimensional, fatiada por polígonos de dragagem, derrocamento de pedrais e eixos de escoamento para a Ferrogrão e a BR-163.",
+     "imagens": [],
+     "geo": [
+      -55.3,
+      -3.4
+     ],
+     "zoom": 8.5,
+     "ponto": "p_miritituba"
+    },
+    {
+     "id": "c1_nim",
+     "x": 0.901,
+     "y": 0.25,
+     "categoria": "territorio",
+     "titulo": "O que o mapa silencia",
+     "resumo": "O mapa etno-histórico de Curt Nimuendajú (1944).",
+     "texto": "Enquanto o planejamento desenhava clareiras geométricas, o mapa etno-histórico de Nimuendajú já registrava a presença de dezenas de povos no território. Contra o silêncio, a colagem recoloca a densidade humana sobre o papel.",
+     "imagens": []
+    },
+    {
+     "id": "c1_defo",
+     "x": 0.8958,
+     "y": 0.7222,
+     "categoria": "ruptura",
+     "titulo": "A cicatriz como única presença legível",
+     "resumo": "Desmatamento ao longo da BR-163 (PRODES).",
+     "texto": "Na cartografia colonial-modernista, a presença humana só se torna legível quando convertida em cicatriz: nas manchas poligonais do desmatamento e nos rasgões das infraestruturas. Ao lado, a forma branca da Flona aparece como “vazio” protegido entre as espinhas de peixe.",
+     "imagens": [],
+     "geo": [
+      -54.95,
+      -3.6
+     ],
+     "zoom": 9,
+     "ponto": "p_br163"
+    }
+   ]
+  },
+  {
+   "id": "colagem2",
+   "titulo": "Viver-mapear(-se)",
+   "subtitulo": "Aquatório, Fundo e encantes: fotografias de campo, fios vermelhos e a autodemarcação Borari.",
+   "tipo": "tiles",
+   "src": "atlas/colagem2",
+   "capa": "atlas/colagem2/preview.jpg",
+   "geo": [
+    -54.85,
+    -2.62
+   ],
+   "serie": "Colagens",
+   "hotspots": [
+    {
+     "id": "c2_aquatorio",
+     "x": 0.6406,
+     "y": 0.4444,
+     "categoria": "aguas",
+     "titulo": "O aquatório",
+     "resumo": "Um território vivo onde o rio ocupa o centro da existência.",
+     "texto": "Esta pesquisa investiga o Baixo Tapajós como um **aquatório**: um território vivo onde o rio organiza os fluxos de trabalho, a circulação comunitária e as alianças entre seres humanos e mais-que-humanos.\n\nEm contraposição às cartografias que convertem a paisagem em polígonos e dados vetoriais, a pergunta é: como representar a espessura de um território constituído por caminhos, memória, rastros de manejo ancestral e geografias invisíveis habitadas pelos encantados no Fundo?",
+     "imagens": [],
+     "geo": [
+      -54.97,
+      -2.5
+     ],
+     "zoom": 11.5,
+     "ponto": "p_aquabilidade",
+     "fontes": "MIRANDA & GOMES (2019); FRAXE (2000)."
+    },
+    {
+     "id": "c2_borari",
+     "x": 0.5951,
+     "y": 0.5274,
+     "categoria": "territorio",
+     "titulo": "Autodemarcação Borari",
+     "resumo": "Cartografar por conta própria como ato de soberania.",
+     "texto": "Diante de mais de 15 anos de paralisação no processo oficial de demarcação e das imprecisões dos mapas do INCRA — que deixavam fora da proteção o Lago Verde, as pontas de areia e os igarapés sagrados —, o povo Borari de Alter do Chão elaborou a cartografia do próprio território (jul./2024–fev./2025), com o NEPES/UFOPA.\n\nCombinaram sobrevoos de drone e ortofotos com a memória oral e a busca dos “lugares respeitados”: peirais, mananciais e os territórios dos Donos do Lugar e dos encantados do Fundo. O mapa comunitário foi incorporado ao processo da Funai e enviado ao MPF.\n\n*Os pontos na colagem são esquemáticos.*",
+     "imagens": [],
+     "geo": [
+      -54.97,
+      -2.52
+     ],
+     "zoom": 11.8,
+     "ponto": "p_borari",
+     "fontes": "Relatório de Autodemarcação da TI Borari de Alter do Chão (2025)."
+    },
+    {
+     "id": "c2_flags",
+     "x": 0.1198,
+     "y": 0.5926,
+     "categoria": "aguas",
+     "titulo": "Canoas no Tapajós",
+     "resumo": "Fotografia de campo.",
+     "texto": "O rio como lugar de festa, trabalho e passagem. A fotografia de campo entra na colagem como fragmento de experiência: o mapa feito com o corpo, a escuta e o percurso, e não a partir de um “lugar nenhum”.",
+     "imagens": [],
+     "geo": [
+      -54.955,
+      -2.5
+     ],
+     "zoom": 13
+    },
+    {
+     "id": "c2_resgate",
+     "x": 0.3698,
+     "y": 0.213,
+     "categoria": "encantes",
+     "titulo": "Resgate",
+     "resumo": "Fig. 01 — Fonte: Autoral, 2025.",
+     "texto": "Uma canoa à noite, borrada pelo movimento: imagem do limiar entre o visível e o invisível. As geografias do Fundo e dos Encantes não podem ser facilmente georreferenciadas — e é justamente esse limite das cartografias convencionais que a pesquisa quer tornar presente.",
+     "imagens": []
+    },
+    {
+     "id": "c2_cheia",
+     "x": 0.3646,
+     "y": 0.8296,
+     "categoria": "aguas",
+     "titulo": "A cheia",
+     "resumo": "Quando a terra é, por meses, água.",
+     "texto": "Casas cobertas até o telhado, uma palmeira emergindo: a várzea é a planície sujeita às inundações anuais. As populações que habitam os dois ambientes — terra e água — são o que Fraxe chamou de “homens anfíbios”.",
+     "imagens": [],
+     "ponto": "p_aquabilidade",
+     "fontes": "FRAXE, T. Homens anfíbios (2000)."
+    },
+    {
+     "id": "c2_sanson",
+     "x": 0.8854,
+     "y": 0.1759,
+     "categoria": "capital",
+     "titulo": "Le Cours de la Rivière des Amazones (1680)",
+     "resumo": "O rio como domínio mercantil europeu.",
+     "texto": "Nicolas Sanson cartografou a bacia amazônica para registrar o domínio mercantil europeu e a divisão política do território. Na colagem, a carta é revelada em cianotipia e ligada por fios vermelhos ao território vivido — o decalque colonial confrontado com as redes de conexão.\n\nNa obra *Não existe cartografia no mundo dos pajés* (2020), Denilson Baniwa intervém sobre uma reprodução desse mesmo mapa com um grafismo que atravessa a linha do equador.",
+     "imagens": [],
+     "fontes": "SPERLING, David. Cartografias críticas (2025)."
+    },
+    {
+     "id": "c2_cobra",
+     "x": 0.8698,
+     "y": 0.7963,
+     "categoria": "encantes",
+     "titulo": "A cobra-grande",
+     "resumo": "Norato sob o Lago Verde.",
+     "texto": "“Os antigos diziam” que a cobra-grande do Lago Verde se estende entre a serra Piroca e a igreja, com a cabeça “debaixo do pé da santa”. Bicho, mãe, cobra-grande e índios antigos são enunciados como potências de formação da paisagem.",
+     "imagens": [],
+     "geo": [
+      -54.955,
+      -2.507
+     ],
+     "zoom": 13.5,
+     "ponto": "p_cobra"
+    },
+    {
+     "id": "c2_fundo",
+     "x": 0.9115,
+     "y": 0.5,
+     "categoria": "encantes",
+     "titulo": "O Fundo",
+     "resumo": "A cidade submersa “onde tudo brilha”.",
+     "texto": "O reino encantado no fundo dos rios e igarapés: um mundo submerso semelhante a uma cidade. Os encantados ocupam os lugares em posição de donos, e por isso há lugares de respeito, pedidos de licença e interdições.",
+     "imagens": [],
+     "fontes": "GALVÃO (1955); VAZ FILHO & CARVALHO, Isso tudo é encantado (2013)."
+    },
+    {
+     "id": "c2_boto",
+     "x": 0.5104,
+     "y": 0.4907,
+     "categoria": "encantes",
+     "titulo": "O boto",
+     "resumo": "“Gente do fundo”, “pessoa imitando bicho”.",
+     "texto": "O boto encantado pode curar ou “malinar”. Atravessa do Tapajós para o Lago Verde por um túnel sob a Ilha do Amor.",
+     "imagens": [],
+     "ponto": "p_cobra"
+    },
+    {
+     "id": "c2_pal",
+     "x": 0.2656,
+     "y": 0.4722,
+     "categoria": "aguas",
+     "titulo": "Aquabilidade",
+     "resumo": "Existir sobre as águas.",
+     "texto": "A casa sobre esteios, o caminho de canoa: a aquabilidade (Miranda & Gomes, 2019) subverte a ordem que elegeu a terra como lugar primeiro da ocupação humana.",
+     "imagens": [],
+     "ponto": "p_aquabilidade"
+    },
+    {
+     "id": "c2_bispo",
+     "x": 0.349,
+     "y": 0.4481,
+     "categoria": "aguas",
+     "titulo": "Confluência",
+     "resumo": "Antônio Bispo dos Santos.",
+     "texto": "A epígrafe do trabalho: quando a gente conflui, a gente não deixa de ser a gente — passa a ser a gente e outra gente. As redes de conexão no Baixo Tapajós são confluências de rios, povos, encantados e saberes.",
+     "imagens": []
+    }
+   ]
+  },
+  {
+   "id": "colagem3",
+   "titulo": "Conflitos · Ser-Rio",
+   "subtitulo": "O rio entre o canal hidroviário e o aquatório habitado: cronologia, mercúrio e direitos da natureza.",
+   "tipo": "tiles",
+   "src": "atlas/colagem3",
+   "capa": "atlas/colagem3/preview.jpg",
+   "geo": [
+    -55.9,
+    -4.1
+   ],
+   "serie": "Colagens",
+   "hotspots": [
+    {
+     "id": "c3_barge",
+     "x": 0.1771,
+     "y": 0.2315,
+     "categoria": "capital",
+     "titulo": "O comboio",
+     "resumo": "O rio como canal de commodities.",
+     "texto": "Comboios de barcaças cruzam o Baixo Tapajós rumo aos terminais de Santarém. As corporações operam sob a ficção de que a água é apenas H2O navegável — ignorando que o rio é a “casa dos espíritos” e o sustento de humanidades anfíbias.",
+     "imagens": [],
+     "geo": [
+      -54.95,
+      -2.6
+     ],
+     "zoom": 10,
+     "ponto": "p_miritituba"
+    },
+    {
+     "id": "c3_porto",
+     "x": 0.6059,
+     "y": 0.2966,
+     "categoria": "capital",
+     "titulo": "Cargill e o Sítio Porto",
+     "resumo": "2002: o leilão do porto.",
+     "texto": "Em 2002 a Cargill venceu o leilão para arrendar a área do Porto de Santarém e ergueu um terminal de granéis sólidos. A instalação aterrou a praia de Vera Paz, privatizou a orla com cercas e bloqueou o acesso dos moradores do bairro Laguinho.\n\nO Sítio Porto (PA-ST-42), 356.950 m² ricos em Terra Preta de Índio e cerâmica inciso-ponteada datada de mais de mil anos, foi parcialmente destruído e soterrado pelo pátio de carretas e pelos silos.",
+     "imagens": [],
+     "geo": [
+      -54.7195,
+      -2.4205
+     ],
+     "zoom": 14,
+     "ponto": "p_sitioporto"
+    },
+    {
+     "id": "c3_garimpo",
+     "x": 0.4452,
+     "y": 0.8501,
+     "categoria": "ruptura",
+     "titulo": "O vale garimpeiro",
+     "resumo": "Rio das Tropas, Crepori, Idixidi.",
+     "texto": "A partir das prospecções do Projeto RADAM e das jazidas do Rio das Tropas e do Crepori, o Vale do Tapajós converteu-se na maior região garimpeira do planeta. Dragas e balsas despejam sedimentos e mercúrio nas águas do Idixidi (Rio Tapajós em Munduruku).\n\nNa TI Sawré Muybu, 57,9% dos examinados apresentaram mercúrio no sangue acima dos limites internacionais; no Rio das Tropas, 100% dos indígenas avaliados apresentaram queixas de origem neurológica.",
+     "imagens": [],
+     "geo": [
+      -56.05,
+      -4.75
+     ],
+     "zoom": 9,
+     "ponto": "p_garimpo",
+     "fontes": "Basta & Hacon (Fiocruz, 2020); Meneses et al. (2021)."
+    },
+    {
+     "id": "c3_uhe",
+     "x": 0.4138,
+     "y": 0.7497,
+     "categoria": "capital",
+     "titulo": "Hidrelétricas",
+     "resumo": "Teles Pires, São Manoel… e São Luiz do Tapajós.",
+     "texto": "O Complexo Hidrelétrico do Teles Pires provocou a inundação de cachoeiras e a destruição de sítios sagrados. Quando destruíram a cachoeira de Sete Quedas, destruíram também a morada das Mães dos Peixes e removeram ilegalmente as urnas sagradas (It’ga), provocando a expedição de retomada liderada pelas mulheres e pajés Munduruku. A UHE São Luiz do Tapajós teve o licenciamento arquivado em 2016.",
+     "imagens": [],
+     "geo": [
+      -56.25,
+      -4.45
+     ],
+     "zoom": 10,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "c3_prodes",
+     "x": 0.8906,
+     "y": 0.3519,
+     "categoria": "ruptura",
+     "titulo": "A série do desmatamento",
+     "resumo": "PRODES/INPE, recorte do projeto.",
+     "texto": "Soma anual das áreas desmatadas nos arquivos do projeto: cerca de 12,8 mil km² entre 2008 e 2025, além de quase 40 mil km² acumulados até 2007. No mapa geográfico, a camada “Intensidade 3D” mostra esse acúmulo ano a ano.",
+     "imagens": [],
+     "ponto": "p_br163"
+    },
+    {
+     "id": "c3_timeline",
+     "x": 0.2812,
+     "y": 0.7593,
+     "categoria": "capital",
+     "titulo": "Uma cronologia de vetores",
+     "resumo": "De 1970 às autodemarcações.",
+     "texto": "Os conflitos territoriais e ambientais que atravessam a bacia do Tapajós não são eventos isolados, mas o resultado de um contínuo processo de imposição infraestrutural e extrativista projetado pelo Estado e pelo capital internacional.",
+     "imagens": []
+    },
+    {
+     "id": "c3_globo",
+     "x": 0.1198,
+     "y": 0.6204,
+     "categoria": "ruptura",
+     "titulo": "O Globo e a Zona Crítica",
+     "resumo": "Earthrise (1968) e Blue Marble (1972).",
+     "texto": "O Globo é a ficção do capitalismo de expansão: a Terra como esfera azul, isolada, vista de fora. Contra ela, a Zona Crítica — a fina e porosa película entre o topo do dossel e a rocha-mãe — e o aquatório habitado por peixes, ribeirinhos, Borari, Munduruku e encantados.",
+     "imagens": [],
+     "fontes": "DANOWSKI & VIVEIROS DE CASTRO (2014); LATOUR; SPERLING (2023)."
+    },
+    {
+     "id": "c3_serrio",
+     "x": 0.8229,
+     "y": 0.0833,
+     "categoria": "aguas",
+     "titulo": "Ser-Rio, sujeito de direitos",
+     "resumo": "Quem fala em nome do Rio Tapajós?",
+     "texto": "O Novo Constitucionalismo Latino-Americano consagrou a transição do antropocentrismo ao ecocentrismo: o Rio Vilcabamba (Equador, 2010) e o Rio Atrato (Colômbia, Sentença T-622/16) foram reconhecidos como sujeitos de direitos, com “guardiões do rio”. No Brasil, as ações da Volta Grande do Xingu e da Bacia do Rio Doce foram indeferidas.\n\nReconhecer o Tapajós como Sujeito de Direitos é a consequência lógica e ética de uma pesquisa que recusa a cartografia colonial do esvaziamento.",
+     "imagens": [],
+     "geo": [
+      -55.0,
+      -2.9
+     ],
+     "zoom": 7.6,
+     "ponto": "p_encontro",
+     "fontes": "CANÇADO; TERENA; SOUZA; TAVARES. Seres-Rios (2021)."
+    },
+    {
+     "id": "c3_mercurio",
+     "x": 0.8698,
+     "y": 0.8333,
+     "categoria": "ruptura",
+     "titulo": "Mercúrio nos corpos",
+     "resumo": "O peixe como vetor.",
+     "texto": "O peixe converteu-se no vetor pelo qual “o próprio indígena vai morrer com o seu próprio veneno”.",
+     "imagens": [],
+     "ponto": "p_garimpo"
+    },
+    {
+     "id": "c3_carta",
+     "x": 0.8854,
+     "y": 0.6167,
+     "categoria": "territorio",
+     "titulo": "Carta do Povo Munduruku (2017)",
+     "resumo": "“Todo pássaro, jacaré, peixe… já foi Munduruku.”",
+     "texto": "Querem transformar em mercado aquilo que é sagrado: os rios e a floresta. Ao mapear esses conflitos, o projeto assume a defesa do Rio Tapajós como entidade viva e inviolável.",
+     "imagens": [],
+     "ponto": "p_daje"
+    }
+   ]
+  },
+  {
+   "id": "atlas1",
+   "titulo": "O Fundo",
+   "subtitulo": "Planta e corte do Ser-Rio, de Santarém a Alter do Chão: a cianotipia vista de cima e o que o rio guarda por baixo — águas, encantes e memória da terra.",
+   "tipo": "tiles",
+   "src": "atlas/atlas1",
+   "capa": "atlas/atlas1/preview.jpg",
+   "geo": [
+    -54.86,
+    -2.47
+   ],
+   "hotspots": [
+    {
+     "id": "h1_porto",
+     "x": 0.8422,
+     "y": 0.6333,
+     "categoria": "capital",
+     "titulo": "O terminal sobre a aldeia",
+     "resumo": "Silos, esteiras e estacas cravadas no maior sítio tapajônico.",
+     "texto": "As estacas do terminal atravessam a camada de terra preta onde repousam urnas e fragmentos cerâmicos. O Sítio Porto, com 35,7 ha, é o maior sítio da região tapajônica — e hoje é o chão do porto escoador de soja.",
+     "imagens": [
+      {
+       "src": "media/a1_sitio_porto.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.7195,
+      -2.4205
+     ],
+     "zoom": 14,
+     "ponto": "p_sitioporto",
+     "fontes": "Stenborg & Schaan (2012)."
+    },
+    {
+     "id": "h1_ceramica",
+     "x": 0.8472,
+     "y": 0.7864,
+     "categoria": "memoria",
+     "titulo": "Urnas, cariátides e terra preta",
+     "resumo": "A memória da terra sob a cidade de Santarém.",
+     "texto": "A cerâmica tapajônica produziu algumas das formas mais elaboradas da Amazônia pré-colonial, como os vasos de cariátides. A terra preta revela séculos de manejo que tornaram o solo fértil.",
+     "imagens": [
+      {
+       "src": "media/a1_ceramica.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.708,
+      -2.441
+     ],
+     "zoom": 13,
+     "ponto": "p_ceramica"
+    },
+    {
+     "id": "h1_muira",
+     "x": 0.9531,
+     "y": 0.9037,
+     "categoria": "memoria",
+     "titulo": "Muiraquitã",
+     "resumo": "A pedra verde em forma de sapo, objeto de prestígio e de troca.",
+     "texto": "A região de Santarém parece ter sido a principal área de produção dos muiraquitãs, que circularam em redes de troca envolvendo a Amazônia, o Caribe e a América Central (Navarro et al., 2017).",
+     "imagens": [],
+     "geo": [
+      -54.708,
+      -2.441
+     ],
+     "zoom": 13,
+     "ponto": "p_ceramica",
+     "fontes": "Navarro et al. (2017)."
+    },
+    {
+     "id": "h1_encontro",
+     "x": 0.625,
+     "y": 0.6543,
+     "categoria": "aguas",
+     "titulo": "O encontro das águas",
+     "resumo": "Águas claras e barrentas correm lado a lado.",
+     "texto": "Diante de Santarém, o Tapajós e o Amazonas se encontram sem se misturar por quilômetros. O mesmo trecho que o planejamento lê como entroncamento hidroviário é, para quem vive no rio, morada de muitos seres.",
+     "imagens": [
+      {
+       "src": "media/a1_encontro_aguas.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.725,
+      -2.405
+     ],
+     "zoom": 12,
+     "ponto": "p_encontro"
+    },
+    {
+     "id": "h1_boto",
+     "x": 0.7014,
+     "y": 0.6605,
+     "categoria": "encantes",
+     "titulo": "O boto, gente do fundo",
+     "resumo": "Ambivalente: pode curar, seduzir ou \"malinar\".",
+     "texto": "Para Heraldo Maués, o boto encantado é \"gente do fundo\", uma \"pessoa imitando bicho\". Botos podem tanto \"curar e praticar o bem\" como \"provocar doenças e malinar as pessoas\".",
+     "imagens": [],
+     "fontes": "Vasconcelos & Süssekind (2020), *Transformações do boto na Amazônia*."
+    },
+    {
+     "id": "h1_fundo",
+     "x": 0.5521,
+     "y": 0.8251,
+     "categoria": "encantes",
+     "titulo": "O Fundo: cidade dos encantados",
+     "resumo": "Um mundo submerso \"onde tudo brilha\".",
+     "texto": "Eduardo Galvão descreve o \"reino encantado\" que existe no fundo dos rios e igarapés — um mundo submerso semelhante a uma cidade, \"onde tudo brilha\". Para Florêncio Vaz Filho, o universo amazônico tem níveis conectados: as águas, os espíritos da terra, o mundo físico e o céu e o inferno cristãos.",
+     "imagens": [
+      {
+       "src": "media/a1_fundo.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "fontes": "Galvão (1955); Vaz Filho (2013)."
+    },
+    {
+     "id": "h1_cobra",
+     "x": 0.3584,
+     "y": 0.7241,
+     "categoria": "encantes",
+     "titulo": "Norato, a cobra-grande",
+     "resumo": "Tem a cabeça debaixo do pé da santa, na igreja da vila.",
+     "texto": "A cobra-grande do Lago Verde se estende entre a serra Piroca e a igreja de Alter do Chão. Suas acomodações teriam aberto o grande buraco perto da igreja, onde uma \"mãe engolia tudo\". Norato pediu para ser desencantado, mas o ritual não foi cumprido — e a cobra continua \"andando\" por ali.",
+     "imagens": [
+      {
+       "src": "media/a1_cobra.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.955,
+      -2.507
+     ],
+     "zoom": 14,
+     "ponto": "p_cobra",
+     "fontes": "*Os verdadeiros donos da terra*."
+    },
+    {
+     "id": "h1_tunel",
+     "x": 0.2374,
+     "y": 0.7288,
+     "categoria": "encantes",
+     "titulo": "O túnel dos botos",
+     "resumo": "Sob a Ilha do Amor, uma passagem entre o rio e o lago.",
+     "texto": "O corpo da cobra atravessa a ponta de areia da Ilha do Amor por um túnel subaquático, usado ainda hoje pelos botos que passam do Tapajós para o Lago Verde e vice-versa.",
+     "imagens": [],
+     "geo": [
+      -54.952,
+      -2.499
+     ],
+     "zoom": 14,
+     "ponto": "p_cobra"
+    },
+    {
+     "id": "h1_borari",
+     "x": 0.2319,
+     "y": 0.6572,
+     "categoria": "territorio",
+     "titulo": "Autodemarcação Borari",
+     "resumo": "Marcos fixados pelo próprio povo, 2024–2025.",
+     "texto": "A TI Borari de Alter do Chão aguarda a demarcação desde 2003. Diante das inconsistências dos mapas oficiais, os Borari levantaram com drone e GPS os pontos de interesse do território (jul./2024–fev./2025).",
+     "imagens": [
+      {
+       "src": "media/a1_borari.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.975,
+      -2.55
+     ],
+     "zoom": 12,
+     "ponto": "p_borari",
+     "fontes": "Relatório de Autodemarcação Borari (2025)."
+    },
+    {
+     "id": "h1_lote",
+     "x": 0.149,
+     "y": 0.6982,
+     "categoria": "capital",
+     "titulo": "Loteamentos e especulação",
+     "resumo": "Projetos turísticos e imobiliários sobre território ancestral.",
+     "texto": "Mesmo sendo destino turístico conhecido, poucos visitantes sabem que Alter do Chão é território de ocupação tradicional. O relatório Borari registra o avanço da especulação imobiliária e de focos de desmatamento na última década.",
+     "imagens": [],
+     "geo": [
+      -54.965,
+      -2.52
+     ],
+     "zoom": 13,
+     "ponto": "p_borari"
+    },
+    {
+     "id": "h1_serra",
+     "x": 0.1951,
+     "y": 0.5917,
+     "categoria": "memoria",
+     "titulo": "Serra Piroca",
+     "resumo": "Marco da paisagem e das narrativas da vila.",
+     "texto": "A serra limita o corpo da cobra-grande na narrativa dos antigos. Na toponímia do Baixo Tapajós, os nomes dos lugares guardam histórias de encantados e de curadores.",
+     "imagens": [],
+     "geo": [
+      -54.94,
+      -2.513
+     ],
+     "zoom": 14
+    },
+    {
+     "id": "h1_igapo",
+     "x": 0.0814,
+     "y": 0.7984,
+     "categoria": "aguas",
+     "titulo": "Igapó e palafitas",
+     "resumo": "A aquabilidade: existir sobre as águas.",
+     "texto": "Na floresta alagada, a casa se ergue sobre esteios e o caminho é a canoa. A aquabilidade (Miranda & Gomes, 2019) contesta o pressuposto de que toda vida humana se desenrola sobre o solo.",
+     "imagens": [
+      {
+       "src": "media/a1_igapo.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.99,
+      -2.47
+     ],
+     "zoom": 12,
+     "ponto": "p_aquabilidade"
+    },
+    {
+     "id": "h1_aquifero",
+     "x": 0.526,
+     "y": 0.9338,
+     "categoria": "aguas",
+     "titulo": "Aquífero Alter do Chão",
+     "resumo": "As águas que correm por baixo.",
+     "texto": "A formação sedimentar que leva o nome da vila guarda um dos grandes reservatórios de água subterrânea da Amazônia. O corte imaginário lembra que o território também é vertical: superfície, águas, fundo e subsolo.",
+     "imagens": [
+      {
+       "src": "media/a1_aquifero.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “O Fundo” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.95,
+      -2.51
+     ],
+     "zoom": 10
+    }
+   ],
+   "serie": "Colagens"
+  },
+  {
+   "id": "atlas2",
+   "titulo": "A linha e a rede",
+   "subtitulo": "Duas cartografias do Baixo Tapajós rasgadas lado a lado: a rede das comunidades e encantes, a linha das rodovias, hidrovia, soja e desmatamento.",
+   "tipo": "tiles",
+   "src": "atlas/atlas2",
+   "capa": "atlas/atlas2/preview.jpg",
+   "geo": [
+    -55.25,
+    -3.25
+   ],
+   "hotspots": [
+    {
+     "id": "h2_vazio",
+     "x": 0.2448,
+     "y": 0.7315,
+     "categoria": "capital",
+     "titulo": "O carimbo do \"vazio demográfico\"",
+     "resumo": "A ficção da terra nullius aplicada sobre territórios habitados.",
+     "texto": "O carimbo resume a operação cartográfica do planejamento: declarar vazio o que é denso de gente, de caminhos e de relações, para justificar eixos, lotes e grandes obras.",
+     "imagens": [
+      {
+       "src": "media/a2_vazio.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -55.2,
+      -2.9
+     ],
+     "zoom": 9,
+     "ponto": "p_resex"
+    },
+    {
+     "id": "h2_rede",
+     "x": 0.3224,
+     "y": 0.5625,
+     "categoria": "territorio",
+     "titulo": "A rede das comunidades",
+     "resumo": "Caminhos, igarapés e parentesco ligam as comunidades da Resex.",
+     "texto": "Na margem esquerda, o território é uma malha de comunidades conectadas por trilhas e cursos d’água, com roças e pesqueiros de uso comum.",
+     "imagens": [
+      {
+       "src": "media/a2_rede.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -55.25,
+      -2.68
+     ],
+     "zoom": 10,
+     "ponto": "p_resex",
+     "fontes": "Vaz Filho (2010)."
+    },
+    {
+     "id": "h2_encantes",
+     "x": 0.2664,
+     "y": 0.2972,
+     "categoria": "encantes",
+     "titulo": "Encantes: lugares de respeito",
+     "resumo": "Pontas, poços e praias com donos.",
+     "texto": "No Baixo Tapajós, boa parte dos nomes dos lugares está associada a histórias que revelam relações de domínio entre humanos e os donos do lugar, orientam condutas e lembram a biografia de curadores (Vaz Filho & Carvalho, 2013).",
+     "imagens": [
+      {
+       "src": "media/a2_encantes.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -55.0,
+      -2.45
+     ],
+     "zoom": 11,
+     "ponto": "p_cobra"
+    },
+    {
+     "id": "h2_arapiuns",
+     "x": 0.2291,
+     "y": 0.3038,
+     "categoria": "aguas",
+     "titulo": "Rio Arapiuns",
+     "resumo": "Afluente da margem esquerda, de águas pretas.",
+     "texto": "O Arapiuns desemboca no Tapajós em frente a Alter do Chão. Suas pontas e praias estão ligadas à história de pajés como Merandolino, da TI Cobra Grande.",
+     "imagens": [],
+     "geo": [
+      -55.05,
+      -2.42
+     ],
+     "zoom": 10,
+     "ponto": "p_resex",
+     "fontes": "Lima (2015)."
+    },
+    {
+     "id": "h2_cheia",
+     "x": 0.3469,
+     "y": 0.6759,
+     "categoria": "aguas",
+     "titulo": "O rio que respira",
+     "resumo": "A linha tracejada marca o limite da cheia.",
+     "texto": "Na cheia o rio avança sobre a várzea; na vazante devolve praias, pesqueiros e roças. A fronteira entre terra e água é sazonal — algo que a linha fixa do mapa não registra.",
+     "imagens": [],
+     "geo": [
+      -55.1,
+      -3.2
+     ],
+     "zoom": 10
+    },
+    {
+     "id": "h2_hidrovia",
+     "x": 0.7552,
+     "y": 0.4919,
+     "categoria": "capital",
+     "titulo": "Hidrovia do Tapajós",
+     "resumo": "O rio redesenhado como canal com quilometragem.",
+     "texto": "Comboios de barcaças descem de Miritituba a Santarém. No traçado do planejamento, o rio é um eixo medido em quilômetros e calado.",
+     "imagens": [],
+     "geo": [
+      -55.4,
+      -3.5
+     ],
+     "zoom": 9,
+     "ponto": "p_miritituba"
+    },
+    {
+     "id": "h2_miri",
+     "x": 0.6119,
+     "y": 0.8471,
+     "categoria": "capital",
+     "titulo": "Estações de transbordo",
+     "resumo": "Do caminhão para a barcaça.",
+     "texto": "Em Miritituba, os grãos que chegam pela BR-163 são embarcados em barcaças: o ponto onde a linha da estrada vira linha d’água.",
+     "imagens": [
+      {
+       "src": "media/a2_miritituba.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -55.96,
+      -4.29
+     ],
+     "zoom": 12,
+     "ponto": "p_miritituba"
+    },
+    {
+     "id": "h2_br163",
+     "x": 0.8229,
+     "y": 0.7685,
+     "categoria": "ruptura",
+     "titulo": "BR-163 e a espinha de peixe",
+     "resumo": "Vicinais perpendiculares abrem lotes e desmatamento.",
+     "texto": "A rodovia organiza o desmatamento em padrão \"espinha de peixe\". No mapa geográfico, ative o PRODES e a linha do tempo para ver o padrão real.",
+     "imagens": [
+      {
+       "src": "media/a2_br163.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.95,
+      -3.7
+     ],
+     "zoom": 9,
+     "ponto": "p_br163"
+    },
+    {
+     "id": "h2_soja",
+     "x": 0.9267,
+     "y": 0.4022,
+     "categoria": "capital",
+     "titulo": "Monocultura de soja",
+     "resumo": "O planalto convertido em superfície produtiva.",
+     "texto": "As lavouras de grãos do planalto santareno alimentam o terminal graneleiro da cidade.",
+     "imagens": [
+      {
+       "src": "media/a2_soja.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.94,
+      -2.64
+     ],
+     "zoom": 11,
+     "ponto": "p_soja"
+    },
+    {
+     "id": "h2_ferro",
+     "x": 0.6886,
+     "y": 0.9138,
+     "categoria": "capital",
+     "titulo": "Ferrogrão (EF-170)",
+     "resumo": "Ferrovia projetada para ligar o Mato Grosso a Miritituba.",
+     "texto": "Projeto ferroviário paralelo à BR-163, voltado ao escoamento de grãos para os portos do Tapajós. Os Munduruku a incluem entre os \"projetos de morte\" ao lado de hidrelétricas, hidrovias e portos.",
+     "imagens": [],
+     "geo": [
+      -55.6,
+      -4.6
+     ],
+     "zoom": 8,
+     "fontes": "*O cerco do ouro*."
+    },
+    {
+     "id": "h2_flona",
+     "x": 0.7956,
+     "y": 0.5278,
+     "categoria": "territorio",
+     "titulo": "Flona do Tapajós",
+     "resumo": "Floresta protegida entre o rio e a estrada.",
+     "texto": "Unidade de conservação de uso sustentável criada em 1974, com comunidades tradicionais vivendo do manejo da floresta.",
+     "imagens": [
+      {
+       "src": "media/a2_flona.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -55.02,
+      -3.05
+     ],
+     "zoom": 10,
+     "ponto": "p_flona"
+    },
+    {
+     "id": "h2_santarem",
+     "x": 0.8642,
+     "y": 0.1797,
+     "categoria": "capital",
+     "titulo": "Santarém e o terminal",
+     "resumo": "A cidade \"explode\" e \"implode\" em torno do porto.",
+     "texto": "A mancha urbana dispersa integra comunidades antes isoladas, enquanto o centro sofre \"implosão\" com a infraestrutura de exportação de grãos e a verticalização da orla.",
+     "imagens": [
+      {
+       "src": "media/a2_santarem.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “A linha e a rede” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -54.71,
+      -2.43
+     ],
+     "zoom": 12,
+     "ponto": "p_sitioporto",
+     "fontes": "*Santarém: o ponto de partida…* (urbe, 2019)."
+    }
+   ],
+   "serie": "Colagens"
+  },
+  {
+   "id": "atlas3",
+   "titulo": "Daje Kapap Eypi",
+   "subtitulo": "Os fechos do rio no médio Tapajós: lugar sagrado Munduruku, garimpo, mercúrio e a autodemarcação diante do mapa do Estado.",
+   "tipo": "tiles",
+   "src": "atlas/atlas3",
+   "capa": "atlas/atlas3/preview.jpg",
+   "geo": [
+    -56.2,
+    -4.38
+   ],
+   "hotspots": [
+    {
+     "id": "h3_fechos",
+     "x": 0.488,
+     "y": 0.4519,
+     "categoria": "territorio",
+     "titulo": "Os fechos do rio",
+     "resumo": "Onde os porcos estreitaram o leito para atravessar.",
+     "texto": "Daje Kapap Eypi significa \"os fechos\", em referência ao lugar onde o leito do rio foi estreitado pelos porcos que levavam o filho de Karosakaybu. É lugar sagrado para todo o povo Munduruku, do alto e do médio Tapajós.",
+     "imagens": [
+      {
+       "src": "media/a3_fechos.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.28,
+      -4.48
+     ],
+     "zoom": 12,
+     "ponto": "p_daje",
+     "fontes": "Korap Munduruku, Alfinito & Schavelzon (2024)."
+    },
+    {
+     "id": "h3_pegadas",
+     "x": 0.5248,
+     "y": 0.5221,
+     "categoria": "encantes",
+     "titulo": "As pegadas nas pedras",
+     "resumo": "Visíveis no verão, na vazante.",
+     "texto": "\"Nesse local, no verão se pode ver o rastro esculpido na rocha, que é o rastro das marcas do pé do Karosakaybu\" — Carta das lideranças Munduruku ao Governo (2013).",
+     "imagens": [],
+     "geo": [
+      -56.28,
+      -4.48
+     ],
+     "zoom": 13,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_surucucu",
+     "x": 0.6369,
+     "y": 0.4983,
+     "categoria": "encantes",
+     "titulo": "A surucucu guardiã",
+     "resumo": "Um lugar interdito.",
+     "texto": "Desgostoso pela perda do filho, Karosakaybu deixou uma cobra surucucu \"para que ninguém pudesse se fazer de deus\". O mito estabelece normas de conduta e lugares cuja violação traz consequências graves.",
+     "imagens": [],
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_porcos",
+     "x": 0.7984,
+     "y": 0.6372,
+     "categoria": "territorio",
+     "titulo": "A passagem dos porcos",
+     "resumo": "A rocha partida em forma de vala na margem direita.",
+     "texto": "\"Do lado direito da margem do Tapajós se pode ver a rocha partida em forma de vala, é a passagem dos porcos, é o caminho por onde eles desceram.\" Daje Kapap Eypi não tem bordas fixas como uma propriedade: é um lugar marcado pela memória coletiva, ligado a um território muito mais vasto.",
+     "imagens": [
+      {
+       "src": "media/a3_porcos.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.27,
+      -4.47
+     ],
+     "zoom": 12,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_autodem",
+     "x": 0.4115,
+     "y": 0.8791,
+     "categoria": "territorio",
+     "titulo": "A autodemarcação",
+     "resumo": "Guerreiras e guerreiros abrem a picada e fixam as placas.",
+     "texto": "Em 2019, a quinta etapa percorreu mais de 100 km do território e expulsou dois grupos de madeireiros. Em 2021, a autodemarcação encontrou uma pista de pouso clandestina e uma extensa área desmatada.",
+     "imagens": [
+      {
+       "src": "media/a3_autodemarcacao.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.35,
+      -4.55
+     ],
+     "zoom": 11,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_aldeia",
+     "x": 0.7233,
+     "y": 0.8515,
+     "categoria": "territorio",
+     "titulo": "Aldeias do médio Tapajós",
+     "resumo": "Roça, pesca, caça e longas expedições pelo território.",
+     "texto": "Os registros de ocupação Munduruku no médio Tapajós datam do século XVIII. As famílias usavam o território para roça, pesca e caça, com expedições longas três ou quatro vezes ao ano (FUNAI, 2013).",
+     "imagens": [],
+     "geo": [
+      -56.4,
+      -4.6
+     ],
+     "zoom": 11,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_garimpo",
+     "x": 0.7172,
+     "y": 0.222,
+     "categoria": "ruptura",
+     "titulo": "Balsas de garimpo",
+     "resumo": "Lama e mercúrio descem o rio.",
+     "texto": "Balsas e dragas revolvem o leito e lançam mercúrio na água. A pluma de sedimentos muda a cor do Tapajós por centenas de quilômetros.",
+     "imagens": [
+      {
+       "src": "media/a3_garimpo.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.05,
+      -4.75
+     ],
+     "zoom": 10,
+     "ponto": "p_garimpo"
+    },
+    {
+     "id": "h3_mercurio",
+     "x": 0.9115,
+     "y": 0.7556,
+     "categoria": "ruptura",
+     "titulo": "Mercúrio nos corpos",
+     "resumo": "Seis em cada dez acima do limite.",
+     "texto": "Todos os Munduruku testados pela pesquisa Fiocruz/WWF estavam contaminados por mercúrio; nove em cada dez nas aldeias à margem dos rios mais afetados (Basta & Hacon, 2020).",
+     "imagens": [
+      {
+       "src": "media/a3_mercurio.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "ponto": "p_garimpo",
+     "fontes": "Basta & Hacon (2020)."
+    },
+    {
+     "id": "h3_pista",
+     "x": 0.8594,
+     "y": 0.4537,
+     "categoria": "ruptura",
+     "titulo": "Pista clandestina e madeira",
+     "resumo": "Encontradas durante a autodemarcação de 2021.",
+     "texto": "Durante o percurso de mais de 15 km pelo território, os Munduruku encontraram uma pista de pouso clandestina e uma extensa área desmatada.",
+     "imagens": [
+      {
+       "src": "media/a3_pista.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.3,
+      -4.6
+     ],
+     "zoom": 11,
+     "ponto": "p_daje"
+    },
+    {
+     "id": "h3_uhe",
+     "x": 0.5156,
+     "y": 0.6667,
+     "categoria": "capital",
+     "titulo": "O fantasma da UHE São Luiz do Tapajós",
+     "resumo": "Projeto arquivado pelo IBAMA em 2016.",
+     "texto": "A hidrelétrica implicaria a supressão de cerca de 7% da TI identificada. Em 2016 o IBAMA arquivou o licenciamento — mas as pressões mudaram de forma: garimpeiros, grileiros e madeireiros.",
+     "imagens": [
+      {
+       "src": "media/a3_uhe.jpg",
+       "legenda": "Detalhe da prancha ilustrada original “Daje Kapap Eypi” (ilustração do projeto)"
+      }
+     ],
+     "geo": [
+      -56.25,
+      -4.45
+     ],
+     "zoom": 11,
+     "ponto": "p_daje",
+     "fontes": "IBAMA (2016); FUNAI (2013)."
+    }
+   ],
+   "serie": "Colagens"
+  }
+ ]
+}
