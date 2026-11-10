@@ -572,7 +572,10 @@ input[type=range]::-moz-range-thumb { background: var(--accent); border: 2px sol
 .intro-box .go .btn { border-radius: 0; background: #fff; }
 .intro-box .go .btn.primary { background: var(--accent); color: #fff; }
 .intro-box .credit { color: #fff; font-family: var(--font-ui); letter-spacing: 0; font-size: 12px; max-width: 560px; line-height: 1.5; opacity: .9; }
-.intro-quote { position: absolute; right: 4vw; bottom: 5vh; max-width: 380px; color: #fff; font-size: 12.5px; line-height: 1.5; text-align: left; background: rgba(13, 44, 69, .78); padding: 14px 16px; }
+/* título bordado (bordado à mão, digitalizado) */
+.intro-box h1.bordado-wrap { margin: 12px 0 14px; line-height: 0; font-size: 0; text-shadow: none; }
+.bordado { display: block; width: min(100%, 860px); height: auto; margin-left: -8px; filter: brightness(1.18) saturate(1.1) drop-shadow(2px 3px 2px rgba(3, 11, 31, .55)); }
+.intro-box .place.place-bordado { text-transform: uppercase; font-weight: 400; letter-spacing: .08em; font-size: clamp(15px, 1.9vw, 25px); color: #f6e7e2; margin-bottom: 30px; text-shadow: 1px 1px 0 rgba(0,0,0,.35); }
 
 /* modal sobre = página do caderno */
 .modal { background: rgba(255, 255, 255, .7); backdrop-filter: none; }
@@ -704,3 +707,56 @@ input[type=range]::-moz-range-thumb { background: var(--accent); border: 2px sol
 .dz-data table { max-width: 640px; margin-top: 6px; }
 #dzTip { position: fixed; z-index: 90; pointer-events: none; background: #0a0a0a; color: #fff; font-family: Arial, sans-serif; font-size: 12.5px; line-height: 1.35; padding: 7px 10px; max-width: 320px; box-shadow: 4px 4px 0 var(--accent); display: none; }
 @media (max-width: 860px) { .dz-mapwrap { grid-template-columns: 1fr; } }
+
+/* fichas dos pontos Borari */
+.story-content .bor-tipo { display: inline-block; margin: 0 0 10px; padding: 3px 8px; background: #d2431f; color: #fff; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: .04em; }
+.story-content .bor-h { font-family: var(--font-mono); font-size: 12.5px; text-transform: uppercase; letter-spacing: .05em; margin: 4px 0 6px; color: #a8301a; }
+.story-content .bor-txt { color: #161616; font-size: 14.5px; line-height: 1.62; text-align: justify; hyphens: auto; margin: 0 0 14px; }
+.story-content .bor-dep { margin: 0 0 16px; padding: 6px 0 6px 14px; border-left: 3px solid #d2431f; color: #222; font-style: italic; font-size: 14px; line-height: 1.5; }
+.story-content .bor-dep cite { display: block; margin-top: 6px; font-style: normal; font-size: 12px; opacity: .8; }
+
+/* ======================================================= CADERNO (folheador) */
+#cadernoView { background: #0f2f5c; color: #fff; display: none; flex-direction: column; }
+#cadernoView.on { display: flex; }
+#cadBar { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: #fff; color: #111; border-bottom: 2px solid #111; flex: 0 0 auto; }
+#cadBar h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: 17px; margin: 0 auto 0 0; color: var(--accent); letter-spacing: .01em; }
+#cadBar .btn { border-radius: 0; background: #fff; }
+#cadCount { font-family: var(--font-mono); font-size: 13px; min-width: 90px; text-align: center; }
+#cadStage { position: relative; flex: 1 1 auto; display: grid; place-items: center; overflow: hidden; touch-action: pan-y; user-select: none; }
+#cadBook { position: relative; perspective: 2600px; transition: transform .5s ease; filter: drop-shadow(0 18px 28px rgba(0,0,0,.45)); }
+#cadBook.cover { transform: translateX(-25%); }
+#cadBook.back { transform: translateX(25%); }
+#cadBook.single.cover, #cadBook.single.back { transform: none; }
+.cad-page { position: absolute; top: 0; height: 100%; width: 50%; cursor: pointer; overflow: hidden; }
+.cad-page img, .cad-leaf img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
+#cadL { left: 0; } #cadR { left: 50%; }
+#cadL:not(:empty)::after, #cadR:not(:empty)::after { content: ''; position: absolute; inset: 0; pointer-events: none; }
+#cadL:not(:empty)::after { background: linear-gradient(90deg, rgba(0,0,0,0) 85%, rgba(0,0,0,.22)); }
+#cadR:not(:empty)::after { background: linear-gradient(90deg, rgba(0,0,0,.22), rgba(0,0,0,0) 15%); }
+#cadBook.single #cadL { display: none; }
+#cadBook.single #cadR { left: 0; width: 100%; }
+#cadBook.single #cadR::after { display: none; }
+.cad-leaf { position: absolute; top: 0; height: 100%; width: 50%; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.45,.05,.3,1); z-index: 5; pointer-events: none; }
+.cad-leaf .face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; overflow: hidden; background: #fff; }
+.cad-leaf .face::after { content: ''; position: absolute; inset: 0; transition: opacity .7s; opacity: 0; }
+.cad-leaf .backf { transform: rotateY(180deg); }
+.cad-leaf.fwd { left: 50%; transform-origin: left center; }
+.cad-leaf.fwd.go { transform: rotateY(-180deg); }
+.cad-leaf.fwd .front::after { background: linear-gradient(90deg, rgba(0,0,0,.05), rgba(0,0,0,.35)); }
+.cad-leaf.bwd { left: 0; transform-origin: right center; }
+.cad-leaf.bwd.go { transform: rotateY(180deg); }
+.cad-leaf.bwd .front::after { background: linear-gradient(270deg, rgba(0,0,0,.05), rgba(0,0,0,.35)); }
+.cad-leaf.go .face::after { opacity: 1; }
+.cad-leaf.one { left: 0; width: 100%; transform-origin: left center; transition: transform .7s cubic-bezier(.45,.05,.3,1), opacity .7s; }
+.cad-leaf.one.go { transform: rotateY(-95deg); opacity: .2; }
+.cad-leaf.one.in { transform: rotateY(-95deg); opacity: .2; }
+.cad-leaf.one.in.go { transform: rotateY(0); opacity: 1; }
+#cadThumbs { flex: 0 0 auto; display: none; gap: 8px; overflow-x: auto; padding: 10px 16px; background: rgba(0,0,0,.25); }
+#cadernoView.thumbs-on #cadThumbs { display: flex; }
+#cadThumbs button { flex: 0 0 auto; padding: 0; border: 2px solid transparent; background: none; cursor: pointer; position: relative; }
+#cadThumbs button.on { border-color: var(--accent); }
+#cadThumbs img { display: block; height: 96px; width: auto; }
+#cadThumbs span { position: absolute; right: 2px; bottom: 2px; background: #111; color: #fff; font: 10px var(--font-mono); padding: 1px 4px; }
+.cad-hint { position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); font: 12px var(--font-mono); color: rgba(255,255,255,.7); pointer-events: none; }
+@media (max-width: 760px) { #cadBar { gap: 6px; padding: 8px 10px; } #cadBar h2 { display: none; } #cadBar .lbl { display: none; } #cadCount { min-width: 64px; margin-left: auto; } }
+#cadernoView.used .cad-hint { display: none; }

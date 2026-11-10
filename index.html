@@ -60,6 +60,7 @@
     <button data-mode="mapa" class="on"><svg class="i"><use href="#i-map"/></svg><span class="lbl">Mapa geográfico</span></button>
     <button data-mode="atlas"><svg class="i"><use href="#i-book"/></svg><span class="lbl">Atlas · colagens</span></button>
     <button data-mode="dossie"><svg class="i"><use href="#i-anchor"/></svg><span class="lbl">Dossiês</span></button>
+    <button data-mode="caderno"><svg class="i"><use href="#i-book"/></svg><span class="lbl">Caderno</span></button>
   </nav>
   <div class="tools">
     <span class="badge" id="editBadge">MODO EDIÇÃO</span>
@@ -146,6 +147,18 @@
 <!-- ======================= ATLAS ======================= -->
 <section class="view" id="dossieView"><nav id="dossieTabs"><a href="#dossie/hidrovia" data-doc="hidrovia">Hidrovia em disputa</a><a href="#dossie/encantados" data-doc="encantados">Encantados e não humanos</a></nav><div id="dossieBody"><p class="dz-loading">Carregando o dossiê…</p></div></section>
 
+<section class="view" id="cadernoView">
+  <div id="cadBar">
+    <h2>Caderno · Cartografias em disputa</h2>
+    <button class="btn sm" id="cadThumbsBtn" title="Mostrar todas as páginas"><svg class="i"><use href="#i-layers"/></svg><span class="lbl">Páginas</span></button>
+    <button class="btn sm" id="cadZoom" title="Ampliar página"><svg class="i"><use href="#i-full"/></svg><span class="lbl">Ampliar</span></button>
+    <button class="btn icon" id="cadPrev" title="Página anterior (←)"><svg class="i"><use href="#i-left"/></svg></button>
+    <span id="cadCount">–</span>
+    <button class="btn icon" id="cadNext" title="Próxima página (→)"><svg class="i"><use href="#i-right"/></svg></button>
+  </div>
+  <div id="cadStage"><div id="cadBook"><div class="cad-page" id="cadL"></div><div class="cad-page" id="cadR"></div></div><div class="cad-hint">clique na página, arraste ou use ← →</div></div>
+  <div id="cadThumbs"></div>
+</section>
 <section class="view" id="atlasView">
   <div id="gallery" class="scroll">
     <header>
@@ -182,18 +195,18 @@
   <div class="veil"></div>
   <div class="intro-box">
     <div class="kicker">Universidade de Brasília · Faculdade de Arquitetura e Urbanismo · 2026</div>
-    <h1>Cartografias<br>em disputa</h1>
-    <div class="place">redes de conexão<br>no Baixo Tapajós</div>
-    <p>Um geoportal que contrasta as linhas abstratas do planejamento — que reduzem o território a um “vazio demográfico” e o Rio Tapajós a um canal logístico de exportação — com as redes de conexão vivas, anfíbias e mais-que-humanas tecidas pelas populações originárias e tradicionais.</p>
+    <h1 class="bordado-wrap"><img class="bordado" src="media/titulo_bordado.webp" width="2200" height="573" alt="Cartografias em disputa" fetchpriority="high"></h1>
+    <div class="place place-bordado">Redes de conexão no Baixo Tapajós</div>
+    <p>Uma investigação cartográfica que contrasta as linhas abstratas do planejamento, que reduzem o território a um “vazio demográfico” e o Rio Tapajós a um canal logístico de exportação, com as redes de conexão vivas, anfíbias e mais-que-humanas tecidas pelas populações originárias e tradicionais.</p>
     <div class="go">
       <button class="btn primary" data-go="mapa"><svg class="i"><use href="#i-map"/></svg>Mapa geográfico 3D</button>
       <button class="btn" data-go="atlas"><svg class="i"><use href="#i-book"/></svg>Atlas em colagem</button>
       <button class="btn" data-go="tour"><svg class="i"><use href="#i-route"/></svg>Percurso</button>
       <button class="btn" data-go="dossie"><svg class="i"><use href="#i-anchor"/></svg>Dossiês: hidrovia e encantados</button>
+      <button class="btn" data-go="caderno"><svg class="i"><use href="#i-book"/></svg>Caderno</button>
     </div>
     <div class="credit">Alice Jales Bartholo de Oliveira · Trabalho Final de Graduação em Arquitetura e Urbanismo · orientação Prof. Dr. Paulo Roberto Carvalho Tavares</div>
   </div>
-  <div class="intro-quote">“Um rio não deixa de ser um rio porque conflui com outro rio. Ao contrário: ele passa a ser ele mesmo e outros rios, ele se fortalece.”<br>— Antônio Bispo dos Santos</div>
 </div>
 
 <!-- ======================= SOBRE ======================= -->
@@ -227,6 +240,7 @@
 <script src="js/util.js"></script>
 <script src="js/map.js"></script>
 <script src="js/atlas.js"></script>
+<script src="js/caderno.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

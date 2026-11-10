@@ -5,8 +5,8 @@
     map: null, points: { type: 'FeatureCollection', features: [] }, markers: {}, atlasMarkers: [], cityMarkers: [],
     year: 2025, playing: null, data: {}, loaded: {}, current: null, tour: null, draft: null
   };
-  const ORDER = ['hist', 'prodes', 'agua', 'igapo', 'uc', 'ti', 'quilombos', 'urb', 'dren', 'rodovia', 'hidrovia', 'hv_nh', 'hv_hum', 'arq', 'portos', 'hv_conf', 'en_lug', 'grade'];
-  const layerIds = def => def.tipo === 'fill' ? [def.id + '-f', def.id + '-l'] : [def.id];
+  const ORDER = ['hist', 'prodes', 'agua', 'igapo', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'dren', 'rodovia', 'hidrovia', 'hv_loc', 'hv_com', 'arq', 'portos', 'en_lug', 'hv_seres', 'bor_pts', 'en_bord', 'grade'];
+  const layerIds = def => def.tipo === 'fill' ? [def.id + '-f', def.id + '-l'] : def.tipo === 'bordado' ? [def.id + '-f', def.id + '-lim', ...def.obras.map((o, i) => def.id + '-img' + i)] : def.tipo === 'misto' ? [def.id + '-l', def.id] : [def.id];
   const def = id => CD.LAYERS.find(l => l.id === id);
 
   /* ======================================================= estilo base */
@@ -58,6 +58,27 @@
     }
     return undefined;
   }
+  /* semente de olho-de-cabra (Ormosia): grão vermelho-alaranjado com a ponta preta */
+  function seedIcons(map) {
+    const draw = (name, body, dark) => {
+      if (map.hasImage(name)) return;
+      const W = 64, H = 84, c = document.createElement('canvas'); c.width = W; c.height = H; const g = c.getContext('2d');
+      const cx = W / 2, cy = H / 2 + 2, rx = 22, ry = 30;
+      g.save(); g.filter = 'blur(3px)'; g.fillStyle = 'rgba(10,4,2,.55)'; g.beginPath(); g.ellipse(cx + 3, cy + 5, rx, ry, 0, 0, 7); g.fill(); g.restore();
+      g.save(); g.beginPath(); g.ellipse(cx, cy, rx, ry, 0, 0, 7); g.clip();
+      let gr = g.createRadialGradient(cx - 8, cy - 4, 3, cx, cy, ry * 1.1); gr.addColorStop(0, body[0]); gr.addColorStop(.6, body[1]); gr.addColorStop(1, body[2]);
+      g.fillStyle = gr; g.fillRect(0, 0, W, H);
+      g.beginPath(); g.ellipse(cx + 2, cy - ry * .78, rx * 1.15, ry * .62, -.25, 0, 7);
+      gr = g.createRadialGradient(cx - 4, cy - ry * .85, 1, cx, cy - ry * .7, ry * .7); gr.addColorStop(0, dark[0]); gr.addColorStop(1, dark[1]); g.fillStyle = gr; g.fill();
+      g.fillStyle = 'rgba(255,255,255,.55)'; g.beginPath(); g.ellipse(cx - 8, cy + 2, 4, 9, -.35, 0, 7); g.fill();
+      g.fillStyle = 'rgba(255,255,255,.25)'; g.beginPath(); g.ellipse(cx - 2, cy - ry * .78, 5, 2.5, -.3, 0, 7); g.fill();
+      g.restore();
+      g.strokeStyle = 'rgba(40,8,2,.75)'; g.lineWidth = 1.5; g.beginPath(); g.ellipse(cx, cy, rx, ry, 0, 0, 7); g.stroke();
+      map.addImage(name, g.getImageData(0, 0, W, H), { pixelRatio: 2 });
+    };
+    draw('semente', ['#ff8a5a', '#e0431c', '#9c2310'], ['#3a3330', '#050403']);
+    draw('semente-escura', ['#e2572e', '#b52a12', '#6e1608'], ['#2a2220', '#030202']);
+  }
   function addLayer(d) {
     const map = M.map;
     if (map.getLayer(layerIds(d)[0])) { setVis(d, true); return; }
@@ -76,12 +97,57 @@
       map.addLayer({ id: d.id, type: 'circle', source: d.id, paint: {
         'circle-color': d.corExpr || d.cor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 5, (d.raio || 4) * .6, 10, (d.raio || 4) * 1.4, 14, (d.raio || 4) * 2.2],
         'circle-stroke-color': ['case', ['boolean', ['feature-state', 'hover'], false], '#ffffff', '#1b1209'], 'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.5, 1], 'circle-opacity': op, 'circle-stroke-opacity': op, 'circle-pitch-alignment': 'map' } }, before);
+    } else if (d.tipo === 'misto') {
+      const lp = { 'line-color': d.corLinha || '#c8102e', 'line-width': d.largura || 2, 'line-opacity': .9 * op };
+      if (d.dash) lp['line-dasharray'] = d.dash;
+      map.addLayer({ id: d.id + '-l', type: 'line', source: d.id, filter: ['!=', ['geometry-type'], 'Point'], layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: lp }, before);
+      map.addLayer({ id: d.id, type: 'circle', source: d.id, filter: ['==', ['geometry-type'], 'Point'], paint: {
+        'circle-color': d.corExpr || d.cor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 5, (d.raio || 5) * .6, 10, (d.raio || 5) * 1.3, 14, (d.raio || 5) * 2],
+        'circle-stroke-color': ['case', ['boolean', ['feature-state', 'hover'], false], '#ffffff', '#1b1209'], 'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.5, 1.2], 'circle-opacity': op, 'circle-stroke-opacity': op, 'circle-pitch-alignment': 'map' } }, before);
+    } else if (d.tipo === 'icone') {
+      if (d._carregando) return; d._carregando = true;
+      Promise.all(d.icones.map(n => new Promise(res => {
+        if (map.hasImage('ser-' + n)) return res();
+        const im = new Image(128, 128); im.onload = () => { try { map.addImage('ser-' + n, im, { pixelRatio: 2 }); } catch (e) { } res(); }; im.onerror = () => res(); im.src = 'media/seres/' + n + '.svg';
+      }))).then(() => {
+        d._carregando = false;
+        if (map.getLayer(d.id)) return;
+        map.addLayer({ id: d.id, type: 'symbol', source: d.id, layout: {
+          'icon-image': ['concat', 'ser-', ['get', 'icone']], 'icon-size': ['interpolate', ['linear'], ['zoom'], 6, .55, 10, .95, 14, 1.5],
+          'icon-allow-overlap': true, 'icon-ignore-placement': true }, paint: { 'icon-opacity': d.opMul == null ? 1 : d.opMul } }, beforeIdFor(d.id));
+        if (!d.on) map.setLayoutProperty(d.id, 'visibility', 'none');
+      });
+    } else if (d.tipo === 'bordado') {
+      map.addLayer({ id: d.id + '-f', type: 'fill', source: d.id, filter: ['==', ['get', 'tipo'], 'encantado'], paint: { 'fill-color': '#ffffff', 'fill-opacity': 0.01 } }, before);
+      map.addLayer({ id: d.id + '-lim', type: 'line', source: d.id, filter: ['==', ['get', 'tipo'], 'limite'], layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': '#ff3355', 'line-width': 2.6, 'line-dasharray': [2.2, 1.3], 'line-opacity': .9 * op } }, before);
+      d.obras.forEach((o, i) => {
+        const sid = d.id + '-src' + i;
+        if (!map.getSource(sid)) map.addSource(sid, { type: 'image', url: o.src, coordinates: o.coords });
+        map.addLayer({ id: d.id + '-img' + i, type: 'raster', source: sid, paint: { 'raster-opacity': op, 'raster-fade-duration': 0, 'raster-resampling': 'linear' } }, before);
+      });
+    } else if (d.tipo === 'seed') {
+      seedIcons(map);
+      map.addLayer({ id: d.id, type: 'symbol', source: d.id, layout: {
+        'icon-image': ['match', ['get', 'tipo'], 'sagrado', 'semente-escura', 'semente'], 'icon-rotate': ['coalesce', ['get', 'rot'], 0],
+        'icon-size': ['interpolate', ['linear'], ['zoom'], 8, .42, 11, .75, 14, 1.15], 'icon-allow-overlap': true, 'icon-ignore-placement': true,
+        'icon-pitch-alignment': 'map', 'icon-rotation-alignment': 'map' }, paint: { 'icon-opacity': op } }, before);
     } else if (d.tipo === 'extrude') {
       map.addLayer({ id: d.id, type: 'fill-extrusion', source: d.id, paint: { 'fill-extrusion-color': gridColor(), 'fill-extrusion-height': gridHeight(), 'fill-extrusion-opacity': .85 * op, 'fill-extrusion-vertical-gradient': true } }, before);
     }
     if (d.timeline) applyYear();
-    const onData = e => { if (e.sourceId === d.id && e.isSourceLoaded) { card && card.classList.remove('loading'); map.off('sourcedata', onData); } };
-    map.on('sourcedata', onData);
+    const t0 = Date.now();
+    const slow = setTimeout(() => { if (!map.isSourceLoaded(d.id)) CD.toast('Carregando “' + d.nome + '”… (arquivo grande, pode levar alguns segundos)'); }, 2500);
+    const done = () => { clearTimeout(slow); const c = $(`.layer[data-id="${d.id}"]`); c && c.classList.remove('loading'); map.off('sourcedata', onData); map.off('error', onErr); };
+    const onData = e => { if (e.sourceId === d.id && e.isSourceLoaded) done(); };
+    const onErr = e => {
+      if (e.sourceId !== d.id && !(e.source && e.source.data === d.arquivo)) return;
+      done(); layerIds(d).forEach(id => map.getLayer(id) && map.removeLayer(id)); map.getSource(d.id) && map.removeSource(d.id);
+      d.on = false; const c = $(`.layer[data-id="${d.id}"]`); if (c) { c.classList.remove('on'); const cb = $('input[type=checkbox]', c); if (cb) cb.checked = false; }
+      CD.toast('Não foi possível carregar “' + d.nome + '” (' + d.arquivo + '). ' + (location.protocol === 'file:' ? 'Abra o site pelo iniciar_servidor.bat, não pelo index.html direto.' : 'Verifique se o arquivo foi publicado.'), true);
+      console.warn('camada', d.id, e.error);
+    };
+    map.on('sourcedata', onData); map.on('error', onErr);
   }
   function setVis(d, v) {
     if (d.tipo === 'html') {
@@ -102,6 +168,9 @@
     } else if (d.tipo === 'line') map.setPaintProperty(d.id, 'line-opacity', .9 * k);
     else if (d.tipo === 'circle') { map.setPaintProperty(d.id, 'circle-opacity', k); map.setPaintProperty(d.id, 'circle-stroke-opacity', k); }
     else if (d.tipo === 'extrude') map.setPaintProperty(d.id, 'fill-extrusion-opacity', .85 * k);
+    else if (d.tipo === 'seed' || d.tipo === 'icone') map.setPaintProperty(d.id, 'icon-opacity', k);
+    else if (d.tipo === 'misto') { map.setPaintProperty(d.id + '-l', 'line-opacity', .9 * k); map.setPaintProperty(d.id, 'circle-opacity', k); map.setPaintProperty(d.id, 'circle-stroke-opacity', k); }
+    else if (d.tipo === 'bordado') { map.setPaintProperty(d.id + '-lim', 'line-opacity', .9 * k); d.obras.forEach((o, i) => map.setPaintProperty(d.id + '-img' + i, 'raster-opacity', k)); }
   }
 
   function buildLayerPanel() {
@@ -228,7 +297,7 @@
   M.home = () => M.map.flyTo({ center: CD.VIEW.center, zoom: CD.VIEW.zoom, pitch: CD.VIEW.pitch, bearing: CD.VIEW.bearing, duration: 2200 });
 
   /* ======================================================= interação com feições */
-  const interactive = () => CD.LAYERS.filter(d => d.on && d.tipo !== 'html' && M.map.getLayer(layerIds(d)[0])).map(d => d.tipo === 'fill' ? d.id + '-f' : d.id).reverse();
+  const interactive = () => CD.LAYERS.filter(d => d.on && d.tipo !== 'html' && M.map.getLayer(layerIds(d)[0])).flatMap(d => d.tipo === 'fill' ? [d.id + '-f'] : d.tipo === 'bordado' ? [d.id + '-f', d.id + '-lim'] : d.tipo === 'misto' ? [d.id + '-l', d.id] : [d.id]).reverse();
   let hoverF = null, tip = { remove() { } };
   function bindMapEvents() {
     const map = M.map;
@@ -240,7 +309,7 @@
       const fs = map.queryRenderedFeatures(e.point, { layers: interactive() });
       if (hoverF) { map.setFeatureState(hoverF, { hover: false }); hoverF = null; }
       if (fs.length) {
-        const f = fs[0]; const d = def(f.layer.id.replace(/-f$/, ''));
+        const f = fs[0]; const d = def(f.layer.id.replace(/-(f|lim|l)$/, ''));
         if (f.id != null) { hoverF = { source: f.source, id: f.id }; map.setFeatureState(hoverF, { hover: true }); }
         map.getCanvas().style.cursor = 'pointer';
         tip.setLngLat(e.lngLat).setHTML(`<b>${CD.esc(d.titulo ? d.titulo(f.properties) : d.nome)}</b><span>${CD.esc(d.nome)}</span>`).addTo(map);
@@ -251,7 +320,7 @@
       if (document.body.classList.contains('editing')) { M.newPoint(e.lngLat); return; }
       const fs = map.queryRenderedFeatures(e.point, { layers: interactive() });
       if (!fs.length) return;
-      const f = fs[0]; const d = def(f.layer.id.replace(/-f$/, ''));
+      const f = fs[0]; const d = def(f.layer.id.replace(/-(f|lim|l)$/, ''));
       M.showFeature(d, f.properties, e.lngLat);
     });
   }
@@ -261,7 +330,7 @@
     openStory(`<div class="story-hero empty"></div><div class="story-content">
       <span class="cat"><i style="background:${d.sw ? d.sw.cor : '#999'}"></i>${CD.esc(d.nome)}</span>
       <h2>${CD.esc(d.titulo ? d.titulo(p) : d.nome)}</h2>
-      ${d.desc ? `<p class="lead" style="font-size:13.5px">${d.desc}</p>` : ''}
+      ${d.corpo ? d.corpo(p) : d.desc ? `<p class="lead" style="font-size:13.5px">${d.desc}</p>` : ''}
       <table class="meta-table">${rows.map(r => `<tr><td>${CD.esc(r[0])}</td><td>${/^https?:/.test(String(r[1])) ? `<a href="${CD.esc(r[1])}" target="_blank" rel="noopener">abrir fonte ↗</a>` : CD.esc(r[1])}</td></tr>`).join('')}</table>
       ${lngLat ? `<p class="src" style="margin-top:10px">${lngLat.lat.toFixed(5)}, ${lngLat.lng.toFixed(5)}</p>` : ''}
       ${near ? `<div class="story-actions"><button class="btn sm" data-open-point="${near.properties.id}">${CD.icon('pin')} Narrativa próxima: ${CD.esc(near.properties.titulo)}</button></div>` : ''}

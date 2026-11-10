@@ -9,6 +9,7 @@
     $('#mapView').classList.toggle('on', m === 'mapa');
     $('#atlasView').classList.toggle('on', m === 'atlas');
     $('#dossieView').classList.toggle('on', m === 'dossie');
+    $('#cadernoView').classList.toggle('on', m === 'caderno');
     if (m === 'dossie') loadDossie(App.dzDoc);
     if (m === 'mapa' && CD.Map.map) setTimeout(() => CD.Map.map.resize(), 30);
     if (m === 'atlas' && !CD.Atlas.cur) CD.Atlas.renderGallery();
@@ -69,6 +70,9 @@
     } else if (m === 'dossie') {
       App.dzDoc = id || App.dzDoc || 'hidrovia';
       App.setMode('dossie', false);
+    } else if (m === 'caderno') {
+      App.setMode('caderno', false);
+      CD.Caderno.open(+id || 0);
     } else if (m === 'mapa' || m === '') {
       App.setMode('mapa', false);
       if (id) { await App.mapReady; CD.Map.openPoint(id); }
@@ -101,7 +105,7 @@
     await CD.api.check();
     await CD.Atlas.load();
     CD.Atlas.init();
-    $$('.modes button').forEach(b => b.onclick = () => { if (b.dataset.mode === 'atlas') location.hash = CD.Atlas.cur ? '#atlas/' + CD.Atlas.cur.id : '#atlas'; else if (b.dataset.mode === 'dossie') location.hash = '#dossie/' + (App.dzDoc || 'hidrovia'); else location.hash = '#mapa'; });
+    $$('.modes button').forEach(b => b.onclick = () => { if (b.dataset.mode === 'atlas') location.hash = CD.Atlas.cur ? '#atlas/' + CD.Atlas.cur.id : '#atlas'; else if (b.dataset.mode === 'dossie') location.hash = '#dossie/' + (App.dzDoc || 'hidrovia'); else if (b.dataset.mode === 'caderno') location.hash = '#caderno'; else location.hash = '#mapa'; });
     $('#brand').onclick = showIntro;
     $('#btnAbout').onclick = () => $('#about').classList.add('on');
     $('#btnEdit').onclick = () => App.setEditing(!document.body.classList.contains('editing'));
@@ -112,6 +116,7 @@
       hideIntro(); const g = b.dataset.go;
       if (g === 'atlas') location.hash = '#atlas';
       else if (g === 'dossie') location.hash = '#dossie';
+      else if (g === 'caderno') location.hash = '#caderno';
       else if (g === 'tour') { location.hash = '#mapa'; await App.mapReady; CD.Map.startTour(); }
       else location.hash = '#mapa';
     });

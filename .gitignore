@@ -11,6 +11,7 @@
 !/atlas/
 !/media/
 !/dossie/
+!/caderno/
 !/server.py
 !/server.ps1
 !/iniciar_servidor.bat
