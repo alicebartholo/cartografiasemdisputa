@@ -6,7 +6,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.725,
+     -54.708,
      -2.405
     ]
    },
@@ -25,13 +25,9 @@
     ],
     "fontes": "Seres-rio (diálogos); Cançado, Tavares et al.",
     "camera": {
-     "center": [
-      -54.74,
-      -2.43
-     ],
-     "zoom": 11.2,
-     "pitch": 62,
-     "bearing": 20
+     "zoom": 12.6,
+     "pitch": 42,
+     "bearing": 10
     },
     "atlas": {
      "id": "atlas1",
@@ -44,8 +40,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.7195,
-     -2.4205
+     -54.7379,
+     -2.4202
     ]
    },
    "properties": {
@@ -63,13 +59,9 @@
     ],
     "fontes": "Stenborg & Schaan (2012); *Os verdadeiros donos da terra*; *Santarém: o ponto de partida…* (urbe, 2019).",
     "camera": {
-     "center": [
-      -54.716,
-      -2.43
-     ],
-     "zoom": 13.6,
-     "pitch": 64,
-     "bearing": -25
+     "zoom": 15.2,
+     "pitch": 42,
+     "bearing": -12
     },
     "atlas": {
      "id": "atlas1",
@@ -101,12 +93,8 @@
     ],
     "fontes": "Navarro et al. (2017), *O muiraquitã da estearia da Boca do Rio*; Schaan (2012); IPHAN/CNSA.",
     "camera": {
-     "center": [
-      -54.72,
-      -2.45
-     ],
-     "zoom": 12.4,
-     "pitch": 55,
+     "zoom": 13.4,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -120,8 +108,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.962,
-     -2.513
+     -54.9507,
+     -2.5006
     ]
    },
    "properties": {
@@ -139,13 +127,9 @@
     ],
     "fontes": "*Os verdadeiros donos da terra: paisagem e transformação no Baixo Tapajós*; Galvão (1955).",
     "camera": {
-     "center": [
-      -54.955,
-      -2.51
-     ],
-     "zoom": 13.2,
-     "pitch": 66,
-     "bearing": 35
+     "zoom": 14.4,
+     "pitch": 42,
+     "bearing": 18
     },
     "atlas": {
      "id": "atlas1",
@@ -177,13 +161,18 @@
     ],
     "fontes": "Relatório de Autodemarcação da Terra Indígena Borari de Alter do Chão (2025).",
     "camera": {
-     "center": [
-      -54.97,
-      -2.56
+     "bounds": [
+      [
+       -55.045,
+       -2.575
+      ],
+      [
+       -54.84,
+       -2.38
+      ]
      ],
-     "zoom": 11.6,
-     "pitch": 58,
-     "bearing": -10
+     "pitch": 30,
+     "bearing": 0
     },
     "atlas": {
      "id": "atlas1",
@@ -219,13 +208,18 @@
     ],
     "fontes": "Vaz Filho (2010); Lima (2015); ICMBio.",
     "camera": {
-     "center": [
-      -55.15,
-      -2.62
+     "bounds": [
+      [
+       -56.0,
+       -3.7
+      ],
+      [
+       -55.01,
+       -2.32
+      ]
      ],
-     "zoom": 9.6,
-     "pitch": 55,
-     "bearing": -20
+     "pitch": 30,
+     "bearing": 0
     },
     "atlas": {
      "id": "atlas2",
@@ -238,8 +232,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -55.02,
-     -3.05
+     -55.036,
+     -2.8068
     ]
    },
    "properties": {
@@ -257,13 +251,18 @@
     ],
     "fontes": "ICMBio; PRODES/INPE.",
     "camera": {
-     "center": [
-      -54.98,
-      -3.15
+     "bounds": [
+      [
+       -55.41,
+       -4.115
+      ],
+      [
+       -54.79,
+       -2.75
+      ]
      ],
-     "zoom": 9.2,
-     "pitch": 60,
-     "bearing": -30
+     "pitch": 30,
+     "bearing": 0
     },
     "atlas": {
      "id": "atlas2",
@@ -295,13 +294,9 @@
     ],
     "fontes": "PRODES/INPE; IBGE.",
     "camera": {
-     "center": [
-      -54.9,
-      -2.7
-     ],
-     "zoom": 10.6,
-     "pitch": 60,
-     "bearing": 15
+     "zoom": 11.6,
+     "pitch": 42,
+     "bearing": 8
     },
     "atlas": {
      "id": "atlas2",
@@ -314,8 +309,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -55.96,
-     -4.29
+     -55.9605,
+     -4.2929
     ]
    },
    "properties": {
@@ -333,13 +328,9 @@
     ],
     "fontes": "*Mapa batimétrico* (Santos et al., 2020; Su et al., 2017); ANTAQ.",
     "camera": {
-     "center": [
-      -55.97,
-      -4.28
-     ],
-     "zoom": 12.2,
-     "pitch": 60,
-     "bearing": 40
+     "zoom": 13.4,
+     "pitch": 42,
+     "bearing": 20
     },
     "atlas": {
      "id": "atlas2",
@@ -352,8 +343,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.95,
-     -3.7
+     -54.85235,
+     -3.64962
     ]
    },
    "properties": {
@@ -371,13 +362,9 @@
     ],
     "fontes": "PRODES/INPE (arquivos do projeto); DNIT.",
     "camera": {
-     "center": [
-      -54.9,
-      -3.75
-     ],
-     "zoom": 9.0,
-     "pitch": 62,
-     "bearing": -20
+     "zoom": 10.4,
+     "pitch": 42,
+     "bearing": -10
     },
     "atlas": {
      "id": "atlas2",
@@ -390,8 +377,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -56.28,
-     -4.48
+     -56.254,
+     -4.4939
     ]
    },
    "properties": {
@@ -417,13 +404,9 @@
     ],
     "fontes": "Korap Munduruku, Alfinito & Schavelzon (2024), *Rev. Direito e Práxis*; Cartas da Autodemarcação (2014).",
     "camera": {
-     "center": [
-      -56.3,
-      -4.5
-     ],
-     "zoom": 11.0,
-     "pitch": 64,
-     "bearing": 10
+     "zoom": 12.6,
+     "pitch": 42,
+     "bearing": 5
     },
     "atlas": {
      "id": "atlas3",
@@ -459,12 +442,8 @@
     ],
     "fontes": "Basta & Hacon (2020); *O cerco do ouro*; *Seres-rio*.",
     "camera": {
-     "center": [
-      -56.1,
-      -4.7
-     ],
-     "zoom": 9.4,
-     "pitch": 58,
+     "zoom": 10.4,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -497,13 +476,9 @@
     ],
     "fontes": "Miranda & Gomes (2019), *Existir sobre as águas*; *Homens anfíbios: terra e água*.",
     "camera": {
-     "center": [
-      -55.0,
-      -2.47
-     ],
-     "zoom": 11.5,
-     "pitch": 60,
-     "bearing": -40
+     "zoom": 12.4,
+     "pitch": 42,
+     "bearing": -20
     },
     "atlas": {
      "id": "atlas1",
@@ -536,13 +511,18 @@
     ],
     "fontes": "GT Infra (04/02/2026); Amazônia Real (16/09/2025); Agência iNFRA (12/05/2026); Repórter Brasil (19/02/2026); Reuters (2023; 2024); Amazonas Atual (01/10/2026); Diário do Pará (2024).",
     "camera": {
-     "center": [
-      -55.285,
-      -3.438
+     "bounds": [
+      [
+       -56.0,
+       -4.32
+      ],
+      [
+       -54.7,
+       -2.4
+      ]
      ],
-     "zoom": 8.6,
-     "pitch": 50,
-     "bearing": -20
+     "pitch": 30,
+     "bearing": 0
     },
     "atlas": {
      "id": "atlas2",
@@ -555,8 +535,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -55.93,
-     -4.305
+     -55.9502,
+     -4.2744
     ]
    },
    "properties": {
@@ -575,13 +555,9 @@
     ],
     "fontes": "Inesc (2020; 2021; 2024); Fenatac (24/07/2026); Brasil de Fato (12/12/2024; 26/10/2023); Rodrigues et al., Geosul (2019).",
     "camera": {
-     "center": [
-      -55.93,
-      -4.305
-     ],
-     "zoom": 12,
-     "pitch": 58,
-     "bearing": 30
+     "zoom": 13.6,
+     "pitch": 42,
+     "bearing": 15
     },
     "atlas": {
      "id": "atlas2",
@@ -594,8 +570,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -55.985,
-     -4.258
+     -55.9741,
+     -4.2563
     ]
    },
    "properties": {
@@ -614,12 +590,8 @@
     ],
     "fontes": "Terra de Direitos (02/06/2022; 26/04/2023); Brasil de Fato (26/10/2023).",
     "camera": {
-     "center": [
-      -55.985,
-      -4.258
-     ],
-     "zoom": 12.5,
-     "pitch": 55,
+     "zoom": 14.2,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -644,12 +616,8 @@
     "imagens": [],
     "fontes": "Agência Pública (23/04/2024); Brasil de Fato (02/04/2022); CNN Brasil (24/07/2026).",
     "camera": {
-     "center": [
-      -55.76092,
-      -4.14144
-     ],
-     "zoom": 11.5,
-     "pitch": 55,
+     "zoom": 13,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -674,12 +642,8 @@
     "imagens": [],
     "fontes": "MPF (17/03/2025); Portal Amazônia; eCycle.",
     "camera": {
-     "center": [
-      -55.59019,
-      -3.96419
-     ],
-     "zoom": 11.5,
-     "pitch": 50,
+     "zoom": 13,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -704,13 +668,18 @@
     "imagens": [],
     "fontes": "GT Infra (04/02/2026; 13/07/2026); Agência iNFRA (03/07/2026); MPF (15/07/2026); CNN Brasil (24/07/2026); Brasil 247 (17/09/2026); O Liberal (09/10/2026).",
     "camera": {
-     "center": [
-      -55.26,
-      -3.47
+     "bounds": [
+      [
+       -56.0,
+       -4.32
+      ],
+      [
+       -54.7,
+       -2.4
+      ]
      ],
-     "zoom": 9.5,
-     "pitch": 45,
-     "bearing": -25
+     "pitch": 30,
+     "bearing": 0
     }
    }
   },
@@ -739,12 +708,8 @@
     ],
     "fontes": "MAB/Brasil de Fato (11/12/2024); Terra de Direitos (2021); FASE et al. (2005); Agência Pública (01/10/2019).",
     "camera": {
-     "center": [
-      -54.64,
-      -2.68
-     ],
-     "zoom": 10,
-     "pitch": 50,
+     "zoom": 11,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -778,13 +743,9 @@
     ],
     "fontes": "Terra de Direitos (2016; 2017; 28/06/2024; 31/10/2025); MPF (02/07/2025; 17/09/2025; 20/10/2025); IHU (24/08/2022).",
     "camera": {
-     "center": [
-      -54.655,
-      -2.468
-     ],
-     "zoom": 12,
-     "pitch": 55,
-     "bearing": 20
+     "zoom": 12.8,
+     "pitch": 42,
+     "bearing": 10
     }
    }
   },
@@ -793,8 +754,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.716,
-     -2.425
+     -54.7356,
+     -2.4187
     ]
    },
    "properties": {
@@ -813,13 +774,9 @@
     ],
     "fontes": "InfoAmazonia (19/02/2026; 23/02/2026); Agência Brasil (21/02/2026); Alma Preta (18/02/2026); Repórter Brasil (19/02/2026).",
     "camera": {
-     "center": [
-      -54.716,
-      -2.425
-     ],
-     "zoom": 13.5,
-     "pitch": 60,
-     "bearing": -30
+     "zoom": 15.2,
+     "pitch": 42,
+     "bearing": -15
     },
     "atlas": {
      "id": "atlas1",
@@ -852,12 +809,8 @@
     ],
     "fontes": "Duponchelle et al. (2016); Hauser et al. (2024); Ribeiro & Petrere (1990); Ladegaard et al. (2015); da Silva et al. (2018); MapBiomas (2022); Carta Munduruku (Cimi, 2013); Loures & Moreira (2022).",
     "camera": {
-     "center": [
-      -54.75,
-      -2.385
-     ],
-     "zoom": 10.5,
-     "pitch": 50,
+     "zoom": 12.4,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -891,12 +844,8 @@
     ],
     "fontes": "Síntese da pesquisa (out/2026).",
     "camera": {
-     "center": [
-      -54.955,
-      -2.49
-     ],
-     "zoom": 10.5,
-     "pitch": 45,
+     "zoom": 11.6,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -926,12 +875,8 @@
     ],
     "fontes": "Romcy-Pereira, *Os verdadeiros donos da terra* (2018); Vaz Filho & Carvalho, *Isso tudo é encantado* (2013); Amazônia Real (22/01/2026); Agência Pública (05/02/2026; 25/02/2026); GT Infra (2026).",
     "camera": {
-     "center": [
-      -55.31,
-      -3.4
-     ],
-     "zoom": 9.5,
-     "pitch": 45,
+     "zoom": 10.6,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -945,8 +890,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.728,
-     -2.416
+     -54.7361,
+     -2.4165
     ]
    },
    "properties": {
@@ -965,13 +910,9 @@
     ],
     "fontes": "Agência Pública (25/02/2026); Amazônia Latitude (20/02/2026); Terra de Direitos (2021); Stenborg & Schaan (2012).",
     "camera": {
-     "center": [
-      -54.728,
-      -2.416
-     ],
-     "zoom": 13.5,
-     "pitch": 60,
-     "bearing": -30
+     "zoom": 15.2,
+     "pitch": 42,
+     "bearing": -15
     },
     "atlas": {
      "id": "atlas1",
@@ -984,8 +925,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.958,
-     -2.508
+     -54.9462,
+     -2.4907
     ]
    },
    "properties": {
@@ -999,13 +940,9 @@
     "imagens": [],
     "fontes": "Romcy-Pereira (2018), p. 250, 267, 303–304; Relatório de Autodemarcação da TI Borari de Alter do Chão (2025).",
     "camera": {
-     "center": [
-      -54.958,
-      -2.508
-     ],
-     "zoom": 13,
-     "pitch": 60,
-     "bearing": 20
+     "zoom": 13.6,
+     "pitch": 42,
+     "bearing": 10
     },
     "atlas": {
      "id": "atlas1",
@@ -1033,12 +970,8 @@
     "imagens": [],
     "fontes": "Protocolos de Consulta Tupinambá (2018), Kumaruara (2021), TI Cobra Grande (2021), Munduruku (2014); MPF, Recomendação 6/2026.",
     "camera": {
-     "center": [
-      -55.02,
-      -2.43
-     ],
-     "zoom": 11,
-     "pitch": 45,
+     "zoom": 12,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -1048,8 +981,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.73,
-     -2.395
+     -54.73021,
+     -2.39935
     ]
    },
    "properties": {
@@ -1068,12 +1001,8 @@
     ],
     "fontes": "IUCN (da Silva et al., 2020); Portaria MMA 1.704/2026; Pavanato et al. (2016); WWF-Brasil/Mamirauá (2022); Galvão (1955); Vasconcelos & Süssekind (2020); Romcy-Pereira (2018).",
     "camera": {
-     "center": [
-      -54.73,
-      -2.395
-     ],
-     "zoom": 11.5,
-     "pitch": 50,
+     "zoom": 13,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -1087,8 +1016,8 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -54.8,
-     -2.43
+     -54.81676,
+     -2.41854
     ]
    },
    "properties": {
@@ -1102,12 +1031,8 @@
     "imagens": [],
     "fontes": "da Silva et al. (2018); Martin & da Silva (2022); Pavanato et al. (2016); Mosquera-Guerra et al. (2019); Portaria Interministerial 4/2023; Maués (2006); Vasconcelos & Süssekind (2020).",
     "camera": {
-     "center": [
-      -54.8,
-      -2.43
-     ],
-     "zoom": 11,
-     "pitch": 50,
+     "zoom": 12.6,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -1117,7 +1042,7 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -56.24,
+     -56.2585,
      -4.47
     ]
    },
@@ -1137,12 +1062,8 @@
     ],
     "fontes": "Carta Munduruku (Cimi, 2013); Amazônia Real (12/11/2025); Repórter Brasil (14/11/2025); Pariri (2018); Mongabay (06/2025).",
     "camera": {
-     "center": [
-      -56.24,
-      -4.47
-     ],
-     "zoom": 11.5,
-     "pitch": 55,
+     "zoom": 13.2,
+     "pitch": 42,
      "bearing": 0
     },
     "atlas": {
@@ -1171,12 +1092,8 @@
     "imagens": [],
     "fontes": "Loures & Moreira, *Antropolítica* 54(1), 2022; IHU (27/11/2014); Branford, Moreira & Torres (Mongabay, 2017).",
     "camera": {
-     "center": [
-      -56.77,
-      -9.35
-     ],
-     "zoom": 10,
-     "pitch": 50,
+     "zoom": 12,
+     "pitch": 42,
      "bearing": 0
     }
    }
@@ -1206,12 +1123,8 @@
     ],
     "fontes": "Portarias MMA 1.704/2026 e 1.667/2026; Forero-Medina et al. (2019); Mongabay (28/04/2026); Romcy-Pereira (2018), p. 272–273.",
     "camera": {
-     "center": [
-      -54.635,
-      -2.45
-     ],
-     "zoom": 11.5,
-     "pitch": 50,
+     "zoom": 12.4,
+     "pitch": 42,
      "bearing": 0
     }
    }

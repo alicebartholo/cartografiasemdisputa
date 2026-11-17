@@ -10,6 +10,22 @@ CD.CATS = {
   ruptura:    { nome: 'Ruptura ecológica',        cor: '#e0b000' }
 };
 
+/* Dois mapas geográficos: cada camada pertence a um deles ou aos dois */
+CD.MAPAS = {
+  ext: { nome: 'Mapa do extrativismo', hash: 'extrativismo', cats: ['capital', 'ruptura', 'territorio'],
+    desc: 'As linhas do planejamento: hidrovia das commodities, portos, estradas, Ferrogrão e o desmatamento que elas puxam.' },
+  cos: { nome: 'Mapa cosmológico', hash: 'cosmologia', cats: ['aguas', 'encantes', 'memoria', 'territorio'],
+    desc: 'As redes vivas: encantados, seres do rio, caminhos das comunidades, a TI Borari, a arqueologia e as águas.' }
+};
+const AMBOS = ['ext', 'cos'];
+CD.LAYER_MAPAS = {
+  pontos: AMBOS, ti: AMBOS, quilombos: AMBOS, uc: AMBOS,
+  hv_com: ['ext'], hidrovia: ['ext'], rodovia: ['ext'], portos: ['ext'], urb: ['ext'], desm_acum: ['ext'],
+  en_lug: ['cos'], en_bord: ['cos'], bor_pts: ['cos'], bor_lim: ['cos'], arq: ['cos'], agua: AMBOS
+};
+// mapa de cada ponto narrativo: percurso primeiro, depois categoria
+CD.mapaDoPonto = p => p.percurso === 'hidrovia' ? 'ext' : p.percurso === 'encantados' ? 'cos' : (['capital', 'ruptura'].includes(p.categoria) ? 'ext' : 'cos');
+
 CD.VIEW = { center: [-55.05, -3.05], zoom: 7.1, pitch: 48, bearing: -12 };
 CD.BOUNDS = [[-59.5, -6.6], [-51.2, 0.3]];
 
@@ -48,12 +64,9 @@ CD.LAYERS = [
   // ---------------- narrativas (HTML markers)
   { id: 'pontos', grupo: 'narr', nome: 'Pontos narrativos', sub: 'histórias, imagens e relatos', tipo: 'html', on: true, sw: { cor: '#e3a857', forma: 'dot' },
     desc: 'Pontos criados no próprio geoportal (modo Editar). Cada ponto guarda texto, imagens, fontes e uma vista de câmera 3D.' },
-  { id: 'atlasmk', grupo: 'narr', nome: 'Atlas ilustrados', sub: 'portas para as obras', tipo: 'html', on: true, sw: { cor: '#efe3c8' },
-    desc: 'Miniaturas posicionadas no lugar a que cada obra se refere. Clique para abrir o atlas.' },
-  { id: 'cidades', grupo: 'narr', nome: 'Cidades e vilas', tipo: 'html', on: true, sw: { cor: '#ffffff', forma: 'dot' }, arquivo: 'data/cidades.geojson' },
 
   // ---------------- hidrovia em disputa (pesquisa out/2026)
-  { id: 'hv_com', grupo: 'hv', nome: '1 · Hidrovia das commodities', sub: 'rota da soja e do milho + notícias e impactos socioambientais', arquivo: 'data/hv_commodities.geojson', tipo: 'misto', on: true, raio: 7,
+  { id: 'hv_com', grupo: 'hv', nome: 'Hidrovia das commodities', sub: 'rota da soja e do milho + notícias e impactos socioambientais', arquivo: 'data/hv_commodities.geojson', tipo: 'misto', on: true, raio: 7,
     corLinha: ['match', ['get', 'tipo'], 'comboio', '#c8102e', 'navio', '#7a0a1c', 'ferrograo', '#e07b00', '#c8102e'],
     largura: ['interpolate', ['linear'], ['zoom'], 5, ['match', ['get', 'tipo'], 'comboio', 3.2, 2.2], 11, ['match', ['get', 'tipo'], 'comboio', 7, 4]],
     corExpr: ['match', ['get', 'tipo'], 'terminal', '#c8102e', 'dragagem', '#ff7a1a', 'comunidade', '#2f8a4e', 'sagrado', '#7b5cc4', 'fauna', '#2f6fd0', 'mobilizacao', '#e0b000', 'politica', '#111111', '#888888'],
@@ -62,23 +75,6 @@ CD.LAYERS = [
     desc: 'O corredor de escoamento de commodities pelo Tapajós (Arco Norte) e, ao longo dele, pontos com notícias, relatórios e ações judiciais sobre o que a hidrovia degrada: portos, dragagem, comunidades, lugares sagrados, fauna e as lutas contra ela (até out/2026).',
     titulo: p => p.nome,
     info: p => p.kind === 'rota' ? [['Ciclo', p.ciclo], ['Descrição', p.descricao], ['Fontes', p.fonte], ['Link', p.url]] : [['Tema', p.categoria], ['O que acontece', p.situacao], ['Atores', p.atores], ['Impactos', p.impactos], ['Localização', p.precisao], ['Fontes', p.fonte], ['Link', p.url]] },
-  { id: 'hv_loc', grupo: 'hv', nome: '2 · Caminhos das comunidades', sub: 'rotas entre vilas, cidades e ramais · pesca e permanência', arquivo: 'data/hv_comunidades.geojson', tipo: 'misto', on: true, raio: 6,
-    corLinha: ['match', ['get', 'tipo'], 'linha', '#f3d36b', 'travessia', '#f3d36b', 'pesca', '#3fbf7f', 'mobilizacao', '#e0b000', 'ramal', '#c9a27a', '#f3d36b'],
-    largura: ['match', ['get', 'tipo'], 'ramal', 1.1, 'pesca', 2.4, 2.6], dash: [2, 1.6],
-    corExpr: ['match', ['get', 'tipo'], 'pesca', '#3fbf7f', 'feira', '#f3d36b', 'permanencia', '#ffffff', '#cccccc'],
-    sw: { cor: '#f3d36b', forma: 'line' },
-    legenda: [['#f3d36b', 'Barcos de linha, recreios e travessias'], ['#3fbf7f', 'Caminhos de pesca'], ['#e0b000', 'Barqueata (2026)'], ['#c9a27a', 'Ramais e estradas vicinais'], ['#3fbf7f', '● Lugar de pesca'], ['#f3d36b', '● Desembarque / feira'], ['#ffffff', '● Comunidade / lugar de permanência']],
-    desc: 'Os caminhos de quem vive no rio: barcos de linha entre vilas e cidades, travessias, caminhos de pesca e ramais que ligam comunidades à beira. Os pontos marcam lugares de pesca e de permanência de comunidades indígenas, quilombolas, extrativistas e ribeirinhas. Traçados esquemáticos e localizações aproximadas.',
-    titulo: p => p.nome, info: p => [['Descrição', p.descricao], ['Localização', p.precisao], ['Fontes', p.fonte]] },
-  { id: 'hv_seres', grupo: 'hv', nome: '3 · Seres do rio', sub: 'botos, peixe-boi, quelônios, peixes migradores · ícones bordados', arquivo: 'data/hv_seres.geojson', tipo: 'icone', on: true,
-    icones: ['boto', 'tucuxi', 'peixeboi', 'ariranha', 'iaca', 'tartaruga', 'dourada', 'jaraqui', 'pedral'],
-    sw: { cor: '#ee8fa1', forma: 'dot' },
-    legenda: [['#ee8fa1', 'Boto-vermelho'], ['#9aa6b8', 'Tucuxi'], ['#8b8174', 'Peixe-boi'], ['#6e4a2c', 'Ariranha'], ['#6b7a3a', 'Quelônios'], ['#e3ad45', 'Dourada'], ['#c3cdd2', 'Jaraqui e matrinxã'], ['#7a6a44', 'Peixes dos pedrais']],
-    desc: 'Animais e outros seres que habitam o rio, desenhados como bordados, nos lugares onde as fontes os registram, com as ameaças que a hidrovia, o garimpo e a crise climática trazem para eles.',
-    titulo: p => p.nome,
-    corpo: p => `<p class="bor-tipo" style="background:#2f6fd0">${CD.esc(p.cientifico || '')}</p><p class="bor-txt">${CD.esc(p.texto || '')}</p>`,
-    info: p => [['Localização', p.precisao], ['Fontes', p.fonte]] },
-
   // ---------------- encantados e não humanos (pesquisa out/2026)
   { id: 'en_lug', grupo: 'en', nome: 'Lugares encantados, sagrados e fauna', sub: 'Fundo, cemitérios, pedrais, botos e tucuxis · aproximado', arquivo: 'data/en_lugares.geojson', tipo: 'circle', on: true, raio: 7.5,
     corExpr: ['match', ['get', 'tipo'], 'fundo', '#4b2a8a', 'encantado', '#7b5cc4', 'cemiterio', '#1b1b1b', 'pedral', '#b08a3c', 'fauna', '#2f6fd0', '#888'],
@@ -93,8 +89,8 @@ CD.LAYERS = [
       { src: 'media/encantado_mulher_dourado.webp', coords: [[-55.1007, -3.025], [-55.0893, -3.025], [-55.0893, -3.051], [-55.1007, -3.051]] }
     ],
     sw: { cor: '#e8b62c', forma: 'dot' },
-    legenda: [['#e8b62c', 'Encantado bordado à mão, georreferenciado'], ['#ff3355', 'Contorno da TI Bragança-Marituba (Munduruku), em ponto alinhavo']],
-    desc: 'Encantados da cartografia têxtil, bordados à mão e colocados no mapa onde vivem. A Cobra Grande está na divisa do Lago Verde com o Tapajós, em Alter do Chão. A Mulher de Dourado está na TI Munduruku Bragança-Marituba, cujo contorno aparece em vermelho. As posições de lugares sagrados são indicativas.',
+    legenda: [['#e8b62c', 'Encantado bordado à mão, georreferenciado']],
+    desc: 'Encantados da cartografia têxtil, bordados à mão e colocados no mapa onde vivem. A Cobra Grande está na divisa do Lago Verde com o Tapajós, em Alter do Chão. A Mulher de Dourado está na TI Munduruku Bragança-Marituba. As posições de lugares sagrados são indicativas.',
     titulo: p => p.nome,
     corpo: p => p.tipo === 'encantado' ? `<p class="bor-tipo" style="background:#b8860b">Encantado</p><h3 class="bor-h">${CD.esc(p.lugar || '')}</h3><p class="bor-txt">${CD.esc(p.texto || '')}</p>` : `<p class="bor-txt">${CD.esc(p.descricao || '')}</p>`,
     info: p => [['Localização', p.precisao], ['Fonte', p.fonte]] },
@@ -127,8 +123,9 @@ CD.LAYERS = [
     desc: 'Territórios quilombolas (INCRA) do Baixo Amazonas e Baixo Tapajós.',
     info: () => [['Fonte', 'INCRA'], ['Observação', 'Polígonos dissolvidos — sem atributos por comunidade neste arquivo']] },
   { id: 'uc', grupo: 'terr', nome: 'Unidades de conservação', sub: 'ICMBio — federais', arquivo: 'data/icmbio.geojson', tipo: 'fill', on: true,
-    corExpr: ['match', ['get', 'grupo'], 'PI', '#3f9a5c', '#9cc36b'], opac: 0.18, linha: '#b9e08d', sw: { cor: '#7fb069' },
-    legenda: [['#3f9a5c', 'Proteção integral (PI)'], ['#9cc36b', 'Uso sustentável (US)']],
+    corExpr: ['match', ['get', 'categoria'], 'FLONA', '#2e8b4e', 'RESEX', '#e0a030', 'APA', '#b7d98a', '#2a8f8a'], opac: 0.26,
+    linha: ['match', ['get', 'categoria'], 'FLONA', '#7be0a0', 'RESEX', '#ffd27a', 'APA', '#dff0c4', '#8fe0dc'], sw: { cor: '#2e8b4e' },
+    legenda: [['#2e8b4e', 'Floresta Nacional (Flona) — ex.: Flona do Tapajós'], ['#e0a030', 'Reserva Extrativista (Resex) — ex.: Resex Tapajós-Arapiuns'], ['#b7d98a', 'Área de Proteção Ambiental (APA do Tapajós)'], ['#2a8f8a', 'Proteção integral (Parna, Esec, Rebio)']],
     desc: 'Unidades de conservação federais (ICMBio): Flona do Tapajós, Resex Tapajós-Arapiuns, APA do Tapajós, Parna da Amazônia, entre outras.',
     titulo: p => p.nome, info: p => [['Categoria', p.categoria], ['Grupo', p.grupo === 'PI' ? 'Proteção integral' : 'Uso sustentável'], ['Criação', p.ano], ['Ato legal', p.ato], ['Municípios', p.municipios], ['Jurisdição', p.jurisdicao]] },
   { id: 'urb', grupo: 'terr', nome: 'Áreas urbanizadas', sub: 'IBGE', arquivo: 'data/areas_urbanizadas.geojson', tipo: 'fill', on: false,
@@ -136,23 +133,16 @@ CD.LAYERS = [
     titulo: p => 'Área urbanizada — ' + (p.nome || ''), info: p => [['UF', p.uf], ['Densidade', p.densidade], ['Porte', p.categoria]] },
 
   // ---------------- memória
-  { id: 'arq', grupo: 'mem', nome: 'Sítios arqueológicos', sub: 'IPHAN — 546 sítios', arquivo: 'data/arqueologia.geojson', tipo: 'circle', on: true,
+  { id: 'arq', grupo: 'mem', nome: 'Sítios arqueológicos', sub: 'IPHAN — 546 sítios · mapa de calor', arquivo: 'data/arqueologia.geojson', tipo: 'calor', on: true,
     corExpr: ['match', ['get', 'classificacao'], 'Pré-colonial', '#f0b35e', 'Pré-colonial e Histórico', '#e58f4a', 'Histórico', '#c9c3b5', '#a9876a'],
-    sw: { cor: '#f0b35e', forma: 'dot' },
-    legenda: [['#f0b35e', 'Pré-colonial'], ['#e58f4a', 'Pré-colonial e histórico'], ['#c9c3b5', 'Histórico'], ['#a9876a', 'Sem classificação']],
-    desc: 'Cadastro Nacional de Sítios Arqueológicos (IPHAN). Terra preta, cerâmica tapajônica e assentamentos de longa duração revelam séculos de manejo do território.',
+    sw: { cor: '#e8503a', forma: 'dot' },
+    legenda: [['#fde0d6', 'Poucos sítios'], ['#f4927a', ''], ['#e0412c', ''], ['#9e0f12', 'Maior concentração de sítios'], ['#f0b35e', '● De perto (zoom), cada sítio aparece como ponto: clique para ver a ficha']],
+    desc: 'Cadastro Nacional de Sítios Arqueológicos (IPHAN), mostrado como mapa de calor: quanto mais escuro o vermelho, maior a concentração de sítios. Ao aproximar o mapa, os sítios aparecem um a um. Terra preta, cerâmica tapajônica e assentamentos de longa duração revelam séculos de manejo do território.',
     titulo: p => p.nome || 'Sítio arqueológico', info: p => [['Código IPHAN', p.codigo], ['Natureza', p.natureza], ['Classificação', p.classificacao], ['Síntese', p.sintese], ['Cadastro', p.data]] },
 
   // ---------------- águas
-  { id: 'agua', grupo: 'agua', nome: 'Massas d’água', sub: 'rios e lagos', arquivo: 'data/massa_dagua.geojson', tipo: 'fill', on: false,
+  { id: 'agua', grupo: 'agua', nome: 'Massas d’água', sub: 'rios e lagos', arquivo: 'data/massa_dagua.geojson', tipo: 'fill', on: true,
     cor: '#2f8fae', opac: 0.55, linha: '#7fd0e6', sw: { cor: '#2f8fae' }, info: () => [['Fonte', 'ANA — base hidrográfica']] },
-  { id: 'igapo', grupo: 'agua', nome: 'Igapós e várzeas', sub: 'florestas inundáveis', arquivo: 'data/igapo.geojson', tipo: 'fill', on: false,
-    cor: '#4fb39a', opac: 0.35, linha: '#8fe0c8', sw: { cor: '#4fb39a' },
-    desc: 'Florestas sazonalmente alagadas: o território anfíbio onde terra e água se alternam ao ritmo da cheia e da vazante.', info: () => [['Tipo', 'Floresta inundável (igapó/várzea)']] },
-  { id: 'dren', grupo: 'agua', nome: 'Rede de drenagem', sub: 'igarapés e rios', arquivo: 'data/drenagem.geojson', tipo: 'line', on: true,
-    cor: '#6cc7e6', largura: ['interpolate', ['linear'], ['to-number', ['get', 'ordem']], 1, 0.4, 4, 1.2, 7, 2.8], sw: { cor: '#6cc7e6', forma: 'line' },
-    titulo: p => p.nome || 'Curso d’água', info: p => [['Ordem', p.ordem], ['Comprimento (km)', p.km]] },
-
   // ---------------- infraestrutura
   { id: 'hidrovia', grupo: 'infra', nome: 'Hidrovias', sub: 'ANTAQ / SNV', arquivo: 'data/hidrovia.geojson', tipo: 'line', on: true,
     cor: '#ff7a5c', largura: 2.6, dash: [2, 1.5], sw: { cor: '#ff7a5c', forma: 'line' },
@@ -167,16 +157,9 @@ CD.LAYERS = [
     titulo: p => 'Porto — ' + p.Nome, info: p => [['UF', p.Unidade_Fe], ['Rio', p.Local]] },
 
   // ---------------- desmatamento
-  { id: 'prodes', grupo: 'desm', nome: 'Desmatamento 2008–2025', sub: 'polígonos ≥ 20 ha · linha do tempo', arquivo: 'data/desmatamento_prodes.geojson', tipo: 'fill', on: false, timeline: true,
-    corExpr: yearRamp, opac: 0.8, sw: { cor: '#ea7d33' },
-    legenda: [['#f7e27c', '2008'], ['#f3b94a', '2013'], ['#ea7d33', '2018'], ['#d8452a', '2022'], ['#a5161a', '2025']],
-    desc: 'Incrementos anuais de desmatamento por corte raso (PRODES/INPE). Para leveza, o mapa exibe polígonos a partir de 20 ha; as estatísticas consideram todos os polígonos.',
-    titulo: p => 'Desmatamento ' + p.y, info: p => [['Ano PRODES', p.y], ['Área', (p.a * 100).toFixed(1) + ' ha'], ['Classe', p.c], ['Imagem', p.d], ['Satélite', p.s]] },
-  { id: 'hist', grupo: 'desm', nome: 'Desmatamento acumulado até 2007', sub: 'máscara histórica · polígonos ≥ 40 ha', arquivo: 'data/desmatamento_historico.geojson', tipo: 'fill', on: false,
-    cor: '#8a4f35', opac: 0.6, sw: { cor: '#8a4f35' },
-    titulo: () => 'Desmatamento até 2007', info: p => [['Área', (p.a * 100).toFixed(1) + ' ha'], ['Fonte', 'PRODES — máscara histórica']] },
-  { id: 'grade', grupo: 'desm', nome: 'Intensidade 3D', sub: 'km² desmatados por célula de ~2,8 km', arquivo: 'data/desmatamento_grade.geojson', tipo: 'extrude', on: false, timeline: true,
-    sw: { cor: '#d8452a' },
-    desc: 'Grade de 0,025° em que a altura e a cor indicam a área desmatada acumulada (inclui a máscara anterior a 2008). Acompanha a linha do tempo.',
-    titulo: () => 'Célula de desmatamento', info: p => [['Acumulado até 2007', p.h.toFixed(2) + ' km²'], ['Total até 2025', p.t.toFixed(2) + ' km²']] }
+  { id: 'desm_acum', grupo: 'desm', nome: 'Desmatamento acumulado', sub: 'PRODES/INPE · até 2025', arquivo: 'data/desmatamento_acumulado.geojson', tipo: 'fill', on: false,
+    cor: '#9a9a9a', opac: 0.7, sw: { cor: '#9a9a9a' },
+    legenda: [['#9a9a9a', 'Área desmatada até 2025']],
+    desc: 'Toda a floresta suprimida por corte raso no recorte, segundo o PRODES/INPE: a máscara histórica até 2007 somada aos incrementos anuais de 2008 a 2025. Para leveza, o mapa exibe polígonos a partir de 20 ha (40 ha na máscara histórica); as estatísticas consideram todos os polígonos.',
+    titulo: p => p.y <= 2007 ? 'Desmatamento até 2007' : 'Desmatamento ' + p.y, info: p => [['Período', p.y <= 2007 ? 'até 2007' : 'PRODES ' + p.y], ['Área', (p.a * 100).toFixed(1) + ' ha'], ['Fonte', 'PRODES/INPE']] }
 ];

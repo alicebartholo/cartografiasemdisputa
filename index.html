@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cartografias em Disputa — Baixo Tapajós</title>
-<meta name="description" content="WebGIS e atlas ilustrados sobre os conflitos socioambientais e as sobreposições ontológicas no Baixo Tapajós.">
+<meta name="description" content="WebGIS, dossiês e caderno sobre os conflitos socioambientais e as sobreposições ontológicas no Baixo Tapajós.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -57,9 +57,9 @@
     <div><h1>Cartografias em Disputa</h1><small>redes de conexão no Baixo Tapajós</small></div>
   </div>
   <nav class="modes">
-    <button data-mode="mapa" class="on"><svg class="i"><use href="#i-map"/></svg><span class="lbl">Mapa geográfico</span></button>
-    <button data-mode="atlas"><svg class="i"><use href="#i-book"/></svg><span class="lbl">Atlas · colagens</span></button>
-    <button data-mode="dossie"><svg class="i"><use href="#i-anchor"/></svg><span class="lbl">Dossiês</span></button>
+    <button data-mode="ext"><svg class="i"><use href="#i-map"/></svg><span class="lbl">Mapa do extrativismo</span></button>
+    <button data-mode="cos" class="on"><svg class="i"><use href="#i-globe"/></svg><span class="lbl">Mapa cosmológico</span></button>
+    <button data-mode="dossie"><svg class="i"><use href="#i-anchor"/></svg><span class="lbl">Dossiês e narrativas</span></button>
     <button data-mode="caderno"><svg class="i"><use href="#i-book"/></svg><span class="lbl">Caderno</span></button>
   </nav>
   <div class="tools">
@@ -73,6 +73,7 @@
 
 <!-- ======================= MAPA ======================= -->
 <section class="view on" id="mapView">
+  <div id="mapaTitulo"></div>
   <div id="map"></div>
   <button class="btn icon" id="sideToggle" title="Abrir painel"><svg class="i"><use href="#i-sidebar"/></svg></button>
 
@@ -139,13 +140,13 @@
     <input type="range" id="tlRange" min="2008" max="2025" step="1" value="2025">
     <div id="tlTicks"></div>
   </div>
-  <div id="tourBar"><b>Percurso</b><span id="tourPos"></span><button class="btn sm icon" id="tourPrev"><svg class="i"><use href="#i-left"/></svg></button><button class="btn sm icon" id="tourNext"><svg class="i"><use href="#i-right"/></svg></button><button class="btn sm icon" id="tourEnd"><svg class="i"><use href="#i-x"/></svg></button></div>
+  <div id="tourBar"><b>Percurso</b><span id="tourDots"></span><span id="tourPos"></span><button class="btn sm icon" id="tourPrev"><svg class="i"><use href="#i-left"/></svg></button><button class="btn sm icon" id="tourNext"><svg class="i"><use href="#i-right"/></svg></button><button class="btn sm icon" id="tourEnd"><svg class="i"><use href="#i-x"/></svg></button></div>
   <div id="coords">—</div>
   <aside class="story" id="mapStory"><button class="story-close" data-close="mapStory"><svg class="i"><use href="#i-x"/></svg></button><div class="story-body scroll"></div></aside>
 </section>
 
 <!-- ======================= ATLAS ======================= -->
-<section class="view" id="dossieView"><nav id="dossieTabs"><a href="#dossie/hidrovia" data-doc="hidrovia">Hidrovia em disputa</a><a href="#dossie/encantados" data-doc="encantados">Encantados e não humanos</a></nav><div id="dossieBody"><p class="dz-loading">Carregando o dossiê…</p></div></section>
+<section class="view" id="dossieView"><nav id="dossieTabs"><a href="#dossie/narrativas" data-doc="narrativas">Narrativas</a><a href="#dossie/hidrovia" data-doc="hidrovia">Dossiê · Hidrovia em disputa</a><a href="#dossie/encantados" data-doc="encantados">Dossiê · Encantados e não humanos</a></nav><div id="dossieBody"><p class="dz-loading">Carregando o dossiê…</p></div></section>
 
 <section class="view" id="cadernoView">
   <div id="cadBar">
@@ -199,10 +200,10 @@
     <div class="place place-bordado">Redes de conexão no Baixo Tapajós</div>
     <p>Uma investigação cartográfica que contrasta as linhas abstratas do planejamento, que reduzem o território a um “vazio demográfico” e o Rio Tapajós a um canal logístico de exportação, com as redes de conexão vivas, anfíbias e mais-que-humanas tecidas pelas populações originárias e tradicionais.</p>
     <div class="go">
-      <button class="btn primary" data-go="mapa"><svg class="i"><use href="#i-map"/></svg>Mapa geográfico 3D</button>
-      <button class="btn" data-go="atlas"><svg class="i"><use href="#i-book"/></svg>Atlas em colagem</button>
+      <button class="btn primary" data-go="ext"><svg class="i"><use href="#i-map"/></svg>Mapa do extrativismo</button>
+      <button class="btn primary" data-go="cos"><svg class="i"><use href="#i-globe"/></svg>Mapa cosmológico</button>
       <button class="btn" data-go="tour"><svg class="i"><use href="#i-route"/></svg>Percurso</button>
-      <button class="btn" data-go="dossie"><svg class="i"><use href="#i-anchor"/></svg>Dossiês: hidrovia e encantados</button>
+      <button class="btn" data-go="dossie"><svg class="i"><use href="#i-anchor"/></svg>Dossiês e narrativas</button>
       <button class="btn" data-go="caderno"><svg class="i"><use href="#i-book"/></svg>Caderno</button>
     </div>
     <div class="credit">Alice Jales Bartholo de Oliveira · Trabalho Final de Graduação em Arquitetura e Urbanismo · orientação Prof. Dr. Paulo Roberto Carvalho Tavares</div>
@@ -218,15 +219,15 @@
     <p>Este trabalho investiga os conflitos socioambientais e as sobreposições ontológicas no Baixo Tapajós através do prisma das cartografias críticas. Ancorada na virada decolonial, na ecologia, no perspectivismo ameríndio e no constitucionalismo ecocêntrico, a pesquisa analisa como a experiência da aquabilidade, a arqueologia e as geografias invisíveis do Fundo e dos Encantes desarticulam a ficção da <i>terra nullius</i>, e propõe o reconhecimento do Rio Tapajós como “Ser-Rio”, sujeito vivo de direitos.</p>
     <h3>Como navegar</h3>
     <ul>
-      <li><b>Mapa geográfico</b> — ligue e desligue camadas no painel à esquerda; segure o botão direito (ou Ctrl + arraste) para inclinar e girar a câmera sobre o relevo 3D; clique nas feições para ver os atributos.</li>
+      <li><b>Mapas</b> — o <i>Mapa do extrativismo</i> reúne hidrovia das commodities, portos, estradas, Ferrogrão e desmatamento; o <i>Mapa cosmológico</i> reúne encantados, seres do rio, caminhos das comunidades, TI Borari, arqueologia e águas. Territórios aparecem nos dois. ligue e desligue camadas no painel à esquerda; segure o botão direito (ou Ctrl + arraste) para inclinar e girar a câmera sobre o relevo 3D; clique nas feições para ver os atributos.</li>
       <li><b>Narrativas</b> — os pontos coloridos abrem histórias com texto e imagens. O botão <i>Percurso</i> conduz por eles em sequência.</li>
-      <li><b>Atlas</b> — seis colagens de grande formato com zoom profundo. Os pontos pulsantes abrem relatos; “Ver no mapa” leva ao lugar correspondente.</li>
-      <li><b>Editar</b> — com o servidor local ativo, ligue o modo edição para criar pontos no mapa, adicionar imagens, marcar hotspots nos atlas e carregar novas obras. Tudo é salvo na pasta do projeto.</li>
+      <li><b>Dossiês</b> — pesquisas sobre a hidrovia e sobre os encantados e seres não humanos, com mapas e diagramas.</li>
+      <li><b>Caderno</b> — o caderno do trabalho para folhear página por página.</li>
+      <li><b>Editar</b> — com o servidor local ativo, ligue o modo edição para criar pontos no mapa e adicionar imagens. Tudo é salvo na pasta do projeto.</li>
     </ul>
     <h3>Fontes dos dados</h3>
     <p style="font-size:13px">Sítios arqueológicos: IPHAN/CNSA · Terras indígenas: FUNAI · Territórios quilombolas: INCRA · Unidades de conservação: ICMBio · Desmatamento: PRODES/INPE · Hidrografia: ANA · Rodovias e hidrovias: DNIT/SNV, ANTAQ · Áreas urbanizadas e portos: IBGE · Relevo: Mapzen/AWS Terrain Tiles · Mapas base: Esri, CARTO, OpenStreetMap.</p>
-    <h3>Sobre os atlas</h3>
-    <p style="font-size:13px">As <b>colagens</b> recortam e sobrepõem fotografias de campo da autora, mapas históricos em domínio público (carta portulano do séc. XVI; Mercator, 1569; Ortelius, 1570; Fry &amp; Jefferson, 1751; Holiday, 1876; Sanson, 1680; Nimuendajú, 1944), imagens da NASA, camadas geoprocessadas do projeto e recortes de ilustrações do projeto. As colagens IV–VI nascem das pranchas ilustradas (esquemas interpretativos, sem escala), compostas a partir da bibliografia (Stenborg &amp; Schaan; Vaz Filho; Galvão; Korap Munduruku, Alfinito &amp; Schavelzon; Relatório de Autodemarcação Borari, 2025; Miranda &amp; Gomes; Basta &amp; Hacon). Localizações geográficas dos pontos são aproximadas.</p>
+    <h3>Sobre os dossiês</h3>
     <p style="font-size:13px">O <b>Dossiê · hidrovia</b> reúne a pesquisa sobre a hidrovia do Tapajós e seus conflitos com os modos de vida locais (reportagens, relatórios, documentos do MPF e TCU e literatura científica, até outubro de 2026), com o percurso e as camadas correspondentes no mapa. O dossiê <b>Encantados e não humanos</b> trata da espiritualidade das comunidades, dos lugares de respeito e da fauna ameaçada.</p>
   </div>
 </div></div>

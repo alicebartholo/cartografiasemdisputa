@@ -5,8 +5,11 @@
     map: null, points: { type: 'FeatureCollection', features: [] }, markers: {}, atlasMarkers: [], cityMarkers: [],
     year: 2025, playing: null, data: {}, loaded: {}, current: null, tour: null, draft: null
   };
-  const ORDER = ['hist', 'prodes', 'agua', 'igapo', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'dren', 'rodovia', 'hidrovia', 'hv_loc', 'hv_com', 'arq', 'portos', 'en_lug', 'hv_seres', 'bor_pts', 'en_bord', 'grade'];
-  const layerIds = def => def.tipo === 'fill' ? [def.id + '-f', def.id + '-l'] : def.tipo === 'bordado' ? [def.id + '-f', def.id + '-lim', ...def.obras.map((o, i) => def.id + '-img' + i)] : def.tipo === 'misto' ? [def.id + '-l', def.id] : [def.id];
+  const ORDER = ['desm_acum', 'agua', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'rodovia', 'hidrovia', 'hv_com', 'arq', 'portos', 'en_lug', 'bor_pts', 'en_bord'];
+  M.mapa = 'cos';
+  const inMapa = d => !CD.LAYER_MAPAS || !CD.LAYER_MAPAS[d.id] || CD.LAYER_MAPAS[d.id].includes(M.mapa);
+  const catNoMapa = c => !CD.MAPAS || CD.MAPAS[M.mapa].cats.includes(c);
+  const layerIds = def => def.tipo === 'fill' ? [def.id + '-f', def.id + '-l'] : def.tipo === 'bordado' ? [def.id + '-f', def.id + '-lim', ...def.obras.map((o, i) => def.id + '-img' + i)] : def.tipo === 'misto' ? [def.id + '-l', def.id] : def.tipo === 'calor' ? [def.id + '-h', def.id] : [def.id];
   const def = id => CD.LAYERS.find(l => l.id === id);
 
   /* ======================================================= estilo base */
@@ -44,10 +47,30 @@
     await M.ready;
     try { map.setTerrain({ source: 'dem', exaggeration: 2 }); } catch (e) { console.warn(e); }
     try { map.setSky && map.setSky({ 'sky-color': '#16232a', 'horizon-color': '#c9a46b', 'fog-color': '#1a2224', 'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.6, 'fog-ground-blend': 0.25 }); } catch (e) { }
-    CD.LAYERS.forEach(d => { if (d.on && d.tipo !== 'html') addLayer(d); });
+    CD.LAYERS.forEach(d => { if (d.on && inMapa(d) && d.tipo !== 'html') addLayer(d); });
     buildLayerPanel(); buildBasemaps(); bindControls(); bindMapEvents();
     await loadPoints(); await loadCities(); M.drawAtlasMarkers(); await buildIndex(); await buildStats();
+    M.loaded = true; M.setMapa(M.mapa, true);
   };
+
+  /* ======================================================= os dois mapas */
+  M.setMapa = function (id, force) {
+    if (!CD.MAPAS || !CD.MAPAS[id] || (id === M.mapa && !force)) { M.mapa = id || M.mapa; return; }
+    M.mapa = id; document.body.dataset.mapa = id;
+    const t = $('#mapaTitulo'); if (t) t.innerHTML = `<b>${CD.MAPAS[id].nome}</b><span>${CD.MAPAS[id].desc}</span>`;
+    if (!M.loaded) return;
+    CD.LAYERS.forEach(d => { const v = d.on && inMapa(d); if (d.tipo === 'html' || v || M.map.getLayer(layerIds(d)[0])) setVis(d, v); });
+    buildLayerPanel(); updateTimelineVisibility(); renderPointList(); applyPointVis();
+  };
+  function applyPointVis() {
+    const on = def('pontos').on;
+    const inTour = id => M.tour && M.tour.list.some(x => x.properties.id === id);
+    M.points.features.forEach(f => { const m = M.markers[f.properties.id]; if (!m) return; const id = f.properties.id;
+      const el = m.getElement();
+      el.style.display = inTour(id) ? 'none' : on && (catNoMapa(f.properties.categoria) || id === M.current) ? '' : 'none';
+      el.classList.toggle('dim', !!M.tour); });
+  }
+  M.applyPointVis = applyPointVis;
 
   /* ======================================================= camadas */
   function beforeIdFor(id) {
@@ -97,6 +120,17 @@
       map.addLayer({ id: d.id, type: 'circle', source: d.id, paint: {
         'circle-color': d.corExpr || d.cor, 'circle-radius': ['interpolate', ['linear'], ['zoom'], 5, (d.raio || 4) * .6, 10, (d.raio || 4) * 1.4, 14, (d.raio || 4) * 2.2],
         'circle-stroke-color': ['case', ['boolean', ['feature-state', 'hover'], false], '#ffffff', '#1b1209'], 'circle-stroke-width': ['case', ['boolean', ['feature-state', 'hover'], false], 2.5, 1], 'circle-opacity': op, 'circle-stroke-opacity': op, 'circle-pitch-alignment': 'map' } }, before);
+    } else if (d.tipo === 'calor') {
+      map.addLayer({ id: d.id + '-h', type: 'heatmap', source: d.id, maxzoom: 14, paint: {
+        'heatmap-weight': 1,
+        'heatmap-intensity': ['interpolate', ['linear'], ['zoom'], 5, 0.6, 9, 1.2, 12, 2],
+        'heatmap-radius': ['interpolate', ['linear'], ['zoom'], 5, 7, 8, 14, 10, 22, 12, 32, 14, 40],
+        'heatmap-color': ['interpolate', ['linear'], ['heatmap-density'], 0, 'rgba(255,255,255,0)', 0.08, 'rgba(255,240,234,0.55)', 0.25, 'rgba(250,196,178,0.8)', 0.45, 'rgba(242,138,110,0.88)', 0.65, 'rgba(224,65,44,0.92)', 0.85, 'rgba(180,22,24,0.95)', 1, 'rgba(110,6,12,1)'],
+        'heatmap-opacity': ['interpolate', ['linear'], ['zoom'], 11.5, 0.9 * op, 13.5, 0] } }, before);
+      map.addLayer({ id: d.id, type: 'circle', source: d.id, minzoom: 11, paint: {
+        'circle-color': d.corExpr || '#f0b35e', 'circle-radius': ['interpolate', ['linear'], ['zoom'], 11, 3, 14, 7],
+        'circle-stroke-color': ['case', ['boolean', ['feature-state', 'hover'], false], '#ffffff', '#1b1209'], 'circle-stroke-width': 1,
+        'circle-opacity': ['interpolate', ['linear'], ['zoom'], 11, 0, 12.5, op], 'circle-stroke-opacity': ['interpolate', ['linear'], ['zoom'], 11, 0, 12.5, op] } }, before);
     } else if (d.tipo === 'misto') {
       const lp = { 'line-color': d.corLinha || '#c8102e', 'line-width': d.largura || 2, 'line-opacity': .9 * op };
       if (d.dash) lp['line-dasharray'] = d.dash;
@@ -151,7 +185,7 @@
   }
   function setVis(d, v) {
     if (d.tipo === 'html') {
-      if (d.id === 'pontos') Object.values(M.markers).forEach(m => m.getElement().style.display = v ? '' : 'none');
+      if (d.id === 'pontos') { applyPointVis(); return; }
       if (d.id === 'atlasmk') M.atlasMarkers.forEach(m => m.getElement().style.display = v ? '' : 'none');
       if (d.id === 'cidades') M.cityMarkers.forEach(m => m.getElement().style.display = v ? '' : 'none');
       return;
@@ -169,6 +203,7 @@
     else if (d.tipo === 'circle') { map.setPaintProperty(d.id, 'circle-opacity', k); map.setPaintProperty(d.id, 'circle-stroke-opacity', k); }
     else if (d.tipo === 'extrude') map.setPaintProperty(d.id, 'fill-extrusion-opacity', .85 * k);
     else if (d.tipo === 'seed' || d.tipo === 'icone') map.setPaintProperty(d.id, 'icon-opacity', k);
+    else if (d.tipo === 'calor') { map.setPaintProperty(d.id + '-h', 'heatmap-opacity', ['interpolate', ['linear'], ['zoom'], 11.5, 0.9 * k, 13.5, 0]); map.setPaintProperty(d.id, 'circle-opacity', ['interpolate', ['linear'], ['zoom'], 11, 0, 12.5, k]); map.setPaintProperty(d.id, 'circle-stroke-opacity', ['interpolate', ['linear'], ['zoom'], 11, 0, 12.5, k]); }
     else if (d.tipo === 'misto') { map.setPaintProperty(d.id + '-l', 'line-opacity', .9 * k); map.setPaintProperty(d.id, 'circle-opacity', k); map.setPaintProperty(d.id, 'circle-stroke-opacity', k); }
     else if (d.tipo === 'bordado') { map.setPaintProperty(d.id + '-lim', 'line-opacity', .9 * k); d.obras.forEach((o, i) => map.setPaintProperty(d.id + '-img' + i, 'raster-opacity', k)); }
   }
@@ -176,7 +211,7 @@
   function buildLayerPanel() {
     const box = $('#layerList'); box.innerHTML = '';
     CD.GROUPS.forEach(g => {
-      const ls = CD.LAYERS.filter(l => l.grupo === g.id); if (!ls.length) return;
+      const ls = CD.LAYERS.filter(l => l.grupo === g.id && inMapa(l)); if (!ls.length) return;
       const el = document.createElement('div'); el.className = 'group';
       el.innerHTML = `<div class="group-h"><span>${g.nome}</span>${CD.icon('down')}</div><div class="layers">${ls.map(d => `
         <div class="layer ${d.on ? 'on' : ''}" data-id="${d.id}">
@@ -234,7 +269,7 @@
   }
   M.setYear = y => { M.year = y; applyYear(); };
   function updateTimelineVisibility() {
-    const on = CD.LAYERS.some(d => d.timeline && d.on);
+    const on = CD.LAYERS.some(d => d.timeline && d.on && inMapa(d));
     $('#timeline').classList.toggle('on', on);
   }
 
@@ -297,7 +332,7 @@
   M.home = () => M.map.flyTo({ center: CD.VIEW.center, zoom: CD.VIEW.zoom, pitch: CD.VIEW.pitch, bearing: CD.VIEW.bearing, duration: 2200 });
 
   /* ======================================================= interação com feições */
-  const interactive = () => CD.LAYERS.filter(d => d.on && d.tipo !== 'html' && M.map.getLayer(layerIds(d)[0])).flatMap(d => d.tipo === 'fill' ? [d.id + '-f'] : d.tipo === 'bordado' ? [d.id + '-f', d.id + '-lim'] : d.tipo === 'misto' ? [d.id + '-l', d.id] : [d.id]).reverse();
+  const interactive = () => CD.LAYERS.filter(d => d.on && d.tipo !== 'html' && M.map.getLayer(layerIds(d)[0])).flatMap(d => d.tipo === 'fill' ? [d.id + '-f'] : d.tipo === 'bordado' ? [d.id + '-f', d.id + '-lim'] : d.tipo === 'misto' ? [d.id + '-l', d.id] : d.tipo === 'calor' ? [d.id] : [d.id]).reverse();
   let hoverF = null, tip = { remove() { } };
   function bindMapEvents() {
     const map = M.map;
@@ -351,11 +386,7 @@
   /* ======================================================= cidades */
   async function loadCities() {
     const gj = await CD.api.load('data/cidades.geojson', { features: [] });
-    gj.features.forEach(f => {
-      const el = document.createElement('div'); el.className = 'mk-city' + ((+f.properties.Pop || 0) > 100000 ? ' big' : '');
-      el.textContent = f.properties.Nome;
-      M.cityMarkers.push(new maplibregl.Marker({ element: el, anchor: 'left' }).setLngLat(f.geometry.coordinates).addTo(M.map));
-    });
+    // camada 'Cidades e vilas' retirada do mapa; os nomes seguem só na busca
     M.data.cidades = gj;
   }
 
@@ -367,11 +398,12 @@
   function renderPoints() {
     Object.values(M.markers).forEach(m => m.remove()); M.markers = {};
     const vis = def('pontos').on;
+    const noMapa = p => catNoMapa(p.categoria);
     M.points.features.forEach(f => {
       const p = f.properties; const c = (CD.CATS[p.categoria] || {}).cor || '#e3a857';
       const el = document.createElement('div'); el.className = 'mk'; el.style.background = c; el.style.color = c;
       el.innerHTML = `<span class="mk-label">${CD.esc(p.titulo)}</span>`;
-      if (!vis) el.style.display = 'none';
+      if (!vis || !noMapa(p)) el.style.display = 'none';
       el.addEventListener('click', ev => { ev.stopPropagation(); M.openPoint(p.id); });
       M.markers[p.id] = new maplibregl.Marker({ element: el }).setLngLat(f.geometry.coordinates).addTo(M.map);
     });
@@ -380,9 +412,10 @@
   let catFilter = null;
   function renderPointList() {
     const chips = $('#pointChips');
-    chips.innerHTML = `<button class="chip ${!catFilter ? 'on' : ''}" data-c="">Todas</button>` + Object.entries(CD.CATS).map(([k, v]) => `<button class="chip ${catFilter === k ? 'on' : ''}" data-c="${k}"><i style="background:${v.cor}"></i>${v.nome}</button>`).join('');
+    chips.innerHTML = `<button class="chip ${!catFilter ? 'on' : ''}" data-c="">Todas</button>` + Object.entries(CD.CATS).filter(([k]) => catNoMapa(k)).map(([k, v]) => `<button class="chip ${catFilter === k ? 'on' : ''}" data-c="${k}"><i style="background:${v.cor}"></i>${v.nome}</button>`).join('');
     $$('.chip', chips).forEach(ch => ch.onclick = () => { catFilter = ch.dataset.c || null; renderPointList(); });
-    const fs = sortedPoints().filter(f => !catFilter || f.properties.categoria === catFilter);
+    if (catFilter && !catNoMapa(catFilter)) catFilter = null;
+    const fs = sortedPoints().filter(f => catNoMapa(f.properties.categoria) && (!catFilter || f.properties.categoria === catFilter));
     $('#pointList').innerHTML = fs.length ? fs.map(f => { const p = f.properties; const c = CD.CATS[p.categoria] || {}; const im = (p.imagens || [])[0];
       return `<div class="pitem" data-id="${p.id}"><div class="thumb" style="${im ? `background-image:url('${CD.esc(im.src)}')` : `background:${c.cor || '#333'}33`}"></div>
         <div><span class="cat"><i style="background:${c.cor}"></i>${CD.esc(c.nome || '')}</span><h4>${CD.esc(p.titulo)}</h4><p>${CD.esc(p.resumo || '')}</p></div></div>`; }).join('')
@@ -390,17 +423,25 @@
     $$('#pointList .pitem').forEach(el => el.onclick = () => M.openPoint(el.dataset.id));
   }
   const sortedPoints = () => M.points.features.slice().sort((a, b) => (a.properties.ordem || 999) - (b.properties.ordem || 999));
-  function setSel(id) { Object.entries(M.markers).forEach(([k, m]) => m.getElement().classList.toggle('sel', k === id)); }
+  function setSel(id) { Object.entries(M.markers).forEach(([k, m]) => m.getElement().classList.toggle('sel', k === id)); if (M.points) applyPointVis(); }
+  /* área livre do mapa (descontando o painel da narrativa) para centralizar o foco */
+  const focusPad = () => {
+    const w = window.innerWidth, h = window.innerHeight;
+    if (w > 900) return { top: 70, bottom: 60, left: 60, right: 470 };
+    return { top: 70, bottom: Math.round(h * 0.52), left: 30, right: 30 };
+  };
   M.flyToPoint = function (p, coords) {
     const cam = p.camera || {};
-    M.map.flyTo({ center: cam.center || coords, zoom: cam.zoom || 11.5, pitch: cam.pitch != null ? cam.pitch : 60, bearing: cam.bearing || 0, duration: 2600, essential: true, padding: { right: window.innerWidth > 900 ? 440 : 0 } });
+    const pad = focusPad();
+    if (cam.bounds) return M.map.fitBounds(cam.bounds, { padding: pad, pitch: cam.pitch != null ? cam.pitch : 30, bearing: cam.bearing || 0, duration: 2400, essential: true, maxZoom: 13 });
+    M.map.flyTo({ center: cam.center || coords, zoom: cam.zoom || 12.5, pitch: cam.pitch != null ? Math.min(cam.pitch, 45) : 40, bearing: cam.bearing || 0, duration: 2400, essential: true, padding: pad });
   };
   M.openPoint = function (id, fly = true) {
     const f = M.points.features.find(x => x.properties.id === id); if (!f) return;
     const p = f.properties; M.current = id; setSel(id);
     if (M.tour && !M.tour.list.some(x => x.properties.id === id)) M.endTour();
     if (document.body.classList.contains('editing')) return M.editPoint(f);
-    const at = p.atlas && CD.Atlas.get(p.atlas.id);
+    const at = null; // atlas de colagens retirado do site
     const extra = `<div class="story-actions">
       <button class="btn sm" data-act="fly">${CD.icon('camera')} Ver a paisagem</button>
       ${at ? `<button class="btn sm primary" data-act="atlas">${CD.icon('book')} Abrir no atlas</button>` : ''}
@@ -417,20 +458,76 @@
     if (fly) M.flyToPoint(p, f.geometry.coordinates);
   };
 
-  /* ---------- percurso */
+  /* ---------- percurso: linha do trajeto, paradas numeradas e foco na narrativa */
+  const TOUR_NOMES = { principal: 'Cartografias em disputa', hidrovia: 'Hidrovia em disputa', encantados: 'Encantados e não humanos' };
+  let tourMk = [];
+  function tourGeo(list, i) {
+    const cs = list.map(f => f.geometry.coordinates);
+    return {
+      type: 'FeatureCollection', features: [
+        { type: 'Feature', properties: { parte: 'feito' }, geometry: { type: 'LineString', coordinates: cs.slice(0, i + 1).length > 1 ? cs.slice(0, i + 1) : [cs[0], cs[0]] } },
+        { type: 'Feature', properties: { parte: 'falta' }, geometry: { type: 'LineString', coordinates: cs.slice(i).length > 1 ? cs.slice(i) : [cs[i], cs[i]] } }
+      ]
+    };
+  }
+  function drawTour() {
+    const map = M.map, T = M.tour; if (!T) return;
+    const data = tourGeo(T.list, T.i);
+    if (map.getSource('tour')) map.getSource('tour').setData(data);
+    else {
+      map.addSource('tour', { type: 'geojson', data });
+      map.addLayer({ id: 'tour-casing', type: 'line', source: 'tour', layout: { 'line-cap': 'round', 'line-join': 'round' }, paint: { 'line-color': '#0b1112', 'line-width': 6, 'line-opacity': .55 } });
+      map.addLayer({ id: 'tour-line', type: 'line', source: 'tour', layout: { 'line-cap': 'round', 'line-join': 'round' },
+        paint: { 'line-color': ['match', ['get', 'parte'], 'feito', '#f2c14e', '#fbf3e2'], 'line-width': ['match', ['get', 'parte'], 'feito', 3.4, 2.2],
+          'line-dasharray': [1.6, 1.4], 'line-opacity': ['match', ['get', 'parte'], 'feito', .95, .7] } });
+    }
+    if (!tourMk.length) tourMk = T.list.map((f, k) => {
+      const p = f.properties; const c = (CD.CATS[p.categoria] || {}).cor || '#e3a857';
+      const el = document.createElement('div'); el.className = 'mk-num'; el.style.setProperty('--c', c);
+      el.innerHTML = `<b>${k + 1}</b><span class="mk-label">${CD.esc(p.titulo)}</span>`;
+      el.title = p.titulo;
+      el.addEventListener('click', ev => { ev.stopPropagation(); M.tour.i = k; M.tourStep(0); });
+      return new maplibregl.Marker({ element: el }).setLngLat(f.geometry.coordinates).addTo(map);
+    });
+    tourMk.forEach((m, k) => { const el = m.getElement(); el.classList.toggle('on', k === T.i); el.classList.toggle('done', k < T.i); });
+    $('#tourDots').innerHTML = T.list.map((f, k) => `<i class="${k === T.i ? 'on' : k < T.i ? 'done' : ''}" data-k="${k}" title="${CD.esc(f.properties.titulo)}"></i>`).join('');
+    $$('#tourDots i').forEach(d => d.onclick = () => { M.tour.i = +d.dataset.k; M.tourStep(0); });
+  }
+  function clearTour() {
+    const map = M.map;
+    ['tour-line', 'tour-casing'].forEach(l => map.getLayer(l) && map.removeLayer(l));
+    if (map.getSource('tour')) map.removeSource('tour');
+    tourMk.forEach(m => m.remove()); tourMk = [];
+  }
   M.startTour = function (route = 'principal') {
     const list = sortedPoints().filter(f => f.properties.ordem && (route === 'principal' ? !f.properties.percurso : f.properties.percurso === route));
     if (!list.length) return CD.toast('Defina o campo “ordem no percurso” em algum ponto.');
-    M.tour = { list, i: 0, route }; $('#tourBar b').textContent = ({ hidrovia: 'Hidrovia em disputa', encantados: 'Encantados e não humanos' })[route] || 'Percurso'; $('#tourBar').classList.add('on'); M.tourStep(0);
+    if (M.tour) clearTour();
+    M.tour = { list, i: 0, route }; $('#tourBar b').textContent = TOUR_NOMES[route] || 'Percurso'; $('#tourBar').classList.add('on');
+    document.body.classList.add('touring');
+    drawTour(); applyPointVis();
+    // visão geral do trajeto antes de mergulhar no primeiro ponto
+    const b = new maplibregl.LngLatBounds(); list.forEach(f => b.extend(f.geometry.coordinates));
+    M.map.fitBounds(b, { padding: { top: 90, bottom: 80, left: 60, right: 60 }, pitch: 0, bearing: 0, duration: 1600, maxZoom: 11 });
+    clearTimeout(M._tourT); M._tourT = setTimeout(() => M.tour && M.tourStep(0), 2300);
   };
   M.tourStep = function (k) {
     if (!M.tour) return;
+    clearTimeout(M._tourT);
     M.tour.i = Math.max(0, Math.min(M.tour.list.length - 1, M.tour.i + k));
     $('#tourPos').textContent = `${M.tour.i + 1} de ${M.tour.list.length}`;
+    drawTour();
     M.openPoint(M.tour.list[M.tour.i].properties.id);
   };
-  M.endTour = () => { M.tour = null; $('#tourBar').classList.remove('on'); const n = $('#mapStory .story-nav'); n && n.remove(); };
+  M.endTour = () => {
+    clearTimeout(M._tourT);
+    if (!M.tour) return;
+    M.tour = null; clearTour(); document.body.classList.remove('touring');
+    $('#tourBar').classList.remove('on'); const n = $('#mapStory .story-nav'); n && n.remove(); applyPointVis();
+  };
   $('#tourPrev').onclick = () => M.tourStep(-1); $('#tourNext').onclick = () => M.tourStep(1); $('#tourEnd').onclick = () => M.endTour();
+  document.addEventListener('keydown', e => { if (!M.tour || /input|textarea|select/i.test(e.target.tagName)) return;
+    if (e.key === 'ArrowRight') M.tourStep(1); else if (e.key === 'ArrowLeft') M.tourStep(-1); else if (e.key === 'Escape') M.endTour(); });
 
   /* ---------- edição */
   M.newPoint = function (ll) {
@@ -496,7 +593,7 @@
 
   /* ======================================================= marcadores dos atlas */
   M.drawAtlasMarkers = function () {
-    if (!window.maplibregl || !M.map || !M.map.addLayer) return;
+    if (!window.maplibregl || !M.map || !M.map.addLayer || !def('atlasmk')) return;
     M.atlasMarkers.forEach(m => m.remove()); M.atlasMarkers = [];
     CD.Atlas.list().forEach(a => {
       if (!a.geo) return;
@@ -518,7 +615,7 @@
     M.data.arq.features.forEach(f => index.push({ t: f.properties.nome || f.properties.codigo, s: 'Sítio arqueológico · ' + (f.properties.classificacao || ''), c: f.geometry.coordinates, z: 13, go: () => { M.toggleLayer('arq', true); M.showFeature(def('arq'), f.properties); } }));
     M.data.portos.features.forEach(f => index.push({ t: f.properties.Nome, s: 'Porto · ' + f.properties.Local, c: f.geometry.coordinates, z: 12 }));
     M.data.uc.features.forEach(f => { const b = bbox(f.geometry); index.push({ t: f.properties.nome, s: 'Unidade de conservação · ' + f.properties.categoria, b, go: () => { M.toggleLayer('uc', true); M.showFeature(def('uc'), f.properties); } }); });
-    CD.Atlas.list().forEach(a => (a.hotspots || []).forEach(h => index.push({ t: h.titulo, s: 'Atlas · ' + a.titulo, go: () => CD.App.openAtlas(a.id, h.id) })));
+    if (def('atlasmk')) CD.Atlas.list().forEach(a => (a.hotspots || []).forEach(h => index.push({ t: h.titulo, s: 'Atlas · ' + a.titulo, go: () => CD.App.openAtlas(a.id, h.id) })));
   }
   M.rebuildIndex = buildIndex;
   function bbox(g) { let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9; const w = c => typeof c[0] === 'number' ? (x0 = Math.min(x0, c[0]), y0 = Math.min(y0, c[1]), x1 = Math.max(x1, c[0]), y1 = Math.max(y1, c[1])) : c.forEach(w); w(g.coordinates); return [[x0, y0], [x1, y1]]; }
@@ -549,7 +646,7 @@
     $('#stats').innerHTML = [
       [arq.length, 'sítios arqueológicos (IPHAN)'], [uc.length, 'unidades de conservação federais'],
       [st ? Math.round(st.total_2008_2025_km2).toLocaleString('pt-BR') + ' km²' : '—', 'desmatados 2008–2025'], [st ? Math.round(st.anterior_2008_km2).toLocaleString('pt-BR') + ' km²' : '—', 'desmatados até 2007'],
-      [M.points.features.length, 'pontos narrativos'], [CD.Atlas.list().length, 'atlas ilustrados']
+      [M.points.features.length, 'pontos narrativos']
     ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join('');
     const cnt = {}; arq.forEach(f => cnt[f.properties.classificacao || 'Sem classificação'] = (cnt[f.properties.classificacao || 'Sem classificação'] || 0) + 1);
     const lg = def('arq').legenda;
@@ -567,7 +664,7 @@
     svg.innerHTML = [0, .5, 1].map(k => `<line x1="${pad}" x2="${W}" y1="${H - 18 - (H - 34) * k}" y2="${H - 18 - (H - 34) * k}" stroke="rgba(255,255,255,.07)"/><text x="0" y="${H - 15 - (H - 34) * k}">${Math.round(max * k)}</text>`).join('') +
       st.anos.map((a, i) => { const h = (H - 34) * a.km2 / max; const cls = a.ano === M.year ? 'cur' : a.ano > M.year ? 'future' : '';
         return `<rect class="bar ${cls}" data-y="${a.ano}" x="${pad + i * bw + 1.5}" y="${H - 18 - h}" width="${bw - 3}" height="${h}" rx="2" style="cursor:pointer"><title>${a.ano}: ${a.km2} km²</title></rect>${i % 3 === 0 || i === st.anos.length - 1 ? `<text x="${pad + i * bw + bw / 2}" y="${H - 4}" text-anchor="middle">${String(a.ano).slice(2)}</text>` : ''}`; }).join('');
-    $$('rect[data-y]', svg).forEach(r => r.onclick = () => { M.toggleLayer('prodes', true); M.setYear(+r.dataset.y); });
+    $$('rect[data-y]', svg).forEach(r => r.onclick = () => M.toggleLayer('desm_acum', true));
   }
   window.addEventListener('resize', () => drawChart());
 })();
