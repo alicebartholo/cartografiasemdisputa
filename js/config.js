@@ -20,13 +20,13 @@ CD.MAPAS = {
 const AMBOS = ['ext', 'cos'];
 CD.LAYER_MAPAS = {
   pontos: AMBOS, ti: AMBOS, quilombos: AMBOS, uc: AMBOS,
-  hv_com: ['ext'], hidrovia: ['ext'], rodovia: ['ext'], portos: ['ext'], urb: ['ext'], desm_acum: ['ext'],
+  hv_com: ['ext'], rodovia: ['ext'], portos: ['ext'], urb: ['ext'], desm_acum: ['ext'],
   en_lug: ['cos'], en_bord: ['cos'], bor_pts: ['cos'], bor_lim: ['cos'], arq: ['cos'], agua: AMBOS
 };
 // mapa de cada ponto narrativo: percurso primeiro, depois categoria
 CD.mapaDoPonto = p => p.percurso === 'hidrovia' ? 'ext' : p.percurso === 'encantados' ? 'cos' : (['capital', 'ruptura'].includes(p.categoria) ? 'ext' : 'cos');
 
-CD.VIEW = { center: [-55.05, -3.05], zoom: 7.1, pitch: 48, bearing: -12 };
+CD.VIEW = { center: [-55.05, -3.05], zoom: 7.1, pitch: 0, bearing: 0 };
 CD.BOUNDS = [[-59.5, -6.6], [-51.2, 0.3]];
 
 CD.BASEMAPS = [
@@ -66,13 +66,13 @@ CD.LAYERS = [
     desc: 'Pontos criados no próprio geoportal (modo Editar). Cada ponto guarda texto, imagens, fontes e uma vista de câmera 3D.' },
 
   // ---------------- hidrovia em disputa (pesquisa out/2026)
-  { id: 'hv_com', grupo: 'hv', nome: 'Hidrovia das commodities', sub: 'rota da soja e do milho + notícias e impactos socioambientais', arquivo: 'data/hv_commodities.geojson', tipo: 'misto', on: true, raio: 7,
-    corLinha: ['match', ['get', 'tipo'], 'comboio', '#c8102e', 'navio', '#7a0a1c', 'ferrograo', '#e07b00', '#c8102e'],
-    largura: ['interpolate', ['linear'], ['zoom'], 5, ['match', ['get', 'tipo'], 'comboio', 3.2, 2.2], 11, ['match', ['get', 'tipo'], 'comboio', 7, 4]],
+  { id: 'hv_com', grupo: 'hv', nome: 'Hidrovia das commodities', sub: 'rota da soja e do milho, hidrovias oficiais (ANTAQ) + notícias e impactos', arquivo: 'data/hv_commodities.geojson', tipo: 'misto', on: true, raio: 7,
+    corLinha: ['match', ['get', 'tipo'], 'comboio', '#c8102e', 'navio', '#7a0a1c', 'ferrograo', '#e07b00', 'antaq', '#ff8a70', '#c8102e'],
+    largura: ['interpolate', ['linear'], ['zoom'], 5, ['match', ['get', 'tipo'], 'comboio', 3.2, 'antaq', 1.2, 2.2], 11, ['match', ['get', 'tipo'], 'comboio', 7, 'antaq', 2.2, 4]],
     corExpr: ['match', ['get', 'tipo'], 'terminal', '#c8102e', 'dragagem', '#ff7a1a', 'comunidade', '#2f8a4e', 'sagrado', '#7b5cc4', 'fauna', '#2f6fd0', 'mobilizacao', '#e0b000', 'politica', '#111111', '#888888'],
     sw: { cor: '#c8102e', forma: 'line' },
-    legenda: [['#c8102e', 'Rota dos comboios de grãos (Miritituba → Santarém)'], ['#7a0a1c', 'Exportação por navios'], ['#e07b00', 'Ferrogrão projetada'], ['#c8102e', '● Porto / terminal'], ['#ff7a1a', '● Dragagem'], ['#2f8a4e', '● Comunidade afetada'], ['#7b5cc4', '● Lugar sagrado / arqueológico'], ['#2f6fd0', '● Fauna e clima'], ['#e0b000', '● Mobilização'], ['#111111', '● Decisão política / projeto']],
-    desc: 'O corredor de escoamento de commodities pelo Tapajós (Arco Norte) e, ao longo dele, pontos com notícias, relatórios e ações judiciais sobre o que a hidrovia degrada: portos, dragagem, comunidades, lugares sagrados, fauna e as lutas contra ela (até out/2026).',
+    legenda: [['#c8102e', 'Rota dos comboios de grãos (Miritituba → Santarém)'], ['#7a0a1c', 'Exportação por navios'], ['#e07b00', 'Ferrogrão projetada'], ['#ff8a70', 'Hidrovias oficiais (ANTAQ / SNV)'], ['#c8102e', '● Porto / terminal'], ['#ff7a1a', '● Dragagem'], ['#2f8a4e', '● Comunidade afetada'], ['#7b5cc4', '● Lugar sagrado / arqueológico'], ['#2f6fd0', '● Fauna e clima'], ['#e0b000', '● Mobilização'], ['#111111', '● Decisão política / projeto']],
+    desc: 'O corredor de escoamento de commodities pelo Tapajós (Arco Norte), sobre a rede hidroviária oficial (ANTAQ / SNV), e, ao longo dele, pontos com notícias, relatórios e ações judiciais sobre o que a hidrovia degrada: portos, dragagem, comunidades, lugares sagrados, fauna e as lutas contra ela (até out/2026).',
     titulo: p => p.nome,
     info: p => p.kind === 'rota' ? [['Ciclo', p.ciclo], ['Descrição', p.descricao], ['Fontes', p.fonte], ['Link', p.url]] : [['Tema', p.categoria], ['O que acontece', p.situacao], ['Atores', p.atores], ['Impactos', p.impactos], ['Localização', p.precisao], ['Fontes', p.fonte], ['Link', p.url]] },
   // ---------------- encantados e não humanos (pesquisa out/2026)
@@ -128,7 +128,7 @@ CD.LAYERS = [
     legenda: [['#2e8b4e', 'Floresta Nacional (Flona) — ex.: Flona do Tapajós'], ['#e0a030', 'Reserva Extrativista (Resex) — ex.: Resex Tapajós-Arapiuns'], ['#b7d98a', 'Área de Proteção Ambiental (APA do Tapajós)'], ['#2a8f8a', 'Proteção integral (Parna, Esec, Rebio)']],
     desc: 'Unidades de conservação federais (ICMBio): Flona do Tapajós, Resex Tapajós-Arapiuns, APA do Tapajós, Parna da Amazônia, entre outras.',
     titulo: p => p.nome, info: p => [['Categoria', p.categoria], ['Grupo', p.grupo === 'PI' ? 'Proteção integral' : 'Uso sustentável'], ['Criação', p.ano], ['Ato legal', p.ato], ['Municípios', p.municipios], ['Jurisdição', p.jurisdicao]] },
-  { id: 'urb', grupo: 'terr', nome: 'Áreas urbanizadas', sub: 'IBGE', arquivo: 'data/areas_urbanizadas.geojson', tipo: 'fill', on: false,
+  { id: 'urb', grupo: 'terr', nome: 'Áreas urbanizadas', sub: 'IBGE', arquivo: 'data/areas_urbanizadas.geojson', tipo: 'fill', on: true,
     cor: '#f1e4c4', opac: 0.55, linha: '#fff4d8', sw: { cor: '#f1e4c4' },
     titulo: p => 'Área urbanizada — ' + (p.nome || ''), info: p => [['UF', p.uf], ['Densidade', p.densidade], ['Porte', p.categoria]] },
 
@@ -144,10 +144,6 @@ CD.LAYERS = [
   { id: 'agua', grupo: 'agua', nome: 'Massas d’água', sub: 'rios e lagos', arquivo: 'data/massa_dagua.geojson', tipo: 'fill', on: true,
     cor: '#2f8fae', opac: 0.55, linha: '#7fd0e6', sw: { cor: '#2f8fae' }, info: () => [['Fonte', 'ANA — base hidrográfica']] },
   // ---------------- infraestrutura
-  { id: 'hidrovia', grupo: 'infra', nome: 'Hidrovias', sub: 'ANTAQ / SNV', arquivo: 'data/hidrovia.geojson', tipo: 'line', on: true,
-    cor: '#ff7a5c', largura: 2.6, dash: [2, 1.5], sw: { cor: '#ff7a5c', forma: 'line' },
-    desc: 'O rio desenhado como canal logístico: eixo de escoamento de grãos do Arco Norte até os terminais de Santarém.',
-    titulo: p => p.nome || 'Hidrovia', info: p => [['Operacional', p.operaciona], ['Regime', p.regime]] },
   { id: 'rodovia', grupo: 'infra', nome: 'Rodovias', sub: 'BR-163, BR-230 e estaduais', arquivo: 'data/rodovia.geojson', tipo: 'line', on: true,
     corExpr: ['match', ['get', 'revestimento'], 'Pavimentado', '#e8505f', '#f08f98'], largura: ['interpolate', ['linear'], ['zoom'], 6, 0.8, 11, 2.4], sw: { cor: '#e8505f', forma: 'line' },
     legenda: [['#e8505f', 'Pavimentada'], ['#f08f98', 'Não pavimentada / outras']],
@@ -157,7 +153,7 @@ CD.LAYERS = [
     titulo: p => 'Porto — ' + p.Nome, info: p => [['UF', p.Unidade_Fe], ['Rio', p.Local]] },
 
   // ---------------- desmatamento
-  { id: 'desm_acum', grupo: 'desm', nome: 'Desmatamento acumulado', sub: 'PRODES/INPE · até 2025', arquivo: 'data/desmatamento_acumulado.geojson', tipo: 'fill', on: false,
+  { id: 'desm_acum', grupo: 'desm', nome: 'Desmatamento acumulado', sub: 'PRODES/INPE · até 2025', arquivo: 'data/desmatamento_acumulado.geojson', tipo: 'fill', on: true,
     cor: '#9a9a9a', opac: 0.7, sw: { cor: '#9a9a9a' },
     legenda: [['#9a9a9a', 'Área desmatada até 2025']],
     desc: 'Toda a floresta suprimida por corte raso no recorte, segundo o PRODES/INPE: a máscara histórica até 2007 somada aos incrementos anuais de 2008 a 2025. Para leveza, o mapa exibe polígonos a partir de 20 ha (40 ha na máscara histórica); as estatísticas consideram todos os polígonos.',

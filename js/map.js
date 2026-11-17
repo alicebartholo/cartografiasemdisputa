@@ -5,7 +5,7 @@
     map: null, points: { type: 'FeatureCollection', features: [] }, markers: {}, atlasMarkers: [], cityMarkers: [],
     year: 2025, playing: null, data: {}, loaded: {}, current: null, tour: null, draft: null
   };
-  const ORDER = ['desm_acum', 'agua', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'rodovia', 'hidrovia', 'hv_com', 'arq', 'portos', 'en_lug', 'bor_pts', 'en_bord'];
+  const ORDER = ['desm_acum', 'agua', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'rodovia', 'hv_com', 'arq', 'portos', 'en_lug', 'bor_pts', 'en_bord'];
   M.mapa = 'cos';
   const inMapa = d => !CD.LAYER_MAPAS || !CD.LAYER_MAPAS[d.id] || CD.LAYER_MAPAS[d.id].includes(M.mapa);
   const catNoMapa = c => !CD.MAPAS || CD.MAPAS[M.mapa].cats.includes(c);
@@ -45,7 +45,7 @@
     map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
     M.ready = new Promise(res => map.on('load', res));
     await M.ready;
-    try { map.setTerrain({ source: 'dem', exaggeration: 2 }); } catch (e) { console.warn(e); }
+    // abre em 2D: relevo desligado (pode ser ativado no botão de relevo 3D)
     try { map.setSky && map.setSky({ 'sky-color': '#16232a', 'horizon-color': '#c9a46b', 'fog-color': '#1a2224', 'sky-horizon-blend': 0.6, 'horizon-fog-blend': 0.6, 'fog-ground-blend': 0.25 }); } catch (e) { }
     CD.LAYERS.forEach(d => { if (d.on && inMapa(d) && d.tipo !== 'html') addLayer(d); });
     buildLayerPanel(); buildBasemaps(); bindControls(); bindMapEvents();
@@ -433,8 +433,8 @@
   M.flyToPoint = function (p, coords) {
     const cam = p.camera || {};
     const pad = focusPad();
-    if (cam.bounds) return M.map.fitBounds(cam.bounds, { padding: pad, pitch: cam.pitch != null ? cam.pitch : 30, bearing: cam.bearing || 0, duration: 2400, essential: true, maxZoom: 13 });
-    M.map.flyTo({ center: cam.center || coords, zoom: cam.zoom || 12.5, pitch: cam.pitch != null ? Math.min(cam.pitch, 45) : 40, bearing: cam.bearing || 0, duration: 2400, essential: true, padding: pad });
+    if (cam.bounds) return M.map.fitBounds(cam.bounds, { padding: pad, pitch: 0, bearing: 0, duration: 2400, essential: true, maxZoom: 13 });
+    M.map.flyTo({ center: cam.center || coords, zoom: cam.zoom || 12.5, pitch: 0, bearing: 0, duration: 2400, essential: true, padding: pad });
   };
   M.openPoint = function (id, fly = true) {
     const f = M.points.features.find(x => x.properties.id === id); if (!f) return;
@@ -628,8 +628,8 @@
     box.classList.add('on');
     $$('div[data-i]', box).forEach(el => el.onclick = () => {
       const r = res[+el.dataset.i]; box.classList.remove('on');
-      if (r.b) M.map.fitBounds(r.b, { padding: 80, pitch: 45, duration: 2000 });
-      else if (r.c) M.map.flyTo({ center: r.c, zoom: r.z || 11, pitch: 55, duration: 2200 });
+      if (r.b) M.map.fitBounds(r.b, { padding: 80, pitch: 0, duration: 2000 });
+      else if (r.c) M.map.flyTo({ center: r.c, zoom: r.z || 11, pitch: 0, duration: 2200 });
       r.go && r.go();
     });
   });
