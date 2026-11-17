@@ -116,8 +116,9 @@ CD.LAYERS = [
   // ---------------- territórios
   { id: 'ti', grupo: 'terr', nome: 'Terras indígenas', sub: 'FUNAI', arquivo: 'data/terras_indigenas.geojson', tipo: 'fill', on: true,
     cor: '#c8102e', opac: 0.22, linha: '#ff5a6e', sw: { cor: '#c8102e' },
-    desc: 'Polígonos de terras indígenas (FUNAI) no recorte da área de estudo. A camada foi fornecida dissolvida, sem atributos por território.',
-    info: () => [['Fonte', 'FUNAI'], ['Observação', 'Polígonos dissolvidos — sem nome/fase por território neste arquivo']] },
+    desc: 'Terras indígenas no recorte da área de estudo, com nome, povo e fase do processo de demarcação (FUNAI, GeoServer, consulta em nov/2026).',
+    titulo: p => p.nome || 'Terra indígena',
+    info: p => [['Povo', p.povo], ['Fase', p.fase], ['Modalidade', p.modalidade], ['Área', p.area_ha != null ? Number(p.area_ha).toLocaleString('pt-BR') + ' ha' : ''], ['Municípios', p.municipios], ['Fonte', 'FUNAI']] },
   { id: 'quilombos', grupo: 'terr', nome: 'Territórios quilombolas', sub: 'INCRA', arquivo: 'data/quilombos.geojson', tipo: 'fill', on: true,
     cor: '#b06ad8', opac: 0.35, linha: '#e2c2ff', sw: { cor: '#b06ad8' },
     desc: 'Territórios quilombolas (INCRA) do Baixo Amazonas e Baixo Tapajós.',
