@@ -5,7 +5,7 @@
     map: null, points: { type: 'FeatureCollection', features: [] }, markers: {}, atlasMarkers: [], cityMarkers: [],
     year: 2025, playing: null, data: {}, loaded: {}, current: null, tour: null, draft: null
   };
-  const ORDER = ['desm_acum', 'agua', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'rodovia', 'hv_com', 'arq', 'portos', 'en_lug', 'bor_pts', 'en_bord'];
+  const ORDER = ['desm_acum', 'agua', 'uc', 'ti', 'bor_lim', 'quilombos', 'urb', 'rodovia', 'hv_com', 'arq', 'portos', 'en_lug', 'resex_com', 'bor_pts', 'en_bord'];
   M.mapa = 'cos';
   const inMapa = d => !CD.LAYER_MAPAS || !CD.LAYER_MAPAS[d.id] || CD.LAYER_MAPAS[d.id].includes(M.mapa);
   const catNoMapa = c => !CD.MAPAS || CD.MAPAS[M.mapa].cats.includes(c);

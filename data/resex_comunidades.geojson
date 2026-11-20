@@ -1,0 +1,1374 @@
+{
+ "type": "FeatureCollection",
+ "name": "resex_tapajos_arapiuns_comunidades",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.32397,
+     -3.3309
+    ]
+   },
+   "properties": {
+    "nome": "Pinhel",
+    "tipo": "aldeia",
+    "povo": "Maytapu",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416647296)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.24801,
+     -3.12485
+    ]
+   },
+   "properties": {
+    "nome": "Boim",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416647297)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.16897,
+     -2.68483
+    ]
+   },
+   "properties": {
+    "nome": "Suruacá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416652630)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.45025,
+     -2.5846
+    ]
+   },
+   "properties": {
+    "nome": "São Pedro",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416652633)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.02576,
+     -2.34078
+    ]
+   },
+   "properties": {
+    "nome": "Vila Franca",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757830)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.30869,
+     -3.29638
+    ]
+   },
+   "properties": {
+    "nome": "Cametá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757927)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.35545,
+     -3.4367
+    ]
+   },
+   "properties": {
+    "nome": "Escrivão",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "citada pelo ICMBio como da Resex; ponto do OSM 4 km fora da linha",
+    "fonte_local": "OpenStreetMap (nó 416757928)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.29473,
+     -3.23717
+    ]
+   },
+   "properties": {
+    "nome": "Samaúma",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757930)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.61139,
+     -2.64916
+    ]
+   },
+   "properties": {
+    "nome": "Monte Sião",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 416757931)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.28606,
+     -2.55273
+    ]
+   },
+   "properties": {
+    "nome": "Gurupá",
+    "tipo": "aldeia",
+    "povo": "Tupaiú",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 416757932)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.22353,
+     -2.79462
+    ]
+   },
+   "properties": {
+    "nome": "Cabana do Amorim",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757937)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18582,
+     -2.79535
+    ]
+   },
+   "properties": {
+    "nome": "Amorim",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757938)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.20757,
+     -2.92244
+    ]
+   },
+   "properties": {
+    "nome": "Vista Alegre",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757947)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.14324,
+     -2.60166
+    ]
+   },
+   "properties": {
+    "nome": "Solimões",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757959)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17281,
+     -2.62184
+    ]
+   },
+   "properties": {
+    "nome": "Capichauã",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757960)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.1269,
+     -2.54905
+    ]
+   },
+   "properties": {
+    "nome": "Anumã",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 416757966)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.82006,
+     -3.12328
+    ]
+   },
+   "properties": {
+    "nome": "Porto Rico",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 8923079446)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.71064,
+     -2.79834
+    ]
+   },
+   "properties": {
+    "nome": "Novo Lugar",
+    "tipo": "aldeia",
+    "povo": "Borari",
+    "situacao": "no limite — aldeia da TI Maró (fora da Resex)",
+    "fonte_local": "OpenStreetMap (nó 4455510160)",
+    "fonte_aldeia": "Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.67742,
+     -2.88989
+    ]
+   },
+   "properties": {
+    "nome": "Prainha do Maró",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510182)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.72197,
+     -2.96344
+    ]
+   },
+   "properties": {
+    "nome": "Vista Alegre",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510326)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.60099,
+     -2.78979
+    ]
+   },
+   "properties": {
+    "nome": "Alto Mentae",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 8923009798)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.67888,
+     -2.71141
+    ]
+   },
+   "properties": {
+    "nome": "Bela Vista",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510096)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.69262,
+     -2.74013
+    ]
+   },
+   "properties": {
+    "nome": "Cachoeira do Maró",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "no limite — aldeia da TI Maró (fora da Resex)",
+    "fonte_local": "OpenStreetMap (nó 4455510106)",
+    "fonte_aldeia": "Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.60326,
+     -2.72403
+    ]
+   },
+   "properties": {
+    "nome": "Cachoeira do Mentae",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510107)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.68236,
+     -2.70099
+    ]
+   },
+   "properties": {
+    "nome": "Fé em Deus",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510127)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.60378,
+     -2.6646
+    ]
+   },
+   "properties": {
+    "nome": "Mentae",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510149)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.66459,
+     -2.66387
+    ]
+   },
+   "properties": {
+    "nome": "Nova Bela Vista",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510155)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.55915,
+     -2.6327
+    ]
+   },
+   "properties": {
+    "nome": "Pascoal",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510169)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.30372,
+     -2.56951
+    ]
+   },
+   "properties": {
+    "nome": "Atrocal",
+    "tipo": "aldeia",
+    "povo": "Tapajó",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455509888)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.41776,
+     -2.69598
+    ]
+   },
+   "properties": {
+    "nome": "Braço Grande",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510100)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.54018,
+     -2.60698
+    ]
+   },
+   "properties": {
+    "nome": "Camarão",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510109)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.52911,
+     -2.59275
+    ]
+   },
+   "properties": {
+    "nome": "Curi",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510120)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.4068,
+     -2.58704
+    ]
+   },
+   "properties": {
+    "nome": "Nova Vista",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510158)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.49596,
+     -2.63647
+    ]
+   },
+   "properties": {
+    "nome": "Piquiá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510179)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.3011,
+     -2.54842
+    ]
+   },
+   "properties": {
+    "nome": "São Francisco",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510299)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.3747,
+     -2.56599
+    ]
+   },
+   "properties": {
+    "nome": "São José I",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510302)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.38637,
+     -2.55828
+    ]
+   },
+   "properties": {
+    "nome": "Vila Bom Futuro",
+    "tipo": "aldeia",
+    "povo": "Apiaká",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455510321)",
+    "fonte_aldeia": "Peixoto, Arenz & Figueiredo (2012) (Ywarete/Bom Futuro)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.29771,
+     -3.24674
+    ]
+   },
+   "properties": {
+    "nome": "Anduru",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455509879)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.27033,
+     -3.15551
+    ]
+   },
+   "properties": {
+    "nome": "Bacurituba",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510094)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.22407,
+     -3.04761
+    ]
+   },
+   "properties": {
+    "nome": "Jaca",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510135)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23634,
+     -3.0033
+    ]
+   },
+   "properties": {
+    "nome": "Jauarituba",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510139)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.27973,
+     -3.19056
+    ]
+   },
+   "properties": {
+    "nome": "Nova Vista do Tapajós",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510159)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.27483,
+     -3.17437
+    ]
+   },
+   "properties": {
+    "nome": "Nuquinim",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510162)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23368,
+     -3.02293
+    ]
+   },
+   "properties": {
+    "nome": "Paraná Pixuna",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510166)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23462,
+     -3.09951
+    ]
+   },
+   "properties": {
+    "nome": "Pau da Letra",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510171)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.22501,
+     -3.07465
+    ]
+   },
+   "properties": {
+    "nome": "São Tomé",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510310)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.26061,
+     -3.14517
+    ]
+   },
+   "properties": {
+    "nome": "Tucumatuba",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 11286461777)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.22552,
+     -2.79688
+    ]
+   },
+   "properties": {
+    "nome": "Cabeceira do Amorim",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510101)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.19948,
+     -2.80747
+    ]
+   },
+   "properties": {
+    "nome": "Enseada do Amorim",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510125)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18315,
+     -2.81002
+    ]
+   },
+   "properties": {
+    "nome": "Mangal",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510143)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.2257,
+     -2.96001
+    ]
+   },
+   "properties": {
+    "nome": "Mirixituba",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510150)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.20776,
+     -2.91904
+    ]
+   },
+   "properties": {
+    "nome": "Muratuba",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510152)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23243,
+     -2.80507
+    ]
+   },
+   "properties": {
+    "nome": "Pajurá",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510163)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18227,
+     -2.84202
+    ]
+   },
+   "properties": {
+    "nome": "Parauá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510167)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.19789,
+     -2.89757
+    ]
+   },
+   "properties": {
+    "nome": "Paricatuba",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510168)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17647,
+     -2.76696
+    ]
+   },
+   "properties": {
+    "nome": "Quenã",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510183)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18158,
+     -2.85518
+    ]
+   },
+   "properties": {
+    "nome": "Retiro",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510187)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23334,
+     -2.98161
+    ]
+   },
+   "properties": {
+    "nome": "Santo Amaro",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510292)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17919,
+     -2.8836
+    ]
+   },
+   "properties": {
+    "nome": "Surucuá",
+    "tipo": "aldeia",
+    "povo": "Tupinambá",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510297)",
+    "fonte_aldeia": "Tupinambá: Caderno de Campo UFPA (2024) e Dialnet 8475857"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23853,
+     -2.56411
+    ]
+   },
+   "properties": {
+    "nome": "Aminã",
+    "tipo": "aldeia",
+    "povo": "Tupaiú",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455509878)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.25042,
+     -2.56522
+    ]
+   },
+   "properties": {
+    "nome": "Aningalzinho",
+    "tipo": "aldeia",
+    "povo": "Tupaiú",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455509881)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.20501,
+     -2.51609
+    ]
+   },
+   "properties": {
+    "nome": "Arapiranga",
+    "tipo": "aldeia",
+    "povo": "Arara Vermelha",
+    "situacao": "no limite (até 2 km da linha)",
+    "fonte_local": "OpenStreetMap (nó 4455509885)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração); Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.15785,
+     -2.56552
+    ]
+   },
+   "properties": {
+    "nome": "Carão",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510113)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.23132,
+     -2.74313
+    ]
+   },
+   "properties": {
+    "nome": "Colônia Maranhão",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510118)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.10693,
+     -2.52357
+    ]
+   },
+   "properties": {
+    "nome": "Curipatá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510121)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18703,
+     -2.73829
+    ]
+   },
+   "properties": {
+    "nome": "Mapirizinho",
+    "tipo": "aldeia",
+    "povo": "Kumaruara",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510144)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.13566,
+     -2.58346
+    ]
+   },
+   "properties": {
+    "nome": "Pedra Branca",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510172)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.0941,
+     -2.50366
+    ]
+   },
+   "properties": {
+    "nome": "Santi",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510291)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17227,
+     -2.62719
+    ]
+   },
+   "properties": {
+    "nome": "Vista Alegre do Capixauã",
+    "tipo": "aldeia",
+    "povo": "Kumaruara",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510325)",
+    "fonte_aldeia": "Lista PSEI/UFOPA 2019 (autodeclaração)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.07905,
+     -2.45203
+    ]
+   },
+   "properties": {
+    "nome": "Maripá",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510148)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17051,
+     -2.46888
+    ]
+   },
+   "properties": {
+    "nome": "Nova Sociedade",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510157)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.15074,
+     -2.399
+    ]
+   },
+   "properties": {
+    "nome": "Raposa",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510184)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.18669,
+     -2.42974
+    ]
+   },
+   "properties": {
+    "nome": "São Miguel",
+    "tipo": "aldeia",
+    "povo": "Arapiun",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510306)",
+    "fonte_aldeia": "Peixoto, Arenz & Figueiredo (2012)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.10309,
+     -2.39359
+    ]
+   },
+   "properties": {
+    "nome": "Vila Anã",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510320)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.17523,
+     -2.46305
+    ]
+   },
+   "properties": {
+    "nome": "Vila Tucumã",
+    "tipo": "comunidade",
+    "povo": "",
+    "situacao": "dentro do limite",
+    "fonte_local": "OpenStreetMap (nó 4455510323)",
+    "fonte_aldeia": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -55.173428,
+     -2.601122
+    ]
+   },
+   "properties": {
+    "nome": "Muruary",
+    "tipo": "aldeia",
+    "povo": "Kumaruara",
+    "situacao": "dentro do limite",
+    "fonte_local": "PMIF Resex Tapajós-Arapiuns (ICMBio), base da Brigada Indígena Kumaruara",
+    "fonte_aldeia": "PMIF ICMBio"
+   }
+  }
+ ]
+}
