@@ -19,7 +19,7 @@ CD.MAPAS = {
 };
 const AMBOS = ['ext', 'cos'];
 CD.LAYER_MAPAS = {
-  pontos: AMBOS, ti: AMBOS, quilombos: AMBOS, resex_com: AMBOS, uc: AMBOS,
+  pontos: AMBOS, ti: AMBOS, quilombos: AMBOS, comunidades: AMBOS, uc: AMBOS,
   hv_com: ['ext'], rodovia: ['ext'], portos: ['ext'], urb: ['ext'], desm_acum: ['ext'],
   en_lug: ['cos'], en_bord: ['cos'], bor_pts: ['cos'], bor_lim: ['cos'], arq: ['cos'], agua: AMBOS
 };
@@ -119,12 +119,12 @@ CD.LAYERS = [
     desc: 'Terras indígenas no recorte da área de estudo, com nome, povo e fase do processo de demarcação (FUNAI, GeoServer, consulta em nov/2026).',
     titulo: p => p.nome || 'Terra indígena',
     info: p => [['Povo', p.povo], ['Fase', p.fase], ['Modalidade', p.modalidade], ['Área', p.area_ha != null ? Number(p.area_ha).toLocaleString('pt-BR') + ' ha' : ''], ['Municípios', p.municipios], ['Fonte', 'FUNAI']] },
-  { id: 'resex_com', grupo: 'terr', nome: 'Comunidades e aldeias da Resex', sub: 'Tapajós-Arapiuns · OSM + ICMBio + pesquisas UFPA/UFOPA', arquivo: 'data/resex_comunidades.geojson', tipo: 'circle', on: true, raio: 5,
-    corExpr: ['match', ['get', 'tipo'], 'aldeia', '#c8102e', '#f2efe6'], sw: { cor: '#c8102e', forma: 'dot' },
-    legenda: [['#c8102e', 'Aldeia indígena'], ['#f2efe6', 'Comunidade']],
-    desc: 'Comunidades e aldeias dentro e no limite da Reserva Extrativista Tapajós-Arapiuns (o ICMBio fala em cerca de 81). Posições do OpenStreetMap; povos das aldeias segundo pesquisas da UFPA/UFOPA e autodeclaração. Lista em construção: algumas aldeias citadas nas fontes ainda não têm coordenada.',
+  { id: 'comunidades', grupo: 'terr', nome: 'Comunidades, aldeias e quilombos', sub: 'todo o recorte · OSM + FUNAI + INCRA + pesquisas UFPA/UFOPA', arquivo: 'data/comunidades_recorte.geojson', tipo: 'circle', on: true, raio: 3.6,
+    corExpr: ['match', ['get', 'tipo'], 'aldeia', '#c8102e', 'quilombola', '#e0a030', '#f2efe6'], sw: { cor: '#c8102e', forma: 'dot' },
+    legenda: [['#c8102e', 'Aldeia indígena'], ['#e0a030', 'Comunidade quilombola'], ['#f2efe6', 'Comunidade / vila']],
+    desc: 'Comunidades, vilas, aldeias e quilombos do recorte da pesquisa, a partir dos povoados do OpenStreetMap. Aldeias: pontos dentro de terras indígenas (FUNAI) ou identificados em pesquisas da UFPA/UFOPA; quilombos: pontos dentro de territórios quilombolas (INCRA). Lista em construção — muitas aldeias e comunidades ainda não estão mapeadas no OSM.',
     titulo: p => p.nome,
-    info: p => [['Tipo', p.tipo === 'aldeia' ? 'Aldeia indígena' : 'Comunidade'], ['Povo', p.povo], ['Situação', p.situacao], ['Localização', p.fonte_local], ['Fonte (aldeia)', p.fonte_aldeia]] },
+    info: p => [['Tipo', p.tipo === 'aldeia' ? 'Aldeia indígena' : p.tipo === 'quilombola' ? 'Comunidade quilombola' : 'Comunidade / vila'], ['Povo', p.povo], ['Território', p.territorio], ['Localização', p.fonte_local], ['Identificação', p.fonte_tipo]] },
   { id: 'quilombos', grupo: 'terr', nome: 'Territórios quilombolas', sub: 'INCRA', arquivo: 'data/quilombos.geojson', tipo: 'fill', on: true,
     cor: '#b06ad8', opac: 0.35, linha: '#e2c2ff', sw: { cor: '#b06ad8' },
     desc: 'Territórios quilombolas (INCRA) do Baixo Amazonas e Baixo Tapajós.',
